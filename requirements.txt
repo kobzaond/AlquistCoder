@@ -1,0 +1,8 @@
+vllm
+bandit
+boto3
+huggingface
+datasets
+openai
+huggingface-hub
+codeguru

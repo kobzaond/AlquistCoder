@@ -1,0 +1,227 @@
+Metadata-Version: 2.4
+Name: codeguru-analyzer-package
+Version: 0.1.0
+Summary: AWS CodeGuru Security Analyzer with Boto3 and automated Batching
+Author: Team Alquist
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: boto3
+Requires-Dist: requests
+Requires-Dist: bandit
+Dynamic: author
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# CodeGuru Security Analyzer - Batch Processing with Boto3
+
+This library provides a Python class (`CodeGuruAnalyzer`) to analyze code snippets for security vulnerabilities using AWS CodeGuru Security. It utilizes the `boto3` AWS SDK for direct API interaction and includes robust batch processing capabilities to handle large inputs while respecting CodeGuru's size limits.
+
+## Installation
+
+Clone the repository (if the code is hosted on a platform like GitHub):
+```bash
+git clone https://gitlab.com/alquist/alquistcoder2024/codeguru-analyzer.git
+```
+
+Navigate into the project's root directory (the one containing setup.py and the codeguru_analyzer_package folder):
+
+```bash
+cd codeguru-analyzer
+```
+
+Install the package in editable mode:
+
+```batch
+pip install -e .
+```
+
+## Input Data
+
+The main analysis function `analyze_code` accepts a list of dictionaries, where each dictionary represents a code item to be analyzed:
+
+-   `id`: A unique identifier for the code snippet (e.g., "file1.py", "module/class_x", "user_query_123"). This ID is used to map findings back to the original code item in the output.
+-   `code`: The actual code snippet as a string.
+
+You can load this data from various sources, such as a JSONL file (one JSON object per line), where each line might look like:
+
+```jsonl
+{"id": "script1", "code": "import os\nprint('hello')"}
+{"id": "util/helper", "code": "def my_func():\n  pass"}
+```
+
+## How to Run
+
+Use the following Python code structure. This example demonstrates how to load data and use the CodeGuruAnalyzer or BanditAnalyzer class, the main API (analyze_code function) is the same.
+
+```python
+import json
+import time
+from codeguru.analyzer import CodeGuruAnalyzer
+# You might need a helper function to load JSONL if your data is in that format
+# Example load_jsonl function (can be in utils.py or defined here):
+# def load_jsonl(file_path):
+#     data = []
+#     with open(file_path, 'r', encoding='utf-8') as f:
+#         for line in f:
+#             try:
+#                 data.append(json.loads(line))
+#             except json.JSONDecodeError as e:
+#                 print(f"Skipping invalid JSON line: {line.strip()} - {e}")
+#     return data
+
+
+# --- Configuration ---
+# Replace with the actual path to your data if loading from a file
+# INPUT_DATA_FILE = 'your_input_data.jsonl'
+
+# Optional: Define output paths
+PARTIAL_OUTPUT_PREFIX = 'codeguru_partial_outputs/batch_' # Prefix for saving results per batch
+MERGED_OUTPUT_FILE = 'final_codeguru_results.json'      # Path to save the final merged results
+
+
+# --- Load or Prepare Data ---
+# Example: Loading from a dummy list or a JSONL file
+# raw_data = load_jsonl(INPUT_DATA_FILE) # Uncomment and adjust if loading from file
+# code_input_data = []
+# for item in raw_data:
+#     record_id = item.get('id') or item.get('recordId') # Handle possible key names
+#     code = item.get('code')
+#     if record_id and isinstance(code, str):
+#         code_input_data.append({'id': record_id, 'code': code})
+
+# Dummy data for demonstration (replace with your actual data loading)
+code_input_data = [
+    {'id': 'sample_1', 'code': 'import os\nos.system("echo hello") # Insecure command'},
+    {'id': 'sample_2', 'code': 'def add(a, b):\n    return a + b'}, # Secure code
+    {'id': 'sample_3', 'code': 'import subprocess\nsubprocess.run(["ls"], shell=True) # Insecure shell use'},
+    # Add many more items here to test batching...
+    # {'id': f'filler_{i}', 'code': f'def func_{i}(): pass'} for i in range(2000)
+]
+
+
+if not code_input_data:
+    print("No valid code data loaded or provided.")
+    exit()
+
+# --- Initialize Analyzer ---
+analyzer = None
+try:
+    analyzer = CodeGuruAnalyzer(
+        region="us-east-1", # Replace with your AWS region
+        severities_to_ignore={"Low", "Info"}, # Configure which severities to ignore
+        include_raw=False # Set to True if you want to include the full raw finding in the output
+    )
+    print("CodeGuruAnalyzer initialized.")
+except Exception as e:
+    print(f"Failed to initialize CodeGuruAnalyzer: {e}")
+    print("Please ensure AWS credentials are configured and have necessary CodeGuru Security permissions.")
+    exit()
+
+
+# --- Run Analysis in Batches ---
+if analyzer:
+    print(f"\nStarting CodeGuru security analysis on {len(code_input_data)} items using batches...")
+    start_time = time.time()
+
+    analysis_results = analyzer.analyze_code(
+        code_data=code_input_data,
+        max_batch_items=500, # Optional: Max items per batch (soft limit). Adjust based on item size.
+        max_batch_uncompressed_size_mb=analyzer.MAX_BATCH_UNCOMPRESSED_SIZE_MB, # Keep this at the CodeGuru limit
+        max_workers=8,       # Optional: Number of concurrent batches to process. Adjust based on resources.
+        output_path_prefix=PARTIAL_OUTPUT_PREFIX, # Optional: Prefix to save partial results per batch
+        merge_output_path=MERGED_OUTPUT_FILE,   # Optional: Path to save the final merged results
+        delete_partials=True, # Optional: Set to False to keep partial batch output files
+        sleep_time_between_batches=5 # Optional: Delay in seconds between submitting batch tasks
+    )
+
+    end_time = time.time()
+    print(f"\nAnalysis process completed in {end_time - start_time:.2f} seconds.")
+
+    # --- Process Results ---
+    # Check if analysis_results is None, which indicates a failure during the process
+    if analysis_results is not None:
+        # 'analysis_results' is the dictionary of merged findings: {'recordId': [list_of_findings]}
+        # This dictionary is returned upon success, regardless of whether merge_output_path was specified.
+        print(f"\nAnalysis successful. Findings merged internally.")
+        print(f"Found findings for {len(analysis_results)} unique records.")
+
+        if MERGED_OUTPUT_FILE:
+             # Note: The provided code saves the file *if* merge_output_path is set *within* analyze_code.
+             # This message confirms the user's intent.
+             print(f"Merged findings were configured to be saved to {MERGED_OUTPUT_FILE} (if saving was successful).")
+        else:
+             print("Merged findings were not configured to be saved to a separate file (merge_output_path was not provided).")
+
+        # Example: Print findings for a specific record ID
+        record_id_to_check = 'sample_1'
+        if record_id_to_check in analysis_results:
+            print(f"Summary of results:")
+            print(CodeGuruAnalyzer.analyse_results(analysis_results))
+        else:
+             print(f"\nNo findings found for '{record_id_to_check}'.")
+
+    else:
+        # analysis_results is None, indicating an error occurred during the process.
+        print("\nAnalysis process failed or was aborted.")
+        print("This could be due to initialization errors, batching issues (e.g., items too large or invalid),")
+        print("critical errors during any batch scan (check logs for 'Aborting entire analysis'),")
+        print("or potentially issues saving partial results (if configured).")
+        print("Check application logs for specific error messages.")
+```
+## Output Format
+
+If the analysis completes successfully without critical errors in any batch, the analyze_code method returns a dictionary containing the merged findings. If any critical error occurs (e.g., client initialization failure, inability to form valid batches from input, any single batch failing critically, errors saving partial files if configured), the method returns None.
+
+When successful, the returned dictionary's keys are the unique ids of the input code items that had findings (after filtering by severity). The value for each id is a list of dictionaries, where each dictionary represents a single finding with structured details:
+
+```json
+{
+  "sample_1": [
+    {
+      "title": "CWE-78 - OS Command Injection",
+      "severity": "High",
+      "description": "The application is vulnerable to OS command injection because user-supplied input is used to construct an OS command.",
+      "recommendation": "**Problem**\nThis line of code constructs an OS command using data that could originate from external input...",
+      "code_snippet": "import os\nos.system(\"echo hello\") # Insecure command",
+      "vulnerable_part": "os.system(\"echo hello\")",
+      "raw_finding": "...raw finding as CodeGuru would return, can be configured to be included or not..."
+    }
+  ],
+  "sample_3": [
+    {
+      "title": "CWE-78 - OS Command Injection",
+      "severity": "High",
+      "description": "The application is vulnerable to OS command injection because user-supplied input is used to construct an OS command.",
+      "recommendation": "**Problem**\nThis line of code constructs an OS command using data that could originate from external input...",
+      "code_snippet": "import subprocess\nsubprocess.run([\"ls\"], shell=True) # Insecure shell use",
+      "vulnerable_part": "subprocess.run([\"ls\"], shell=True)",
+      "raw_finding": "...raw finding as CodeGuru would return, can be configured to be included or not..."
+    }
+  ]
+  // ... potentially more recordIds with findings ...
+}
+```
+
+Each finding dictionary includes title, severity, description, recommendation, the full code_snippet around the vulnerability, the vulnerable_part of the code, start_line and end_line of the vulnerable code within the snippet. The raw_finding field can be included based on the include_raw initialization parameter.
+
+## Analyzing the Results Summary
+
+The package also includes a static utility method analyse_results (note the British spelling) to summarize the findings from the output dictionary returned by analyze_code.
+
+```python
+# Assuming 'analyzer' is your initialized CodeGuruAnalyzer instance
+# Assuming 'analysis_results' holds the dictionary returned by analyze_code (and is not None)
+if analysis_results:
+    # Use the static method via the class to count vulnerabilities per file
+    vulnerability_summary = CodeGuruAnalyzer.analyse_results(analysis_results)
+
+    print("\nVulnerability Summary (Vulnerability: Number of Files Affected):")
+    # import pprint # Already imported in the example above
+    print(vulnerability_summary)
+    # Example Output:
+    # {'CWE-78 - OS Command Injection': 2} # Based on the sample data
+```
+This method counts how many unique files (identified by their id) contain each type of vulnerability (identified by title), providing a high-level overview of the most common issues found across the analyzed codebase. It ensures each vulnerability type is counted only once per file. The results are returned as a dictionary sorted by count in descending order.
