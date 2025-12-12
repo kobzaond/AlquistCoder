@@ -1,0 +1,11 @@
+README.md
+setup.py
+codeguru/__init__.py
+codeguru/analyzer.py
+codeguru/bandit_analyzer.py
+codeguru/codeguru_detectors.py
+codeguru_analyzer_package.egg-info/PKG-INFO
+codeguru_analyzer_package.egg-info/SOURCES.txt
+codeguru_analyzer_package.egg-info/dependency_links.txt
+codeguru_analyzer_package.egg-info/requires.txt
+codeguru_analyzer_package.egg-info/top_level.txt
