@@ -36,7 +36,7 @@ Notes
 - Some scripts accept OpenAI/HF tokens for judge/generation (see config.py).
 ## Models and data
 - Models:
-  - [CIIRC-NLP/alquistcoder_FINAL_DPO ](https://huggingface.co/CIIRC-NLP/alquistcoder_FINAL_DPO)(coding LLM)
+  - [CIIRC-NLP/alquistcoder-4B-secureLLM] (https://huggingface.co/CIIRC-NLP/alquistcoder-4B-secureLLM)(coding LLM) - (old name: https://huggingface.co/CIIRC-NLP/alquistcoder_FINAL_DPO)
   - [CIIRC-NLP/alquistcoder-intention_recognition-final](https://huggingface.co/CIIRC-NLP/alquistcoder-intention_recognition-final) (ModernBERT guardrail)
 
 - Data: to be released
@@ -45,6 +45,7 @@ Notes
   - [CIIRC-NLP/alquistcoder2025_SFT_dataset](https://huggingface.co/datasets/CIIRC-NLP/alquistcoder2025_SFT_dataset)
   - [CIIRC-NLP/alquistcoder2025_VulnBench](https://huggingface.co/datasets/CIIRC-NLP/alquistcoder2025_VulnBench_dataset)
   - [CIIRC-NLP/alquistcoder2025_MalBench](https://huggingface.co/datasets/CIIRC-NLP/alquistcoder2025_MalBench_dataset)
+  - [CIIRC-NLP/intention_recognition_guardrail_dataset](https://huggingface.co/datasets/CIIRC-NLP/intention_recognition_guardrail_dataset)
 
 
 ## Citing
