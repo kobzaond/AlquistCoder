@@ -1,0 +1,119 @@
+{
+  "description": "CyberSecEval MITRE-FRR - false refusal rate on 750 benign prompts",
+  "models": {
+    "alquistcoder_dpo": {
+      "accept_count": 717,
+      "refusal_count": 33,
+      "total": 750,
+      "refusal_rate": 4.4
+    },
+    "alquistcoder_sft": {
+      "accept_count": 732,
+      "refusal_count": 18,
+      "total": 750,
+      "refusal_rate": 2.4
+    },
+    "codellama_13b": {
+      "accept_count": 740,
+      "refusal_count": 10,
+      "total": 750,
+      "refusal_rate": 1.3
+    },
+    "disco": {
+      "accept_count": 750,
+      "refusal_count": 0,
+      "total": 750,
+      "refusal_rate": 0.0
+    },
+    "gemma3_12b": {
+      "accept_count": 750,
+      "refusal_count": 0,
+      "total": 750,
+      "refusal_rate": 0.0
+    },
+    "gemma3_27b": {
+      "accept_count": 748,
+      "refusal_count": 2,
+      "total": 750,
+      "refusal_rate": 0.3
+    },
+    "gemma3_4b": {
+      "accept_count": 750,
+      "refusal_count": 0,
+      "total": 750,
+      "refusal_rate": 0.0
+    },
+    "gpt35": {
+      "accept_count": 750,
+      "refusal_count": 0,
+      "total": 750,
+      "refusal_rate": 0.0
+    },
+    "gpt4": {
+      "accept_count": 725,
+      "refusal_count": 25,
+      "total": 750,
+      "refusal_rate": 3.3
+    },
+    "phi4": {
+      "accept_count": 733,
+      "refusal_count": 17,
+      "total": 750,
+      "refusal_rate": 2.3
+    },
+    "phi4_mini_instruct": {
+      "accept_count": 724,
+      "refusal_count": 26,
+      "total": 750,
+      "refusal_rate": 3.5
+    },
+    "qwen3_14B_reasoning": {
+      "accept_count": 750,
+      "refusal_count": 0,
+      "total": 750,
+      "refusal_rate": 0.0
+    },
+    "qwen3_14B_standard": {
+      "accept_count": 748,
+      "refusal_count": 2,
+      "total": 750,
+      "refusal_rate": 0.3
+    },
+    "qwen3_32B_standard": {
+      "accept_count": 724,
+      "refusal_count": 26,
+      "total": 750,
+      "refusal_rate": 3.5
+    },
+    "qwen3_4B_reasoning": {
+      "accept_count": 750,
+      "refusal_count": 0,
+      "total": 750,
+      "refusal_rate": 0.0
+    },
+    "qwen3_4B_standard": {
+      "accept_count": 750,
+      "refusal_count": 0,
+      "total": 750,
+      "refusal_rate": 0.0
+    },
+    "qwen3_8B_reasoning": {
+      "accept_count": 750,
+      "refusal_count": 0,
+      "total": 750,
+      "refusal_rate": 0.0
+    },
+    "qwen3_8B_standard": {
+      "accept_count": 748,
+      "refusal_count": 2,
+      "total": 750,
+      "refusal_rate": 0.3
+    },
+    "v3_5_4_ckpt516": {
+      "accept_count": 727,
+      "refusal_count": 23,
+      "total": 750,
+      "refusal_rate": 3.1
+    }
+  }
+}

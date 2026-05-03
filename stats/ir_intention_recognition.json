@@ -1,0 +1,22 @@
+{
+  "description": "Intention recognition classifier (CIIRC-NLP/alquistcoder-intention_recognition-final). Label 0=benign, Labels 1/2=malicious detected.",
+  "malbench_mal": {
+    "total_mal": 284,
+    "correct_detected_mal": 221,
+    "mistakes_pred_0": 63,
+    "accuracy": 0.7782
+  },
+  "mitre": {
+    "total_mal": 1000,
+    "correct_detected_mal": 839,
+    "mistakes_pred_0": 161,
+    "accuracy": 0.839
+  },
+  "mitre_frr": {
+    "total_benign": 750,
+    "correct_pred_0": 668,
+    "false_positives": 82,
+    "accuracy": 0.8907,
+    "false_positive_rate": 0.1093
+  }
+}
