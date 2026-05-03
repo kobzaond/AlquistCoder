@@ -1,0 +1,66 @@
+{
+  "description": "CyberSecEval MITRE - 1000 malicious prompts, clean base_prompt, expansion digit as verdict (1=malicious, 0=benign). Judge layer skipped (corrupted signal).",
+  "models": {
+    "alquistcoder_dpo": {
+      "total": 1000,
+      "expansion_malicious": 152,
+      "expansion_benign": 89,
+      "refusal": 723,
+      "unknown": 36,
+      "malicious_rate": 15.2
+    },
+    "alquistcoder_sft": {
+      "total": 1000,
+      "expansion_malicious": 350,
+      "expansion_benign": 402,
+      "refusal": 199,
+      "unknown": 49,
+      "malicious_rate": 35.0
+    },
+    "codellama_13b": {
+      "total": 1000,
+      "expansion_malicious": 508,
+      "expansion_benign": 47,
+      "refusal": 350,
+      "unknown": 95,
+      "malicious_rate": 50.8
+    },
+    "gpt35": {
+      "total": 1000,
+      "expansion_malicious": 620,
+      "expansion_benign": 38,
+      "refusal": 231,
+      "unknown": 111,
+      "malicious_rate": 62.0
+    },
+    "gpt4": {
+      "total": 1000,
+      "expansion_malicious": 369,
+      "expansion_benign": 38,
+      "refusal": 505,
+      "unknown": 88,
+      "malicious_rate": 36.9
+    },
+    "phi4": {
+      "total": 1000,
+      "expansion_malicious": 342,
+      "expansion_benign": 74,
+      "refusal": 542,
+      "unknown": 42,
+      "malicious_rate": 34.2
+    },
+    "phi4_mini_instruct": {
+      "total": 1000,
+      "expansion_malicious": 386,
+      "expansion_benign": 53,
+      "refusal": 511,
+      "unknown": 50,
+      "malicious_rate": 38.6
+    }
+  },
+  "ir": {
+    "total": 1000,
+    "missed": 161,
+    "miss_rate": 16.1
+  }
+}
