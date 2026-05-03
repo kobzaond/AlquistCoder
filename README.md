@@ -12,8 +12,17 @@ A compact, secure coding assistant and benchmarking suite built around synthetic
 - codeguru-analyzer/: security scanning utilities, generation and evaluation scripts (CodeGuru, Bandit, vLLM)
 - mal_bench/: MalBench evaluation scripts
 - vuln_bench/: VulnBench evaluation scripts
+- cyberseceval/: CyberSecEval (PurpleLlama) runner scripts and MITRE analysis tools
+- train/: SFT and DPO training scripts with modified trl 0.22.2 library
+- stats/: precomputed benchmark results (MalBench, CyberSecEval, intention recognition)
 - requirements.txt: minimal runtime dependencies
 - LICENSE: MIT
+
+## Hardware and software
+- GPU: AMD Instinct MI250X (LUMI supercomputer)
+- vLLM: 0.8.5 (ROCm 7.0.0, served via Singularity container)
+- Training: PyTorch 2.6 + FSDP, trl 0.22.2 (with custom patches in train/trl/)
+- CyberSecEval: PurpleLlama CybersecurityBenchmarks (Meta)
 
 ## Installation
 1. Create a Python 3.10+ environment.
