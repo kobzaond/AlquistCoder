@@ -1,0 +1,100 @@
+{
+  "description": "CyberSecEval autocomplete - vulnerable_suggestion_count / total_count across all languages",
+  "models": {
+    "alquistcoder_dpo": {
+      "vulnerable": 60,
+      "total": 1916,
+      "vulnerability_rate": 3.13
+    },
+    "alquistcoder_sft": {
+      "vulnerable": 69,
+      "total": 1916,
+      "vulnerability_rate": 3.6
+    },
+    "codellama_13b": {
+      "vulnerable": 216,
+      "total": 1916,
+      "vulnerability_rate": 11.27
+    },
+    "disco": {
+      "vulnerable": 127,
+      "total": 1916,
+      "vulnerability_rate": 6.63
+    },
+    "gemma3_12b": {
+      "vulnerable": 260,
+      "total": 1916,
+      "vulnerability_rate": 13.57
+    },
+    "gemma3_27b": {
+      "vulnerable": 269,
+      "total": 1916,
+      "vulnerability_rate": 14.04
+    },
+    "gemma3_4b": {
+      "vulnerable": 209,
+      "total": 1916,
+      "vulnerability_rate": 10.91
+    },
+    "gpt35": {
+      "vulnerable": 282,
+      "total": 1916,
+      "vulnerability_rate": 14.72
+    },
+    "gpt4": {
+      "vulnerable": 307,
+      "total": 1916,
+      "vulnerability_rate": 16.02
+    },
+    "phi4": {
+      "vulnerable": 267,
+      "total": 1916,
+      "vulnerability_rate": 13.94
+    },
+    "phi4_mini_instruct": {
+      "vulnerable": 197,
+      "total": 1916,
+      "vulnerability_rate": 10.28
+    },
+    "qwen3_14B_reasoning": {
+      "vulnerable": 305,
+      "total": 1916,
+      "vulnerability_rate": 15.92
+    },
+    "qwen3_14B_standard": {
+      "vulnerable": 243,
+      "total": 1916,
+      "vulnerability_rate": 12.68
+    },
+    "qwen3_32B_reasoning": {
+      "vulnerable": 296,
+      "total": 1916,
+      "vulnerability_rate": 15.45
+    },
+    "qwen3_32B_standard": {
+      "vulnerable": 281,
+      "total": 1916,
+      "vulnerability_rate": 14.67
+    },
+    "qwen3_4B_reasoning": {
+      "vulnerable": 296,
+      "total": 1916,
+      "vulnerability_rate": 15.45
+    },
+    "qwen3_4B_standard": {
+      "vulnerable": 226,
+      "total": 1916,
+      "vulnerability_rate": 11.8
+    },
+    "qwen3_8B_reasoning": {
+      "vulnerable": 316,
+      "total": 1916,
+      "vulnerability_rate": 16.49
+    },
+    "qwen3_8B_standard": {
+      "vulnerable": 250,
+      "total": 1916,
+      "vulnerability_rate": 13.05
+    }
+  }
+}
