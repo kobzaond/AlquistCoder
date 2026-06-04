@@ -1,18 +1,18 @@
 {
   "summary": {
     "codeql": {
-      "TP": 1567,
-      "UNCERTAIN": 225,
-      "FP": 58
+      "TP": 1677,
+      "UNCERTAIN": 239,
+      "FP": 63
     },
     "opengrep": {
-      "TP": 1936,
-      "UNCERTAIN": 593,
+      "TP": 2084,
+      "UNCERTAIN": 632,
       "FP": 1
     },
     "bandit": {
-      "UNCERTAIN": 488,
-      "TP": 1636,
+      "UNCERTAIN": 516,
+      "TP": 1741,
       "FP": 18
     }
   },
@@ -23,16 +23,16 @@
       "TP": 1
     },
     "bandit:B314": {
-      "TP": 343
+      "TP": 358
     },
     "bandit:B413": {
-      "UNCERTAIN": 28
+      "UNCERTAIN": 33
     },
     "bandit:B304": {
-      "TP": 14
+      "TP": 16
     },
     "bandit:B201": {
-      "TP": 601
+      "TP": 658
     },
     "bandit:B307": {
       "UNCERTAIN": 37,
@@ -40,59 +40,59 @@
       "FP": 1
     },
     "bandit:B402": {
-      "TP": 42
+      "TP": 44
     },
     "bandit:B321": {
-      "TP": 35
+      "TP": 37
     },
     "codeql:py/weak-cryptographic-algorithm": {
-      "TP": 24
+      "TP": 26
     },
     "codeql:py/weak-sensitive-data-hashing": {
-      "TP": 160
+      "TP": 162
     },
     "codeql:py/insecure-protocol": {
-      "TP": 51
+      "TP": 55
     },
     "codeql:py/path-injection": {
-      "UNCERTAIN": 55,
-      "TP": 46
+      "UNCERTAIN": 58,
+      "TP": 48
     },
     "codeql:py/log-injection": {
-      "FP": 58,
+      "FP": 63,
       "TP": 36
     },
     "codeql:py/flask-debug": {
-      "TP": 626
+      "TP": 690
     },
     "codeql:py/url-redirection": {
-      "TP": 49
+      "TP": 55
     },
     "opengrep:python.django.security.audit.unvalidated-password.unvalidated-password": {
-      "TP": 58
+      "TP": 65
     },
     "opengrep:python.lang.security.audit.insecure-file-permissions.insecure-file-permissions": {
-      "UNCERTAIN": 55,
-      "TP": 25
+      "UNCERTAIN": 56,
+      "TP": 26
     },
     "opengrep:python.lang.security.use-defused-xml.use-defused-xml": {
-      "TP": 357
+      "TP": 374
     },
     "opengrep:python.lang.security.use-defused-xml-parse.use-defused-xml-parse": {
-      "TP": 140
+      "TP": 150
     },
     "opengrep:python.django.security.audit.csrf-exempt.no-csrf-exempt": {
       "TP": 2
     },
     "opengrep:python.pycryptodome.security.insecure-cipher-algorithm-des.insecure-cipher-algorithm-des": {
-      "TP": 19
+      "TP": 21
     },
     "opengrep:python.flask.security.audit.render-template-string.render-template-string": {
-      "UNCERTAIN": 16,
-      "TP": 44
+      "UNCERTAIN": 20,
+      "TP": 60
     },
     "opengrep:python.flask.security.audit.debug-enabled.debug-enabled": {
-      "TP": 630
+      "TP": 695
     },
     "opengrep:python.lang.security.audit.eval-detected.eval-detected": {
       "UNCERTAIN": 40,
@@ -110,87 +110,87 @@
       "TP": 6
     },
     "bandit:B602": {
-      "UNCERTAIN": 65,
+      "UNCERTAIN": 70,
       "TP": 30
     },
     "bandit:B104": {
-      "TP": 237
+      "TP": 252
     },
     "bandit:B507": {
-      "UNCERTAIN": 105,
+      "UNCERTAIN": 112,
       "TP": 10
     },
     "bandit:B324": {
-      "UNCERTAIN": 90,
+      "UNCERTAIN": 95,
       "TP": 1
     },
     "codeql:py/paramiko-missing-host-key-validation": {
-      "TP": 141
+      "TP": 147
     },
     "codeql:py/bind-socket-all-network-interfaces": {
-      "TP": 207
+      "TP": 219
     },
     "codeql:py/stack-trace-exposure": {
-      "UNCERTAIN": 45,
+      "UNCERTAIN": 48,
       "TP": 30
     },
     "codeql:py/clear-text-logging-sensitive-data": {
-      "UNCERTAIN": 73,
+      "UNCERTAIN": 80,
       "TP": 12
     },
     "codeql:py/reflective-xss": {
       "UNCERTAIN": 4,
-      "TP": 29
+      "TP": 30
     },
     "opengrep:python.lang.security.audit.dynamic-urllib-use-detected.dynamic-urllib-use-detected": {
       "TP": 5
     },
     "opengrep:python.flask.security.audit.directly-returned-format-string.directly-returned-format-string": {
       "UNCERTAIN": 4,
-      "TP": 47
+      "TP": 49
     },
     "opengrep:python.flask.security.audit.app-run-param-config.avoid_app_run_with_bad_host": {
       "TP": 8,
-      "UNCERTAIN": 53
+      "UNCERTAIN": 55
     },
     "opengrep:python.cryptography.security.mode-without-authentication.crypto-mode-without-authentication": {
       "UNCERTAIN": 9,
       "TP": 1
     },
     "opengrep:python.lang.security.deserialization.pickle.avoid-pickle": {
-      "UNCERTAIN": 214,
-      "TP": 82
+      "UNCERTAIN": 226,
+      "TP": 86
     },
     "opengrep:python.lang.security.insecure-hash-algorithms-md5.insecure-hash-algorithm-md5": {
-      "TP": 98
+      "TP": 103
     },
     "bandit:B103": {
-      "UNCERTAIN": 27,
-      "TP": 25
+      "UNCERTAIN": 28,
+      "TP": 26
     },
     "bandit:B301": {
-      "UNCERTAIN": 80,
-      "TP": 49
+      "UNCERTAIN": 85,
+      "TP": 51
     },
     "bandit:B601": {
-      "TP": 78,
+      "TP": 83,
       "UNCERTAIN": 11
     },
     "codeql:py/cookie-injection": {
-      "TP": 32
+      "TP": 36
     },
     "codeql:py/overly-permissive-file": {
-      "UNCERTAIN": 39,
-      "TP": 25
+      "UNCERTAIN": 40,
+      "TP": 26
     },
     "opengrep:python.flask.security.audit.hardcoded-config.avoid_hardcoded_config_SECRET_KEY": {
-      "UNCERTAIN": 116
+      "UNCERTAIN": 131
     },
     "opengrep:python.flask.security.audit.secure-set-cookie.secure-set-cookie": {
-      "TP": 92
+      "TP": 102
     },
     "opengrep:python.lang.security.audit.subprocess-shell-true.subprocess-shell-true": {
-      "UNCERTAIN": 56,
+      "UNCERTAIN": 61,
       "TP": 32
     },
     "bandit:B615": {
@@ -204,20 +204,20 @@
     },
     "bandit:B605": {
       "UNCERTAIN": 15,
-      "TP": 48
+      "TP": 52
     },
     "codeql:py/command-line-injection": {
       "UNCERTAIN": 1,
       "TP": 8
     },
     "codeql:py/client-exposed-cookie": {
-      "TP": 17
+      "TP": 19
     },
     "codeql:py/insecure-cookie": {
-      "TP": 18
+      "TP": 20
     },
     "codeql:py/xml-bomb": {
-      "TP": 27
+      "TP": 29
     },
     "opengrep:python.django.security.injection.raw-html-format.raw-html-format": {
       "TP": 9
@@ -257,13 +257,13 @@
     },
     "opengrep:python.flask.security.audit.flask-url-for-external-true.flask-url-for-external-true": {
       "UNCERTAIN": 10,
-      "TP": 9
+      "TP": 12
     },
     "bandit:B318": {
       "UNCERTAIN": 1
     },
     "opengrep:python.flask.security.open-redirect.open-redirect": {
-      "TP": 53
+      "TP": 59
     },
     "codeql:py/code-injection": {
       "UNCERTAIN": 1,
@@ -382,6 +382,16 @@
       "raw_rate": 0.3899,
       "adjusted_rate": 0.3836,
       "fps_removed": 1
+    },
+    "phi4_mini_sp": {
+      "raw_rate": 0.4151,
+      "adjusted_rate": 0.4151,
+      "fps_removed": 0
+    },
+    "phi4_sp": {
+      "raw_rate": 0.4528,
+      "adjusted_rate": 0.4528,
+      "fps_removed": 0
     },
     "qwen3-14b_reasoning": {
       "raw_rate": 0.4717,
