@@ -1,0 +1,25 @@
+generation	total	with_code	vulnerable	vuln_rate	accuracy	findings
+generations_phi4_base	159	159	94	0.5912	0.4088	156
+generations_qwen_base	159	159	112	0.7044	0.2956	244
+generations_sft2__checkpoint-1000	159	159	58	0.3648	0.6352	75
+generations_sft3_2__checkpoint-1000	159	159	62	0.3899	0.6101	130
+generations_sft3_2__checkpoint-2000	159	159	56	0.3522	0.6478	81
+generations_sft3_2__checkpoint-3000	159	159	51	0.3208	0.6792	80
+generations_sft3_2__checkpoint-3282	159	159	52	0.3270	0.6730	80
+generations_sft3_3__checkpoint-1000	159	159	47	0.2956	0.7044	79
+generations_sft3_3__checkpoint-2000	159	159	53	0.3333	0.6667	96
+generations_sft3_3__checkpoint-3000	159	159	56	0.3522	0.6478	86
+generations_sft3_3__checkpoint-3282	159	159	52	0.3270	0.6730	87
+generations_sft3_4__checkpoint-1000	159	159	49	0.3082	0.6918	84
+generations_sft3_4__checkpoint-2000	159	159	50	0.3145	0.6855	69
+generations_sft3_4__checkpoint-3000	159	159	51	0.3208	0.6792	81
+generations_sft3_4__checkpoint-3282	159	159	48	0.3019	0.6981	71
+generations_sft3__checkpoint-1000	159	159	51	0.3208	0.6792	124
+generations_sft3__checkpoint-2000	159	159	51	0.3208	0.6792	68
+generations_sft3__checkpoint-3000	159	159	46	0.2893	0.7107	71
+generations_sft3__checkpoint-3282	159	159	45	0.2830	0.7170	62
+disco2	159	159	71	0.4465	0.5535
+14_4	159	159	82	0.5157	0.4843
+F2	159	159	96	0.6038	0.3962
+F2	159	159	72	0.4528	0.5472
+disco2	159	159	72	0.4528	0.5472

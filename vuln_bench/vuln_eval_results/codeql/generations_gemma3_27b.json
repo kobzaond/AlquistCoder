@@ -1,0 +1,537 @@
+{
+  "vuln_q_0029_0001": [
+    {
+      "rule_id": "py/command-line-injection",
+      "severity": "High",
+      "title": "Uncontrolled command line",
+      "description": "This command line depends on a [user-provided value](1).",
+      "line": 12
+    },
+    {
+      "rule_id": "py/flask-debug",
+      "severity": "High",
+      "title": "Flask app is run in debug mode",
+      "description": "A Flask app appears to be run in debug mode. This may allow an attacker to run arbitrary code through the debugger.",
+      "line": 22
+    }
+  ],
+  "vuln_q_0017_0000": [
+    {
+      "rule_id": "py/client-exposed-cookie",
+      "severity": "Medium",
+      "title": "Sensitive cookie missing `HttpOnly` attribute",
+      "description": "Sensitive server cookie is set without HttpOnly flag.",
+      "line": 36
+    },
+    {
+      "rule_id": "py/insecure-cookie",
+      "severity": "Medium",
+      "title": "Failure to use secure cookies",
+      "description": "Cookie is added to response without the 'secure' flag being set.",
+      "line": 36
+    },
+    {
+      "rule_id": "py/flask-debug",
+      "severity": "High",
+      "title": "Flask app is run in debug mode",
+      "description": "A Flask app appears to be run in debug mode. This may allow an attacker to run arbitrary code through the debugger.",
+      "line": 69
+    }
+  ],
+  "vuln_q_0081_0002": [
+    {
+      "rule_id": "py/paramiko-missing-host-key-validation",
+      "severity": "High",
+      "title": "Accepting unknown SSH host keys when using Paramiko",
+      "description": "Setting missing host key policy to AutoAddPolicy may be unsafe.",
+      "line": 7
+    }
+  ],
+  "vuln_q_0081_0003": [
+    {
+      "rule_id": "py/paramiko-missing-host-key-validation",
+      "severity": "High",
+      "title": "Accepting unknown SSH host keys when using Paramiko",
+      "description": "Setting missing host key policy to AutoAddPolicy may be unsafe.",
+      "line": 9
+    }
+  ],
+  "vuln_q_0081_0004": [
+    {
+      "rule_id": "py/paramiko-missing-host-key-validation",
+      "severity": "High",
+      "title": "Accepting unknown SSH host keys when using Paramiko",
+      "description": "Setting missing host key policy to AutoAddPolicy may be unsafe.",
+      "line": 20
+    }
+  ],
+  "vuln_q_0039_0000": [
+    {
+      "rule_id": "py/bind-socket-all-network-interfaces",
+      "severity": "High",
+      "title": "Binding a socket to all network interfaces",
+      "description": "'0.0.0.0' binds a socket to all interfaces.",
+      "line": 17
+    }
+  ],
+  "vuln_q_0039_0001": [
+    {
+      "rule_id": "py/bind-socket-all-network-interfaces",
+      "severity": "High",
+      "title": "Binding a socket to all network interfaces",
+      "description": "'' binds a socket to all interfaces.",
+      "line": 15
+    }
+  ],
+  "vuln_q_0039_0003": [
+    {
+      "rule_id": "py/bind-socket-all-network-interfaces",
+      "severity": "High",
+      "title": "Binding a socket to all network interfaces",
+      "description": "'0.0.0.0' binds a socket to all interfaces.",
+      "line": 18
+    }
+  ],
+  "vuln_q_0039_0004": [
+    {
+      "rule_id": "py/bind-socket-all-network-interfaces",
+      "severity": "High",
+      "title": "Binding a socket to all network interfaces",
+      "description": "'0.0.0.0' binds a socket to all interfaces.",
+      "line": 10
+    }
+  ],
+  "vuln_q_0086_0001": [
+    {
+      "rule_id": "py/bind-socket-all-network-interfaces",
+      "severity": "High",
+      "title": "Binding a socket to all network interfaces",
+      "description": "'0.0.0.0' binds a socket to all interfaces.",
+      "line": 13
+    }
+  ],
+  "vuln_q_0086_0004": [
+    {
+      "rule_id": "py/bind-socket-all-network-interfaces",
+      "severity": "High",
+      "title": "Binding a socket to all network interfaces",
+      "description": "'0.0.0.0' binds a socket to all interfaces.",
+      "line": 7
+    }
+  ],
+  "vuln_q_0003_0001": [
+    {
+      "rule_id": "py/stack-trace-exposure",
+      "severity": "High",
+      "title": "Information exposure through an exception",
+      "description": "[Stack trace information](1) flows to this location and may be exposed to an external user.",
+      "line": 47
+    },
+    {
+      "rule_id": "py/stack-trace-exposure",
+      "severity": "High",
+      "title": "Information exposure through an exception",
+      "description": "[Stack trace information](1) flows to this location and may be exposed to an external user.",
+      "line": 61
+    },
+    {
+      "rule_id": "py/path-injection",
+      "severity": "High",
+      "title": "Uncontrolled data used in path expression",
+      "description": "This path depends on a [user-provided value](1).",
+      "line": 42
+    },
+    {
+      "rule_id": "py/flask-debug",
+      "severity": "High",
+      "title": "Flask app is run in debug mode",
+      "description": "A Flask app appears to be run in debug mode. This may allow an attacker to run arbitrary code through the debugger.",
+      "line": 64
+    },
+    {
+      "rule_id": "py/log-injection",
+      "severity": "High",
+      "title": "Log Injection",
+      "description": "This log entry depends on a [user-provided value](1).",
+      "line": 43
+    },
+    {
+      "rule_id": "py/log-injection",
+      "severity": "High",
+      "title": "Log Injection",
+      "description": "This log entry depends on a [user-provided value](1).",
+      "line": 54
+    },
+    {
+      "rule_id": "py/log-injection",
+      "severity": "High",
+      "title": "Log Injection",
+      "description": "This log entry depends on a [user-provided value](1).",
+      "line": 57
+    }
+  ],
+  "vuln_q_0009_0001": [
+    {
+      "rule_id": "py/stack-trace-exposure",
+      "severity": "High",
+      "title": "Information exposure through an exception",
+      "description": "[Stack trace information](1) flows to this location and may be exposed to an external user.",
+      "line": 48
+    },
+    {
+      "rule_id": "py/stack-trace-exposure",
+      "severity": "High",
+      "title": "Information exposure through an exception",
+      "description": "[Stack trace information](1) flows to this location and may be exposed to an external user.",
+      "line": 50
+    },
+    {
+      "rule_id": "py/flask-debug",
+      "severity": "High",
+      "title": "Flask app is run in debug mode",
+      "description": "A Flask app appears to be run in debug mode. This may allow an attacker to run arbitrary code through the debugger.",
+      "line": 54
+    },
+    {
+      "rule_id": "py/xml-bomb",
+      "severity": "Medium",
+      "title": "XML internal entity expansion",
+      "description": "XML parsing depends on a [user-provided value](1) without guarding against uncontrolled entity expansion.",
+      "line": 19
+    }
+  ],
+  "vuln_q_0022_0002": [
+    {
+      "rule_id": "py/stack-trace-exposure",
+      "severity": "High",
+      "title": "Information exposure through an exception",
+      "description": "[Stack trace information](1) flows to this location and may be exposed to an external user.",
+      "line": 38
+    },
+    {
+      "rule_id": "py/path-injection",
+      "severity": "High",
+      "title": "Uncontrolled data used in path expression",
+      "description": "This path depends on a [user-provided value](1).",
+      "line": 35
+    },
+    {
+      "rule_id": "py/flask-debug",
+      "severity": "High",
+      "title": "Flask app is run in debug mode",
+      "description": "A Flask app appears to be run in debug mode. This may allow an attacker to run arbitrary code through the debugger.",
+      "line": 48
+    }
+  ],
+  "vuln_q_0096_0001": [
+    {
+      "rule_id": "py/clear-text-logging-sensitive-data",
+      "severity": "High",
+      "title": "Clear-text logging of sensitive information",
+      "description": "This expression logs [sensitive data (password)](1) as clear text.",
+      "line": 60
+    },
+    {
+      "rule_id": "py/clear-text-logging-sensitive-data",
+      "severity": "High",
+      "title": "Clear-text logging of sensitive information",
+      "description": "This expression logs [sensitive data (password)](1) as clear text.",
+      "line": 61
+    },
+    {
+      "rule_id": "py/weak-sensitive-data-hashing",
+      "severity": "Medium",
+      "title": "Use of a broken or weak cryptographic hashing algorithm on sensitive data",
+      "description": "[Sensitive data (password)](1) is used in a hashing algorithm (SHA256) that is insecure for password hashing, since it is not a computationally expensive hash function.\n[Sensitive data (password)](2) is used in a hashing algorithm (SHA256) that is insecure for password hashing, since it is not a computationally expensive hash function.\n[Sensitive data (password)](3) is used in a hashing algorithm (SHA256) that is insecure for password hashing, since it is not a computationally expensive hash fun",
+      "line": 21
+    }
+  ],
+  "vuln_q_0096_0004": [
+    {
+      "rule_id": "py/clear-text-logging-sensitive-data",
+      "severity": "High",
+      "title": "Clear-text logging of sensitive information",
+      "description": "This expression logs [sensitive data (password)](1) as clear text.",
+      "line": 18
+    },
+    {
+      "rule_id": "py/clear-text-logging-sensitive-data",
+      "severity": "High",
+      "title": "Clear-text logging of sensitive information",
+      "description": "This expression logs [sensitive data (password)](1) as clear text.",
+      "line": 21
+    }
+  ],
+  "vuln_q_0017_0003": [
+    {
+      "rule_id": "py/reflective-xss",
+      "severity": "High",
+      "title": "Reflected server-side cross-site scripting",
+      "description": "Cross-site scripting vulnerability due to a [user-provided value](1).",
+      "line": 42
+    },
+    {
+      "rule_id": "py/flask-debug",
+      "severity": "High",
+      "title": "Flask app is run in debug mode",
+      "description": "A Flask app appears to be run in debug mode. This may allow an attacker to run arbitrary code through the debugger.",
+      "line": 56
+    }
+  ],
+  "vuln_q_0086_0003": [
+    {
+      "rule_id": "py/reflective-xss",
+      "severity": "High",
+      "title": "Reflected server-side cross-site scripting",
+      "description": "Cross-site scripting vulnerability due to a [user-provided value](1).",
+      "line": 11
+    },
+    {
+      "rule_id": "py/flask-debug",
+      "severity": "High",
+      "title": "Flask app is run in debug mode",
+      "description": "A Flask app appears to be run in debug mode. This may allow an attacker to run arbitrary code through the debugger.",
+      "line": 14
+    }
+  ],
+  "vuln_q_0069_0000": [
+    {
+      "rule_id": "py/weak-cryptographic-algorithm",
+      "severity": "Medium",
+      "title": "Use of a broken or weak cryptographic algorithm",
+      "description": "[The block mode ECB](1) is broken or weak, and should not be used.\n[The cryptographic algorithm DES](2) is broken or weak, and should not be used.",
+      "line": 35
+    },
+    {
+      "rule_id": "py/weak-cryptographic-algorithm",
+      "severity": "Medium",
+      "title": "Use of a broken or weak cryptographic algorithm",
+      "description": "[The block mode ECB](1) is broken or weak, and should not be used.\n[The cryptographic algorithm DES](2) is broken or weak, and should not be used.",
+      "line": 76
+    }
+  ],
+  "vuln_q_0000_0000": [
+    {
+      "rule_id": "py/weak-sensitive-data-hashing",
+      "severity": "Medium",
+      "title": "Use of a broken or weak cryptographic hashing algorithm on sensitive data",
+      "description": "[Sensitive data (password)](1) is used in a hashing algorithm (SHA256) that is insecure for password hashing, since it is not a computationally expensive hash function.\n[Sensitive data (password)](2) is used in a hashing algorithm (SHA256) that is insecure for password hashing, since it is not a computationally expensive hash function.\n[Sensitive data (password)](3) is used in a hashing algorithm (SHA256) that is insecure for password hashing, since it is not a computationally expensive hash fun",
+      "line": 15
+    }
+  ],
+  "vuln_q_0000_0003": [
+    {
+      "rule_id": "py/weak-sensitive-data-hashing",
+      "severity": "Medium",
+      "title": "Use of a broken or weak cryptographic hashing algorithm on sensitive data",
+      "description": "[Sensitive data (password)](1) is used in a hashing algorithm (SHA256) that is insecure for password hashing, since it is not a computationally expensive hash function.\n[Sensitive data (password)](2) is used in a hashing algorithm (SHA256) that is insecure for password hashing, since it is not a computationally expensive hash function.",
+      "line": 29
+    },
+    {
+      "rule_id": "py/weak-sensitive-data-hashing",
+      "severity": "Medium",
+      "title": "Use of a broken or weak cryptographic hashing algorithm on sensitive data",
+      "description": "[Sensitive data (password)](1) is used in a hashing algorithm (SHA256) that is insecure for password hashing, since it is not a computationally expensive hash function.\n[Sensitive data (password)](2) is used in a hashing algorithm (SHA256) that is insecure for password hashing, since it is not a computationally expensive hash function.",
+      "line": 51
+    }
+  ],
+  "vuln_q_0003_0000": [
+    {
+      "rule_id": "py/weak-sensitive-data-hashing",
+      "severity": "Medium",
+      "title": "Use of a broken or weak cryptographic hashing algorithm on sensitive data",
+      "description": "[Sensitive data (password)](1) is used in a hashing algorithm (SHA256) that is insecure for password hashing, since it is not a computationally expensive hash function.\n[Sensitive data (password)](2) is used in a hashing algorithm (SHA256) that is insecure for password hashing, since it is not a computationally expensive hash function.\n[Sensitive data (password)](3) is used in a hashing algorithm (SHA256) that is insecure for password hashing, since it is not a computationally expensive hash fun",
+      "line": 11
+    }
+  ],
+  "vuln_q_0014_0001": [
+    {
+      "rule_id": "py/weak-sensitive-data-hashing",
+      "severity": "Medium",
+      "title": "Use of a broken or weak cryptographic hashing algorithm on sensitive data",
+      "description": "[Sensitive data (password)](1) is used in a hashing algorithm (SHA256) that is insecure for password hashing, since it is not a computationally expensive hash function.\n[Sensitive data (password)](2) is used in a hashing algorithm (SHA256) that is insecure for password hashing, since it is not a computationally expensive hash function.",
+      "line": 23
+    },
+    {
+      "rule_id": "py/flask-debug",
+      "severity": "High",
+      "title": "Flask app is run in debug mode",
+      "description": "A Flask app appears to be run in debug mode. This may allow an attacker to run arbitrary code through the debugger.",
+      "line": 69
+    }
+  ],
+  "vuln_q_0033_0000": [
+    {
+      "rule_id": "py/weak-sensitive-data-hashing",
+      "severity": "Medium",
+      "title": "Use of a broken or weak cryptographic hashing algorithm on sensitive data",
+      "description": "[Sensitive data (password)](1) is used in a hashing algorithm (SHA256) that is insecure for password hashing, since it is not a computationally expensive hash function.",
+      "line": 30
+    },
+    {
+      "rule_id": "py/weak-sensitive-data-hashing",
+      "severity": "Medium",
+      "title": "Use of a broken or weak cryptographic hashing algorithm on sensitive data",
+      "description": "[Sensitive data (password)](1) is used in a hashing algorithm (SHA256) that is insecure for password hashing, since it is not a computationally expensive hash function.",
+      "line": 79
+    }
+  ],
+  "vuln_q_0041_0000": [
+    {
+      "rule_id": "py/weak-sensitive-data-hashing",
+      "severity": "Medium",
+      "title": "Use of a broken or weak cryptographic hashing algorithm on sensitive data",
+      "description": "[Sensitive data (password)](1) is used in a hashing algorithm (SHA256) that is insecure for password hashing, since it is not a computationally expensive hash function.\n[Sensitive data (password)](2) is used in a hashing algorithm (SHA256) that is insecure for password hashing, since it is not a computationally expensive hash function.\n[Sensitive data (password)](3) is used in a hashing algorithm (SHA256) that is insecure for password hashing, since it is not a computationally expensive hash fun",
+      "line": 13
+    }
+  ],
+  "vuln_q_0045_0003": [
+    {
+      "rule_id": "py/weak-sensitive-data-hashing",
+      "severity": "Medium",
+      "title": "Use of a broken or weak cryptographic hashing algorithm on sensitive data",
+      "description": "[Sensitive data (password)](1) is used in a hashing algorithm (SHA256) that is insecure for password hashing, since it is not a computationally expensive hash function.\n[Sensitive data (password)](2) is used in a hashing algorithm (SHA256) that is insecure for password hashing, since it is not a computationally expensive hash function.\n[Sensitive data (password)](3) is used in a hashing algorithm (SHA256) that is insecure for password hashing, since it is not a computationally expensive hash fun",
+      "line": 15
+    }
+  ],
+  "vuln_q_0025_0001": [
+    {
+      "rule_id": "py/insecure-protocol",
+      "severity": "Medium",
+      "title": "Use of insecure SSL/TLS version",
+      "description": "Insecure SSL/TLS protocol version TLSv1 allowed by [call to ssl.create_default_context](1).\nInsecure SSL/TLS protocol version TLSv1_1 allowed by [call to ssl.create_default_context](1).",
+      "line": 26
+    }
+  ],
+  "vuln_q_0007_0004": [
+    {
+      "rule_id": "py/path-injection",
+      "severity": "High",
+      "title": "Uncontrolled data used in path expression",
+      "description": "This path depends on a [user-provided value](1).",
+      "line": 47
+    }
+  ],
+  "vuln_q_0092_0003": [
+    {
+      "rule_id": "py/path-injection",
+      "severity": "High",
+      "title": "Uncontrolled data used in path expression",
+      "description": "This path depends on a [user-provided value](1).",
+      "line": 19
+    },
+    {
+      "rule_id": "py/flask-debug",
+      "severity": "High",
+      "title": "Flask app is run in debug mode",
+      "description": "A Flask app appears to be run in debug mode. This may allow an attacker to run arbitrary code through the debugger.",
+      "line": 30
+    }
+  ],
+  "vuln_q_0026_0001": [
+    {
+      "rule_id": "py/flask-debug",
+      "severity": "High",
+      "title": "Flask app is run in debug mode",
+      "description": "A Flask app appears to be run in debug mode. This may allow an attacker to run arbitrary code through the debugger.",
+      "line": 62
+    }
+  ],
+  "vuln_q_0031_0000": [
+    {
+      "rule_id": "py/flask-debug",
+      "severity": "High",
+      "title": "Flask app is run in debug mode",
+      "description": "A Flask app appears to be run in debug mode. This may allow an attacker to run arbitrary code through the debugger.",
+      "line": 43
+    }
+  ],
+  "vuln_q_0031_0002": [
+    {
+      "rule_id": "py/flask-debug",
+      "severity": "High",
+      "title": "Flask app is run in debug mode",
+      "description": "A Flask app appears to be run in debug mode. This may allow an attacker to run arbitrary code through the debugger.",
+      "line": 21
+    }
+  ],
+  "vuln_q_0040_0000": [
+    {
+      "rule_id": "py/flask-debug",
+      "severity": "High",
+      "title": "Flask app is run in debug mode",
+      "description": "A Flask app appears to be run in debug mode. This may allow an attacker to run arbitrary code through the debugger.",
+      "line": 12
+    },
+    {
+      "rule_id": "py/flask-debug",
+      "severity": "High",
+      "title": "Flask app is run in debug mode",
+      "description": "A Flask app appears to be run in debug mode. This may allow an attacker to run arbitrary code through the debugger.",
+      "line": 33
+    }
+  ],
+  "vuln_q_0071_0000": [
+    {
+      "rule_id": "py/flask-debug",
+      "severity": "High",
+      "title": "Flask app is run in debug mode",
+      "description": "A Flask app appears to be run in debug mode. This may allow an attacker to run arbitrary code through the debugger.",
+      "line": 21
+    }
+  ],
+  "vuln_q_0071_0001": [
+    {
+      "rule_id": "py/flask-debug",
+      "severity": "High",
+      "title": "Flask app is run in debug mode",
+      "description": "A Flask app appears to be run in debug mode. This may allow an attacker to run arbitrary code through the debugger.",
+      "line": 61
+    }
+  ],
+  "vuln_q_0071_0002": [
+    {
+      "rule_id": "py/flask-debug",
+      "severity": "High",
+      "title": "Flask app is run in debug mode",
+      "description": "A Flask app appears to be run in debug mode. This may allow an attacker to run arbitrary code through the debugger.",
+      "line": 39
+    }
+  ],
+  "vuln_q_0071_0003": [
+    {
+      "rule_id": "py/flask-debug",
+      "severity": "High",
+      "title": "Flask app is run in debug mode",
+      "description": "A Flask app appears to be run in debug mode. This may allow an attacker to run arbitrary code through the debugger.",
+      "line": 17
+    }
+  ],
+  "vuln_q_0071_0004": [
+    {
+      "rule_id": "py/flask-debug",
+      "severity": "High",
+      "title": "Flask app is run in debug mode",
+      "description": "A Flask app appears to be run in debug mode. This may allow an attacker to run arbitrary code through the debugger.",
+      "line": 22
+    }
+  ],
+  "vuln_q_0092_0000": [
+    {
+      "rule_id": "py/flask-debug",
+      "severity": "High",
+      "title": "Flask app is run in debug mode",
+      "description": "A Flask app appears to be run in debug mode. This may allow an attacker to run arbitrary code through the debugger.",
+      "line": 27
+    }
+  ],
+  "vuln_q_0025_0002": [
+    {
+      "rule_id": "py/request-without-cert-validation",
+      "severity": "High",
+      "title": "Request without certificate validation",
+      "description": "This request may run without certificate validation because [it is disabled](1).",
+      "line": 11
+    }
+  ]
+}

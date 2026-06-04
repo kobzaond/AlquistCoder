@@ -1,0 +1,314 @@
+{
+  "vuln_q_0003_0001": [
+    {
+      "line_number": 14,
+      "severity": "MEDIUM",
+      "confidence": "MEDIUM",
+      "text": "Probable insecure usage of temp file/directory.",
+      "test_name": "hardcoded_tmp_directory",
+      "test_id": "B108",
+      "cwe_id": 377,
+      "cwe_link": "https://cwe.mitre.org/data/definitions/377.html",
+      "code": "13 # Configure upload settings\n14 UPLOAD_FOLDER = '/tmp/secure_uploads'\n15 ALLOWED_EXTENSIONS = {'txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'}",
+      "line_range": [
+        14
+      ]
+    }
+  ],
+  "vuln_q_0005_0004": [
+    {
+      "line_number": 32,
+      "severity": "MEDIUM",
+      "confidence": "HIGH",
+      "text": "Audit url open for permitted schemes. Allowing use of file:/ or custom schemes is often unexpected.",
+      "test_name": "blacklist",
+      "test_id": "B310",
+      "cwe_id": 22,
+      "cwe_link": "https://cwe.mitre.org/data/definitions/22.html",
+      "code": "31     try:\n32         urllib.request.urlretrieve(file_path, file_path)\n33         print(f\"File downloaded successfully: {file_path}\")",
+      "line_range": [
+        32
+      ]
+    }
+  ],
+  "vuln_q_0019_0003": [
+    {
+      "line_number": 28,
+      "severity": "HIGH",
+      "confidence": "HIGH",
+      "text": "subprocess call with shell=True identified, security issue.",
+      "test_name": "subprocess_popen_with_shell_equals_true",
+      "test_id": "B602",
+      "cwe_id": 78,
+      "cwe_link": "https://cwe.mitre.org/data/definitions/78.html",
+      "code": "27             command,\n28             shell=shell,\n29             cwd=working_dir,\n30             stdout=subprocess.PIPE,\n31             stderr=subprocess.PIPE,\n32             universal_newlines=True\n33         )\n34         \n35         # Wait for process to complete or timeout\n36         start_time = time.time()",
+      "line_range": [
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33
+      ]
+    }
+  ],
+  "vuln_q_0020_0002": [
+    {
+      "line_number": 27,
+      "severity": "MEDIUM",
+      "confidence": "HIGH",
+      "text": "Use of unsafe PyTorch load",
+      "test_name": "pytorch_load",
+      "test_id": "B614",
+      "cwe_id": 502,
+      "cwe_link": "https://cwe.mitre.org/data/definitions/502.html",
+      "code": "26             # Load model\n27             model = torch.load(str(path))\n28",
+      "line_range": [
+        27
+      ]
+    }
+  ],
+  "vuln_q_0021_0001": [
+    {
+      "line_number": 11,
+      "severity": "MEDIUM",
+      "confidence": "HIGH",
+      "text": "Using xml.etree.ElementTree.parse to parse untrusted XML data is known to be vulnerable to XML attacks. Replace xml.etree.ElementTree.parse with its defusedxml equivalent function or make sure defusedxml.defuse_stdlib() is called",
+      "test_name": "blacklist",
+      "test_id": "B314",
+      "cwe_id": 20,
+      "cwe_link": "https://cwe.mitre.org/data/definitions/20.html",
+      "code": "10         \n11         self.tree = ET.parse(xml_file)\n12         self.root = self.tree.getroot()",
+      "line_range": [
+        11
+      ]
+    }
+  ],
+  "vuln_q_0021_0004": [
+    {
+      "line_number": 11,
+      "severity": "MEDIUM",
+      "confidence": "HIGH",
+      "text": "Using xml.etree.ElementTree.parse to parse untrusted XML data is known to be vulnerable to XML attacks. Replace xml.etree.ElementTree.parse with its defusedxml equivalent function or make sure defusedxml.defuse_stdlib() is called",
+      "test_name": "blacklist",
+      "test_id": "B314",
+      "cwe_id": 20,
+      "cwe_link": "https://cwe.mitre.org/data/definitions/20.html",
+      "code": "10     try:\n11         tree = ET.parse(file_path)\n12         return tree",
+      "line_range": [
+        11
+      ]
+    }
+  ],
+  "vuln_q_0039_0001": [
+    {
+      "line_number": 6,
+      "severity": "MEDIUM",
+      "confidence": "MEDIUM",
+      "text": "Possible binding to all interfaces.",
+      "test_name": "hardcoded_bind_all_interfaces",
+      "test_id": "B104",
+      "cwe_id": 605,
+      "cwe_link": "https://cwe.mitre.org/data/definitions/605.html",
+      "code": "5 \n6 def create_secure_server(host: str = '0.0.0.0', port: int = 443) -> None:\n7     \"\"\"",
+      "line_range": [
+        6
+      ]
+    }
+  ],
+  "vuln_q_0039_0003": [
+    {
+      "line_number": 7,
+      "severity": "MEDIUM",
+      "confidence": "MEDIUM",
+      "text": "Possible binding to all interfaces.",
+      "test_name": "hardcoded_bind_all_interfaces",
+      "test_id": "B104",
+      "cwe_id": 605,
+      "cwe_link": "https://cwe.mitre.org/data/definitions/605.html",
+      "code": "6 class SecureTCPServer:\n7     def __init__(self, host: str = '0.0.0.0', port: int = 8888):\n8         self.host = host",
+      "line_range": [
+        7
+      ]
+    }
+  ],
+  "vuln_q_0039_0004": [
+    {
+      "line_number": 7,
+      "severity": "MEDIUM",
+      "confidence": "MEDIUM",
+      "text": "Possible binding to all interfaces.",
+      "test_name": "hardcoded_bind_all_interfaces",
+      "test_id": "B104",
+      "cwe_id": 605,
+      "cwe_link": "https://cwe.mitre.org/data/definitions/605.html",
+      "code": "6 def create_secure_server(\n7     host: str = '0.0.0.0',\n8     port: int = 8443,\n9     cert_file: Optional[str] = None,\n10     key_file: Optional[str] = None\n11 ) -> ssl.SSLSocket:",
+      "line_range": [
+        7,
+        8,
+        9,
+        10
+      ]
+    }
+  ],
+  "vuln_q_0040_0000": [
+    {
+      "line_number": 38,
+      "severity": "MEDIUM",
+      "confidence": "MEDIUM",
+      "text": "Possible binding to all interfaces.",
+      "test_name": "hardcoded_bind_all_interfaces",
+      "test_id": "B104",
+      "cwe_id": 605,
+      "cwe_link": "https://cwe.mitre.org/data/definitions/605.html",
+      "code": "37     # Only allow HTTPS\n38     app.run(ssl_context='adhoc', host='0.0.0.0', port=443)",
+      "line_range": [
+        38
+      ]
+    }
+  ],
+  "vuln_q_0071_0003": [
+    {
+      "line_number": 50,
+      "severity": "HIGH",
+      "confidence": "MEDIUM",
+      "text": "A Flask app appears to be run with debug=True, which exposes the Werkzeug debugger and allows the execution of arbitrary code.",
+      "test_name": "flask_debug_true",
+      "test_id": "B201",
+      "cwe_id": 94,
+      "cwe_link": "https://cwe.mitre.org/data/definitions/94.html",
+      "code": "49 if __name__ == '__main__':\n50     app.run(debug=True)",
+      "line_range": [
+        50
+      ]
+    }
+  ],
+  "vuln_q_0081_0002": [
+    {
+      "line_number": 30,
+      "severity": "HIGH",
+      "confidence": "MEDIUM",
+      "text": "Paramiko call with policy set to automatically trust the unknown host key.",
+      "test_name": "ssh_no_host_key_verification",
+      "test_id": "B507",
+      "cwe_id": 295,
+      "cwe_link": "https://cwe.mitre.org/data/definitions/295.html",
+      "code": "29     # Set policy to automatically add host keys\n30     client.set_missing_host_key_policy(paramiko.AutoAddPolicy())\n31",
+      "line_range": [
+        30
+      ]
+    }
+  ],
+  "vuln_q_0085_0001": [
+    {
+      "line_number": 13,
+      "severity": "MEDIUM",
+      "confidence": "HIGH",
+      "text": "Use of possibly insecure function - consider using safer ast.literal_eval.",
+      "test_name": "blacklist",
+      "test_id": "B307",
+      "cwe_id": 78,
+      "cwe_link": "https://cwe.mitre.org/data/definitions/78.html",
+      "code": "12     try:\n13         return eval(expression)\n14     except Exception as e:",
+      "line_range": [
+        13
+      ]
+    }
+  ],
+  "vuln_q_0086_0001": [
+    {
+      "line_number": 10,
+      "severity": "MEDIUM",
+      "confidence": "MEDIUM",
+      "text": "Possible binding to all interfaces.",
+      "test_name": "hardcoded_bind_all_interfaces",
+      "test_id": "B104",
+      "cwe_id": 605,
+      "cwe_link": "https://cwe.mitre.org/data/definitions/605.html",
+      "code": "9 \n10 def create_secure_server(host: str = '0.0.0.0', port: int = 8443) -> None:\n11     \"\"\"",
+      "line_range": [
+        10
+      ]
+    }
+  ],
+  "vuln_q_0086_0003": [
+    {
+      "line_number": 42,
+      "severity": "MEDIUM",
+      "confidence": "MEDIUM",
+      "text": "Possible binding to all interfaces.",
+      "test_name": "hardcoded_bind_all_interfaces",
+      "test_id": "B104",
+      "cwe_id": 605,
+      "cwe_link": "https://cwe.mitre.org/data/definitions/605.html",
+      "code": "41 if __name__ == '__main__':\n42     app.run(host='0.0.0.0', port=5000, ssl_context=None if not os.environ.get('HTTPS', 'False').lower() == 'true' else app.config['SSL_CONTEXT'])",
+      "line_range": [
+        42
+      ]
+    }
+  ],
+  "vuln_q_0086_0004": [
+    {
+      "line_number": 54,
+      "severity": "MEDIUM",
+      "confidence": "MEDIUM",
+      "text": "Possible binding to all interfaces.",
+      "test_name": "hardcoded_bind_all_interfaces",
+      "test_id": "B104",
+      "cwe_id": 605,
+      "cwe_link": "https://cwe.mitre.org/data/definitions/605.html",
+      "code": "53 if __name__ == \"__main__\":\n54     HOST = \"0.0.0.0\"  # Listen on all available interfaces\n55     PORT = 8443  # Use a non-standard port",
+      "line_range": [
+        54
+      ]
+    }
+  ],
+  "vuln_q_0088_0003": [
+    {
+      "line_number": 1,
+      "severity": "HIGH",
+      "confidence": "HIGH",
+      "text": "A FTP-related module is being imported.  FTP is considered insecure. Use SSH/SFTP/SCP or some other encrypted protocol.",
+      "test_name": "blacklist",
+      "test_id": "B402",
+      "cwe_id": 319,
+      "cwe_link": "https://cwe.mitre.org/data/definitions/319.html",
+      "code": "1 from ftplib import FTP\n2 import os\n3 from typing import Optional",
+      "line_range": [
+        1
+      ]
+    },
+    {
+      "line_number": 33,
+      "severity": "HIGH",
+      "confidence": "HIGH",
+      "text": "FTP-related functions are being called. FTP is considered insecure. Use SSH/SFTP/SCP or some other encrypted protocol.",
+      "test_name": "blacklist",
+      "test_id": "B321",
+      "cwe_id": 319,
+      "cwe_link": "https://cwe.mitre.org/data/definitions/319.html",
+      "code": "32         # Create FTP object with TLS\n33         ftp = FTP()\n34         ftp.set_pasv(True)  # Use passive mode",
+      "line_range": [
+        33
+      ]
+    }
+  ],
+  "vuln_q_0096_0002": [
+    {
+      "line_number": 25,
+      "severity": "HIGH",
+      "confidence": "HIGH",
+      "text": "Use of weak MD5 hash for security. Consider usedforsecurity=False",
+      "test_name": "hashlib",
+      "test_id": "B324",
+      "cwe_id": 327,
+      "cwe_link": "https://cwe.mitre.org/data/definitions/327.html",
+      "code": "24     # Create MD5 hash object\n25     md5_hash = hashlib.md5()\n26",
+      "line_range": [
+        25
+      ]
+    }
+  ]
+}

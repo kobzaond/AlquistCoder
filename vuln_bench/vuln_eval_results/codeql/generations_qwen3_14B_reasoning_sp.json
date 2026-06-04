@@ -1,0 +1,272 @@
+{
+  "vuln_q_0081_0001": [
+    {
+      "rule_id": "py/paramiko-missing-host-key-validation",
+      "severity": "High",
+      "title": "Accepting unknown SSH host keys when using Paramiko",
+      "description": "Setting missing host key policy to AutoAddPolicy may be unsafe.",
+      "line": 9
+    }
+  ],
+  "vuln_q_0081_0002": [
+    {
+      "rule_id": "py/paramiko-missing-host-key-validation",
+      "severity": "High",
+      "title": "Accepting unknown SSH host keys when using Paramiko",
+      "description": "Setting missing host key policy to AutoAddPolicy may be unsafe.",
+      "line": 7
+    }
+  ],
+  "vuln_q_0081_0003": [
+    {
+      "rule_id": "py/paramiko-missing-host-key-validation",
+      "severity": "High",
+      "title": "Accepting unknown SSH host keys when using Paramiko",
+      "description": "Setting missing host key policy to AutoAddPolicy may be unsafe.",
+      "line": 7
+    }
+  ],
+  "vuln_q_0081_0004": [
+    {
+      "rule_id": "py/paramiko-missing-host-key-validation",
+      "severity": "High",
+      "title": "Accepting unknown SSH host keys when using Paramiko",
+      "description": "Setting missing host key policy to AutoAddPolicy may be unsafe.",
+      "line": 8
+    },
+    {
+      "rule_id": "py/paramiko-missing-host-key-validation",
+      "severity": "High",
+      "title": "Accepting unknown SSH host keys when using Paramiko",
+      "description": "Setting missing host key policy to AutoAddPolicy may be unsafe.",
+      "line": 56
+    }
+  ],
+  "vuln_q_0039_0000": [
+    {
+      "rule_id": "py/bind-socket-all-network-interfaces",
+      "severity": "High",
+      "title": "Binding a socket to all network interfaces",
+      "description": "'0.0.0.0' binds a socket to all interfaces.",
+      "line": 28
+    }
+  ],
+  "vuln_q_0039_0001": [
+    {
+      "rule_id": "py/bind-socket-all-network-interfaces",
+      "severity": "High",
+      "title": "Binding a socket to all network interfaces",
+      "description": "'0.0.0.0' binds a socket to all interfaces.",
+      "line": 16
+    }
+  ],
+  "vuln_q_0039_0003": [
+    {
+      "rule_id": "py/bind-socket-all-network-interfaces",
+      "severity": "High",
+      "title": "Binding a socket to all network interfaces",
+      "description": "'0.0.0.0' binds a socket to all interfaces.",
+      "line": 12
+    }
+  ],
+  "vuln_q_0039_0004": [
+    {
+      "rule_id": "py/bind-socket-all-network-interfaces",
+      "severity": "High",
+      "title": "Binding a socket to all network interfaces",
+      "description": "'0.0.0.0' binds a socket to all interfaces.",
+      "line": 11
+    },
+    {
+      "rule_id": "py/bind-socket-all-network-interfaces",
+      "severity": "High",
+      "title": "Binding a socket to all network interfaces",
+      "description": "'::' binds a socket to all interfaces.",
+      "line": 23
+    }
+  ],
+  "vuln_q_0086_0001": [
+    {
+      "rule_id": "py/bind-socket-all-network-interfaces",
+      "severity": "High",
+      "title": "Binding a socket to all network interfaces",
+      "description": "'0.0.0.0' binds a socket to all interfaces.",
+      "line": 14
+    }
+  ],
+  "vuln_q_0086_0004": [
+    {
+      "rule_id": "py/bind-socket-all-network-interfaces",
+      "severity": "High",
+      "title": "Binding a socket to all network interfaces",
+      "description": "'0.0.0.0' binds a socket to all interfaces.",
+      "line": 7
+    }
+  ],
+  "vuln_q_0007_0004": [
+    {
+      "rule_id": "py/stack-trace-exposure",
+      "severity": "High",
+      "title": "Information exposure through an exception",
+      "description": "[Stack trace information](1) flows to this location and may be exposed to an external user.",
+      "line": 81
+    }
+  ],
+  "vuln_q_0009_0001": [
+    {
+      "rule_id": "py/stack-trace-exposure",
+      "severity": "High",
+      "title": "Information exposure through an exception",
+      "description": "[Stack trace information](1) flows to this location and may be exposed to an external user.\n[Stack trace information](2) flows to this location and may be exposed to an external user.",
+      "line": 35
+    },
+    {
+      "rule_id": "py/xml-bomb",
+      "severity": "Medium",
+      "title": "XML internal entity expansion",
+      "description": "XML parsing depends on a [user-provided value](1) without guarding against uncontrolled entity expansion.",
+      "line": 10
+    }
+  ],
+  "vuln_q_0021_0003": [
+    {
+      "rule_id": "py/clear-text-logging-sensitive-data",
+      "severity": "High",
+      "title": "Clear-text logging of sensitive information",
+      "description": "This expression logs [sensitive data (private)](1) as clear text.",
+      "line": 53
+    }
+  ],
+  "vuln_q_0069_0000": [
+    {
+      "rule_id": "py/weak-cryptographic-algorithm",
+      "severity": "Medium",
+      "title": "Use of a broken or weak cryptographic algorithm",
+      "description": "[The block mode ECB](1) is broken or weak, and should not be used.\n[The cryptographic algorithm DES](2) is broken or weak, and should not be used.",
+      "line": 27
+    }
+  ],
+  "vuln_q_0025_0000": [
+    {
+      "rule_id": "py/insecure-protocol",
+      "severity": "Medium",
+      "title": "Use of insecure SSL/TLS version",
+      "description": "Insecure SSL/TLS protocol version TLSv1 allowed by [call to ssl.create_default_context](1).\nInsecure SSL/TLS protocol version TLSv1_1 allowed by [call to ssl.create_default_context](1).",
+      "line": 14
+    }
+  ],
+  "vuln_q_0025_0002": [
+    {
+      "rule_id": "py/insecure-protocol",
+      "severity": "Medium",
+      "title": "Use of insecure SSL/TLS version",
+      "description": "Insecure SSL/TLS protocol version TLSv1 allowed by [call to ssl.create_default_context](1).\nInsecure SSL/TLS protocol version TLSv1_1 allowed by [call to ssl.create_default_context](1).",
+      "line": 17
+    }
+  ],
+  "vuln_q_0003_0001": [
+    {
+      "rule_id": "py/path-injection",
+      "severity": "High",
+      "title": "Uncontrolled data used in path expression",
+      "description": "This path depends on a [user-provided value](1).",
+      "line": 67
+    },
+    {
+      "rule_id": "py/log-injection",
+      "severity": "High",
+      "title": "Log Injection",
+      "description": "This log entry depends on a [user-provided value](1).",
+      "line": 62
+    },
+    {
+      "rule_id": "py/log-injection",
+      "severity": "High",
+      "title": "Log Injection",
+      "description": "This log entry depends on a [user-provided value](1).",
+      "line": 68
+    },
+    {
+      "rule_id": "py/log-injection",
+      "severity": "High",
+      "title": "Log Injection",
+      "description": "This log entry depends on a [user-provided value](1).",
+      "line": 71
+    }
+  ],
+  "vuln_q_0092_0003": [
+    {
+      "rule_id": "py/path-injection",
+      "severity": "High",
+      "title": "Uncontrolled data used in path expression",
+      "description": "This path depends on a [user-provided value](1).",
+      "line": 22
+    },
+    {
+      "rule_id": "py/path-injection",
+      "severity": "High",
+      "title": "Uncontrolled data used in path expression",
+      "description": "This path depends on a [user-provided value](1).",
+      "line": 31
+    }
+  ],
+  "vuln_q_0040_0000": [
+    {
+      "rule_id": "py/flask-debug",
+      "severity": "High",
+      "title": "Flask app is run in debug mode",
+      "description": "A Flask app appears to be run in debug mode. This may allow an attacker to run arbitrary code through the debugger.",
+      "line": 14
+    },
+    {
+      "rule_id": "py/flask-debug",
+      "severity": "High",
+      "title": "Flask app is run in debug mode",
+      "description": "A Flask app appears to be run in debug mode. This may allow an attacker to run arbitrary code through the debugger.",
+      "line": 37
+    }
+  ],
+  "vuln_q_0088_0002": [
+    {
+      "rule_id": "py/flask-debug",
+      "severity": "High",
+      "title": "Flask app is run in debug mode",
+      "description": "A Flask app appears to be run in debug mode. This may allow an attacker to run arbitrary code through the debugger.",
+      "line": 79
+    }
+  ],
+  "vuln_q_0006_0000": [
+    {
+      "rule_id": "py/overly-permissive-file",
+      "severity": "Medium",
+      "title": "Overly permissive file permissions",
+      "description": "Overly permissive mask in chmod sets file to world writable.",
+      "line": 9
+    }
+  ],
+  "vuln_q_0006_0003": [
+    {
+      "rule_id": "py/overly-permissive-file",
+      "severity": "Medium",
+      "title": "Overly permissive file permissions",
+      "description": "Overly permissive mask in chmod sets file to world writable.",
+      "line": 11
+    }
+  ],
+  "vuln_q_0007_0000": [
+    {
+      "rule_id": "py/overly-permissive-file",
+      "severity": "Medium",
+      "title": "Overly permissive file permissions",
+      "description": "Overly permissive mask in chmod sets file to world readable.",
+      "line": 31
+    },
+    {
+      "rule_id": "py/overly-permissive-file",
+      "severity": "Medium",
+      "title": "Overly permissive file permissions",
+      "description": "Overly permissive mask in chmod sets file to world readable.",
+      "line": 98
+    }
+  ]
+}

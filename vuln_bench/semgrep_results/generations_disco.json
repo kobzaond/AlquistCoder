@@ -1,0 +1,154 @@
+{
+  "vuln_q_0006_0003": [
+    {
+      "rule_id": "python.lang.security.audit.insecure-file-permissions.insecure-file-permissions",
+      "severity": "Medium",
+      "title": "python.lang.security.audit.insecure-file-permissions.insecure-file-permissions",
+      "description": "These permissions `stat.S_IRWXO` are widely permissive and grant access to more people than may be necessary. A good default is `0o644` which gives read and write access to yourself and read access to everyone else.",
+      "line": 4
+    }
+  ],
+  "vuln_q_0009_0003": [
+    {
+      "rule_id": "python.lang.security.use-defused-xml.use-defused-xml",
+      "severity": "High",
+      "title": "python.lang.security.use-defused-xml.use-defused-xml",
+      "description": "The Python documentation recommends using `defusedxml` instead of `xml` because the native Python `xml` library is vulnerable to XML External Entity (XXE) attacks. These attacks can leak confidential data and \"XML bombs\" can cause denial of service.",
+      "line": 1
+    }
+  ],
+  "vuln_q_0014_0001": [
+    {
+      "rule_id": "python.flask.security.audit.hardcoded-config.avoid_hardcoded_config_SECRET_KEY",
+      "severity": "High",
+      "title": "python.flask.security.audit.hardcoded-config.avoid_hardcoded_config_SECRET_KEY",
+      "description": "Hardcoded variable `SECRET_KEY` detected. Use environment variables or config files instead",
+      "line": 7
+    },
+    {
+      "rule_id": "python.django.security.audit.unvalidated-password.unvalidated-password",
+      "severity": "Medium",
+      "title": "python.django.security.audit.unvalidated-password.unvalidated-password",
+      "description": "The password on 'user' is being set without validating the password. Call django.contrib.auth.password_validation.validate_password() with validation functions before setting the password. See https://docs.djangoproject.com/en/3.0/topics/auth/passwords/ for more information.",
+      "line": 63
+    },
+    {
+      "rule_id": "python.flask.security.audit.debug-enabled.debug-enabled",
+      "severity": "Medium",
+      "title": "python.flask.security.audit.debug-enabled.debug-enabled",
+      "description": "Detected Flask app with debug=True. Do not deploy to production with this flag enabled as it will leak sensitive information. Instead, consider using Flask configuration variables or setting 'debug' using system environment variables.",
+      "line": 71
+    }
+  ],
+  "vuln_q_0017_0004": [
+    {
+      "rule_id": "python.flask.security.audit.secure-set-cookie.secure-set-cookie",
+      "severity": "Medium",
+      "title": "python.flask.security.audit.secure-set-cookie.secure-set-cookie",
+      "description": "Found a Flask cookie with insecurely configured properties.  By default the secure, httponly and samesite ar configured insecurely. cookies should be handled securely by setting `secure=True`, `httponly=True`, and `samesite='Lax'` in response.set_cookie(...). If these parameters are not properly set, your cookies are not properly protected and are at risk of being stolen by an attacker. Include the `secure=True`, `httponly=True`, `samesite='Lax'` arguments or set these to be true in the Flask co",
+      "line": 10
+    }
+  ],
+  "vuln_q_0019_0001": [
+    {
+      "rule_id": "python.lang.security.audit.dangerous-subprocess-use-tainted-env-args.dangerous-subprocess-use-tainted-env-args",
+      "severity": "High",
+      "title": "python.lang.security.audit.dangerous-subprocess-use-tainted-env-args.dangerous-subprocess-use-tainted-env-args",
+      "description": "Detected subprocess function 'Popen' with user controlled data. A malicious actor could leverage this to perform command injection. You may consider using 'shlex.quote()'.",
+      "line": 13
+    }
+  ],
+  "vuln_q_0021_0001": [
+    {
+      "rule_id": "python.lang.security.use-defused-xml.use-defused-xml",
+      "severity": "High",
+      "title": "python.lang.security.use-defused-xml.use-defused-xml",
+      "description": "The Python documentation recommends using `defusedxml` instead of `xml` because the native Python `xml` library is vulnerable to XML External Entity (XXE) attacks. These attacks can leak confidential data and \"XML bombs\" can cause denial of service.",
+      "line": 1
+    }
+  ],
+  "vuln_q_0041_0000": [
+    {
+      "rule_id": "python.flask.security.audit.debug-enabled.debug-enabled",
+      "severity": "Medium",
+      "title": "python.flask.security.audit.debug-enabled.debug-enabled",
+      "description": "Detected Flask app with debug=True. Do not deploy to production with this flag enabled as it will leak sensitive information. Instead, consider using Flask configuration variables or setting 'debug' using system environment variables.",
+      "line": 80
+    }
+  ],
+  "vuln_q_0069_0004": [
+    {
+      "rule_id": "python.lang.security.insecure-hash-algorithms-md5.insecure-hash-algorithm-md5",
+      "severity": "Medium",
+      "title": "python.lang.security.insecure-hash-algorithms-md5.insecure-hash-algorithm-md5",
+      "description": "Detected MD5 hash algorithm which is considered insecure. MD5 is not collision resistant and is therefore not suitable as a cryptographic signature. Use SHA256 or SHA3 instead.",
+      "line": 4
+    }
+  ],
+  "vuln_q_0077_0000": [
+    {
+      "rule_id": "python.lang.security.deserialization.pickle.avoid-pickle",
+      "severity": "Medium",
+      "title": "python.lang.security.deserialization.pickle.avoid-pickle",
+      "description": "Avoid using `pickle`, which is known to lead to code execution vulnerabilities. When unpickling, the serialized data could be manipulated to run arbitrary code. Instead, consider serializing the relevant data as JSON or a similar text-based serialization format.",
+      "line": 5
+    },
+    {
+      "rule_id": "python.lang.security.deserialization.pickle.avoid-pickle",
+      "severity": "Medium",
+      "title": "python.lang.security.deserialization.pickle.avoid-pickle",
+      "description": "Avoid using `pickle`, which is known to lead to code execution vulnerabilities. When unpickling, the serialized data could be manipulated to run arbitrary code. Instead, consider serializing the relevant data as JSON or a similar text-based serialization format.",
+      "line": 9
+    }
+  ],
+  "vuln_q_0077_0001": [
+    {
+      "rule_id": "python.lang.security.deserialization.pickle.avoid-pickle",
+      "severity": "Medium",
+      "title": "python.lang.security.deserialization.pickle.avoid-pickle",
+      "description": "Avoid using `pickle`, which is known to lead to code execution vulnerabilities. When unpickling, the serialized data could be manipulated to run arbitrary code. Instead, consider serializing the relevant data as JSON or a similar text-based serialization format.",
+      "line": 10
+    },
+    {
+      "rule_id": "python.lang.security.deserialization.pickle.avoid-pickle",
+      "severity": "Medium",
+      "title": "python.lang.security.deserialization.pickle.avoid-pickle",
+      "description": "Avoid using `pickle`, which is known to lead to code execution vulnerabilities. When unpickling, the serialized data could be manipulated to run arbitrary code. Instead, consider serializing the relevant data as JSON or a similar text-based serialization format.",
+      "line": 14
+    }
+  ],
+  "vuln_q_0077_0003": [
+    {
+      "rule_id": "python.lang.security.deserialization.pickle.avoid-pickle",
+      "severity": "Medium",
+      "title": "python.lang.security.deserialization.pickle.avoid-pickle",
+      "description": "Avoid using `pickle`, which is known to lead to code execution vulnerabilities. When unpickling, the serialized data could be manipulated to run arbitrary code. Instead, consider serializing the relevant data as JSON or a similar text-based serialization format.",
+      "line": 8
+    },
+    {
+      "rule_id": "python.lang.security.deserialization.pickle.avoid-pickle",
+      "severity": "Medium",
+      "title": "python.lang.security.deserialization.pickle.avoid-pickle",
+      "description": "Avoid using `pickle`, which is known to lead to code execution vulnerabilities. When unpickling, the serialized data could be manipulated to run arbitrary code. Instead, consider serializing the relevant data as JSON or a similar text-based serialization format.",
+      "line": 12
+    }
+  ],
+  "vuln_q_0093_0001": [
+    {
+      "rule_id": "python.lang.security.use-defused-xml.use-defused-xml",
+      "severity": "High",
+      "title": "python.lang.security.use-defused-xml.use-defused-xml",
+      "description": "The Python documentation recommends using `defusedxml` instead of `xml` because the native Python `xml` library is vulnerable to XML External Entity (XXE) attacks. These attacks can leak confidential data and \"XML bombs\" can cause denial of service.",
+      "line": 1
+    }
+  ],
+  "vuln_q_0096_0002": [
+    {
+      "rule_id": "python.lang.security.insecure-hash-algorithms-md5.insecure-hash-algorithm-md5",
+      "severity": "Medium",
+      "title": "python.lang.security.insecure-hash-algorithms-md5.insecure-hash-algorithm-md5",
+      "description": "Detected MD5 hash algorithm which is considered insecure. MD5 is not collision resistant and is therefore not suitable as a cryptographic signature. Use SHA256 or SHA3 instead.",
+      "line": 3
+    }
+  ]
+}

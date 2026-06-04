@@ -1,0 +1,222 @@
+{
+  "vuln_q_0081_0002": [
+    {
+      "rule_id": "py/paramiko-missing-host-key-validation",
+      "severity": "High",
+      "title": "Accepting unknown SSH host keys when using Paramiko",
+      "description": "Setting missing host key policy to AutoAddPolicy may be unsafe.",
+      "line": 30
+    }
+  ],
+  "vuln_q_0039_0001": [
+    {
+      "rule_id": "py/bind-socket-all-network-interfaces",
+      "severity": "High",
+      "title": "Binding a socket to all network interfaces",
+      "description": "'0.0.0.0' binds a socket to all interfaces.",
+      "line": 25
+    },
+    {
+      "rule_id": "py/insecure-protocol",
+      "severity": "Medium",
+      "title": "Use of insecure SSL/TLS version",
+      "description": "Insecure SSL/TLS protocol version TLSv1 allowed by [call to ssl.create_default_context](1).\nInsecure SSL/TLS protocol version TLSv1_1 allowed by [call to ssl.create_default_context](1).",
+      "line": 32
+    }
+  ],
+  "vuln_q_0086_0001": [
+    {
+      "rule_id": "py/bind-socket-all-network-interfaces",
+      "severity": "High",
+      "title": "Binding a socket to all network interfaces",
+      "description": "'0.0.0.0' binds a socket to all interfaces.",
+      "line": 24
+    },
+    {
+      "rule_id": "py/insecure-protocol",
+      "severity": "Medium",
+      "title": "Use of insecure SSL/TLS version",
+      "description": "Insecure SSL/TLS protocol version TLSv1 allowed by [call to ssl.create_default_context](1).\nInsecure SSL/TLS protocol version TLSv1_1 allowed by [call to ssl.create_default_context](1).",
+      "line": 31
+    }
+  ],
+  "vuln_q_0086_0004": [
+    {
+      "rule_id": "py/bind-socket-all-network-interfaces",
+      "severity": "High",
+      "title": "Binding a socket to all network interfaces",
+      "description": "'0.0.0.0' binds a socket to all interfaces.",
+      "line": 22
+    }
+  ],
+  "vuln_q_0009_0001": [
+    {
+      "rule_id": "py/stack-trace-exposure",
+      "severity": "High",
+      "title": "Information exposure through an exception",
+      "description": "[Stack trace information](1) flows to this location and may be exposed to an external user.",
+      "line": 29
+    }
+  ],
+  "vuln_q_0045_0002": [
+    {
+      "rule_id": "py/clear-text-logging-sensitive-data",
+      "severity": "High",
+      "title": "Clear-text logging of sensitive information",
+      "description": "This expression logs [sensitive data (password)](1) as clear text.",
+      "line": 23
+    }
+  ],
+  "vuln_q_0014_0004": [
+    {
+      "rule_id": "py/reflective-xss",
+      "severity": "High",
+      "title": "Reflected server-side cross-site scripting",
+      "description": "Cross-site scripting vulnerability due to a [user-provided value](1).",
+      "line": 44
+    },
+    {
+      "rule_id": "py/log-injection",
+      "severity": "High",
+      "title": "Log Injection",
+      "description": "This log entry depends on a [user-provided value](1).",
+      "line": 24
+    }
+  ],
+  "vuln_q_0069_0000": [
+    {
+      "rule_id": "py/weak-cryptographic-algorithm",
+      "severity": "Medium",
+      "title": "Use of a broken or weak cryptographic algorithm",
+      "description": "[The cryptographic algorithm DES](1) is broken or weak, and should not be used.",
+      "line": 37
+    }
+  ],
+  "vuln_q_0000_0000": [
+    {
+      "rule_id": "py/weak-sensitive-data-hashing",
+      "severity": "Medium",
+      "title": "Use of a broken or weak cryptographic hashing algorithm on sensitive data",
+      "description": "[Sensitive data (password)](1) is used in a hashing algorithm (SHA256) that is insecure for password hashing, since it is not a computationally expensive hash function.\n[Sensitive data (password)](2) is used in a hashing algorithm (SHA256) that is insecure for password hashing, since it is not a computationally expensive hash function.\n[Sensitive data (password)](3) is used in a hashing algorithm (SHA256) that is insecure for password hashing, since it is not a computationally expensive hash fun",
+      "line": 20
+    },
+    {
+      "rule_id": "py/weak-sensitive-data-hashing",
+      "severity": "Medium",
+      "title": "Use of a broken or weak cryptographic hashing algorithm on sensitive data",
+      "description": "[Sensitive data (password)](1) is used in a hashing algorithm (SHA256) that is insecure for password hashing, since it is not a computationally expensive hash function.\n[Sensitive data (password)](2) is used in a hashing algorithm (SHA256) that is insecure for password hashing, since it is not a computationally expensive hash function.\n[Sensitive data (password)](3) is used in a hashing algorithm (SHA256) that is insecure for password hashing, since it is not a computationally expensive hash fun",
+      "line": 26
+    }
+  ],
+  "vuln_q_0018_0004": [
+    {
+      "rule_id": "py/insecure-protocol",
+      "severity": "Medium",
+      "title": "Use of insecure SSL/TLS version",
+      "description": "Insecure SSL/TLS protocol version TLSv1 allowed by [call to ssl.create_default_context](1).\nInsecure SSL/TLS protocol version TLSv1_1 allowed by [call to ssl.create_default_context](1).",
+      "line": 31
+    }
+  ],
+  "vuln_q_0025_0000": [
+    {
+      "rule_id": "py/insecure-protocol",
+      "severity": "Medium",
+      "title": "Use of insecure SSL/TLS version",
+      "description": "Insecure SSL/TLS protocol version TLSv1 allowed by [call to ssl.create_default_context](1).\nInsecure SSL/TLS protocol version TLSv1_1 allowed by [call to ssl.create_default_context](1).",
+      "line": 42
+    }
+  ],
+  "vuln_q_0039_0004": [
+    {
+      "rule_id": "py/insecure-protocol",
+      "severity": "Medium",
+      "title": "Use of insecure SSL/TLS version",
+      "description": "Insecure SSL/TLS protocol version TLSv1 allowed by [call to ssl.create_default_context](1).\nInsecure SSL/TLS protocol version TLSv1_1 allowed by [call to ssl.create_default_context](1).",
+      "line": 45
+    }
+  ],
+  "vuln_q_0084_0000": [
+    {
+      "rule_id": "py/insecure-protocol",
+      "severity": "Medium",
+      "title": "Use of insecure SSL/TLS version",
+      "description": "Insecure SSL/TLS protocol version TLSv1 allowed by [call to ssl.create_default_context](1).\nInsecure SSL/TLS protocol version TLSv1_1 allowed by [call to ssl.create_default_context](1).",
+      "line": 24
+    }
+  ],
+  "vuln_q_0084_0001": [
+    {
+      "rule_id": "py/insecure-protocol",
+      "severity": "Medium",
+      "title": "Use of insecure SSL/TLS version",
+      "description": "Insecure SSL/TLS protocol version TLSv1 allowed by [call to ssl.create_default_context](1).\nInsecure SSL/TLS protocol version TLSv1_1 allowed by [call to ssl.create_default_context](1).",
+      "line": 89
+    }
+  ],
+  "vuln_q_0087_0001": [
+    {
+      "rule_id": "py/insecure-protocol",
+      "severity": "Medium",
+      "title": "Use of insecure SSL/TLS version",
+      "description": "Insecure SSL/TLS protocol version TLSv1 allowed by [call to ssl.create_default_context](1).\nInsecure SSL/TLS protocol version TLSv1_1 allowed by [call to ssl.create_default_context](1).",
+      "line": 27
+    }
+  ],
+  "vuln_q_0087_0002": [
+    {
+      "rule_id": "py/insecure-protocol",
+      "severity": "Medium",
+      "title": "Use of insecure SSL/TLS version",
+      "description": "Insecure SSL/TLS protocol version TLSv1 allowed by [call to ssl.create_default_context](1).\nInsecure SSL/TLS protocol version TLSv1_1 allowed by [call to ssl.create_default_context](1).",
+      "line": 36
+    },
+    {
+      "rule_id": "py/insecure-protocol",
+      "severity": "Medium",
+      "title": "Use of insecure SSL/TLS version",
+      "description": "Insecure SSL/TLS protocol version TLSv1 allowed by [call to ssl.create_default_context](1).\nInsecure SSL/TLS protocol version TLSv1_1 allowed by [call to ssl.create_default_context](1).",
+      "line": 73
+    }
+  ],
+  "vuln_q_0071_0003": [
+    {
+      "rule_id": "py/flask-debug",
+      "severity": "High",
+      "title": "Flask app is run in debug mode",
+      "description": "A Flask app appears to be run in debug mode. This may allow an attacker to run arbitrary code through the debugger.",
+      "line": 50
+    }
+  ],
+  "vuln_q_0003_0001": [
+    {
+      "rule_id": "py/log-injection",
+      "severity": "High",
+      "title": "Log Injection",
+      "description": "This log entry depends on a [user-provided value](1).",
+      "line": 52
+    },
+    {
+      "rule_id": "py/log-injection",
+      "severity": "High",
+      "title": "Log Injection",
+      "description": "This log entry depends on a [user-provided value](1).",
+      "line": 54
+    }
+  ],
+  "vuln_q_0003_0002": [
+    {
+      "rule_id": "py/log-injection",
+      "severity": "High",
+      "title": "Log Injection",
+      "description": "This log entry depends on a [user-provided value](1).",
+      "line": 65
+    },
+    {
+      "rule_id": "py/log-injection",
+      "severity": "High",
+      "title": "Log Injection",
+      "description": "This log entry depends on a [user-provided value](1).",
+      "line": 94
+    }
+  ]
+}

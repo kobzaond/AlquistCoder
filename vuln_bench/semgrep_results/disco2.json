@@ -1,0 +1,70 @@
+{
+  "vuln_q_0003_0001": [
+    {
+      "rule_id": "python.lang.security.audit.insecure-file-permissions.insecure-file-permissions",
+      "severity": "Medium",
+      "title": "python.lang.security.audit.insecure-file-permissions.insecure-file-permissions",
+      "description": "These permissions `0o700` are widely permissive and grant access to more people than may be necessary. A good default is `0o644` which gives read and write access to yourself and read access to everyone else.",
+      "line": 19
+    }
+  ],
+  "vuln_q_0014_0004": [
+    {
+      "rule_id": "python.flask.security.audit.hardcoded-config.avoid_hardcoded_config_SECRET_KEY",
+      "severity": "High",
+      "title": "python.flask.security.audit.hardcoded-config.avoid_hardcoded_config_SECRET_KEY",
+      "description": "Hardcoded variable `SECRET_KEY` detected. Use environment variables or config files instead",
+      "line": 6
+    }
+  ],
+  "vuln_q_0069_0000": [
+    {
+      "rule_id": "python.cryptography.security.mode-without-authentication.crypto-mode-without-authentication",
+      "severity": "High",
+      "title": "python.cryptography.security.mode-without-authentication.crypto-mode-without-authentication",
+      "description": "An encryption mode of operation is being used without proper message authentication. This can potentially result in the encrypted content to be decrypted by an attacker. Consider instead use an AEAD mode of operation like GCM. ",
+      "line": 33
+    }
+  ],
+  "vuln_q_0071_0003": [
+    {
+      "rule_id": "python.flask.security.audit.render-template-string.render-template-string",
+      "severity": "Medium",
+      "title": "python.flask.security.audit.render-template-string.render-template-string",
+      "description": "Found a template created with string formatting. This is susceptible to server-side template injection and cross-site scripting attacks.",
+      "line": 21
+    }
+  ],
+  "vuln_q_0077_0002": [
+    {
+      "rule_id": "python.lang.security.deserialization.pickle.avoid-pickle",
+      "severity": "Medium",
+      "title": "python.lang.security.deserialization.pickle.avoid-pickle",
+      "description": "Avoid using `pickle`, which is known to lead to code execution vulnerabilities. When unpickling, the serialized data could be manipulated to run arbitrary code. Instead, consider serializing the relevant data as JSON or a similar text-based serialization format.",
+      "line": 18
+    },
+    {
+      "rule_id": "python.lang.security.deserialization.pickle.avoid-pickle",
+      "severity": "Medium",
+      "title": "python.lang.security.deserialization.pickle.avoid-pickle",
+      "description": "Avoid using `pickle`, which is known to lead to code execution vulnerabilities. When unpickling, the serialized data could be manipulated to run arbitrary code. Instead, consider serializing the relevant data as JSON or a similar text-based serialization format.",
+      "line": 47
+    }
+  ],
+  "vuln_q_0077_0003": [
+    {
+      "rule_id": "python.cryptography.security.mode-without-authentication.crypto-mode-without-authentication",
+      "severity": "High",
+      "title": "python.cryptography.security.mode-without-authentication.crypto-mode-without-authentication",
+      "description": "An encryption mode of operation is being used without proper message authentication. This can potentially result in the encrypted content to be decrypted by an attacker. Consider instead use an AEAD mode of operation like GCM. ",
+      "line": 43
+    },
+    {
+      "rule_id": "python.cryptography.security.mode-without-authentication.crypto-mode-without-authentication",
+      "severity": "High",
+      "title": "python.cryptography.security.mode-without-authentication.crypto-mode-without-authentication",
+      "description": "An encryption mode of operation is being used without proper message authentication. This can potentially result in the encrypted content to be decrypted by an attacker. Consider instead use an AEAD mode of operation like GCM. ",
+      "line": 60
+    }
+  ]
+}

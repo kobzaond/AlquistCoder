@@ -76,7 +76,7 @@ def main():
     parser.add_argument("--dataset", type=str, required=True, help="Path to JSON/JSONL test dataset (fields: id, question).")
     parser.add_argument("--system-prompt", type=str, default=None, help="Optional system prompt text to prepend.")
     parser.add_argument("--system-prompt-file", type=str, default=None, help="Optional file containing system prompt text.")
-    parser.add_argument("--temperature", type=float, default=0.2)
+    parser.add_argument("--temperature", type=float, default=0.1)
     parser.add_argument("--top-p", type=float, default=0.95)
     parser.add_argument("--max-new-tokens", type=int, default=512)
     parser.add_argument("--seed", type=int, default=1234)

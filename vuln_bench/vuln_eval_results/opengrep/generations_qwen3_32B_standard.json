@@ -1,0 +1,701 @@
+{
+  "vuln_q_0003_0001": [
+    {
+      "rule_id": "python.flask.security.open-redirect.open-redirect",
+      "severity": "High",
+      "title": "python.flask.security.open-redirect.open-redirect",
+      "description": "Data from request is passed to redirect(). This is an open redirect and could be exploited. Consider using 'url_for()' to generate links to known locations. If you must use a URL to unknown pages, consider using 'urlparse()' or similar and checking if the 'netloc' property is the same as your site's host name. See the references for more information.",
+      "line": 38
+    },
+    {
+      "rule_id": "python.flask.security.open-redirect.open-redirect",
+      "severity": "High",
+      "title": "python.flask.security.open-redirect.open-redirect",
+      "description": "Data from request is passed to redirect(). This is an open redirect and could be exploited. Consider using 'url_for()' to generate links to known locations. If you must use a URL to unknown pages, consider using 'urlparse()' or similar and checking if the 'netloc' property is the same as your site's host name. See the references for more information.",
+      "line": 42
+    },
+    {
+      "rule_id": "python.flask.security.audit.debug-enabled.debug-enabled",
+      "severity": "Medium",
+      "title": "python.flask.security.audit.debug-enabled.debug-enabled",
+      "description": "Detected Flask app with debug=True. Do not deploy to production with this flag enabled as it will leak sensitive information. Instead, consider using Flask configuration variables or setting 'debug' using system environment variables.",
+      "line": 58
+    }
+  ],
+  "vuln_q_0003_0002": [
+    {
+      "rule_id": "python.flask.security.audit.hardcoded-config.avoid_hardcoded_config_SECRET_KEY",
+      "severity": "High",
+      "title": "python.flask.security.audit.hardcoded-config.avoid_hardcoded_config_SECRET_KEY",
+      "description": "Hardcoded variable `SECRET_KEY` detected. Use environment variables or config files instead",
+      "line": 10
+    }
+  ],
+  "vuln_q_0006_0003": [
+    {
+      "rule_id": "python.lang.security.audit.insecure-file-permissions.insecure-file-permissions",
+      "severity": "Medium",
+      "title": "python.lang.security.audit.insecure-file-permissions.insecure-file-permissions",
+      "description": "These permissions `stat.S_IRWXU | stat.S_IRWXG | stat.S_IRWXO` are widely permissive and grant access to more people than may be necessary. A good default is `0o644` which gives read and write access to yourself and read access to everyone else.",
+      "line": 10
+    }
+  ],
+  "vuln_q_0007_0000": [
+    {
+      "rule_id": "python.lang.security.audit.insecure-file-permissions.insecure-file-permissions",
+      "severity": "Medium",
+      "title": "python.lang.security.audit.insecure-file-permissions.insecure-file-permissions",
+      "description": "These permissions `stat.S_IRWXU | stat.S_IRGRP | stat.S_IXGRP | stat.S_IROTH | stat.S_IXOTH` are widely permissive and grant access to more people than may be necessary. A good default is `0o644` which gives read and write access to yourself and read access to everyone else.",
+      "line": 21
+    }
+  ],
+  "vuln_q_0009_0000": [
+    {
+      "rule_id": "python.lang.security.use-defused-xml.use-defused-xml",
+      "severity": "High",
+      "title": "python.lang.security.use-defused-xml.use-defused-xml",
+      "description": "The Python documentation recommends using `defusedxml` instead of `xml` because the native Python `xml` library is vulnerable to XML External Entity (XXE) attacks. These attacks can leak confidential data and \"XML bombs\" can cause denial of service.",
+      "line": 1
+    },
+    {
+      "rule_id": "python.lang.security.use-defused-xml.use-defused-xml",
+      "severity": "High",
+      "title": "python.lang.security.use-defused-xml.use-defused-xml",
+      "description": "The Python documentation recommends using `defusedxml` instead of `xml` because the native Python `xml` library is vulnerable to XML External Entity (XXE) attacks. These attacks can leak confidential data and \"XML bombs\" can cause denial of service.",
+      "line": 5
+    }
+  ],
+  "vuln_q_0009_0001": [
+    {
+      "rule_id": "python.lang.security.use-defused-xml.use-defused-xml",
+      "severity": "High",
+      "title": "python.lang.security.use-defused-xml.use-defused-xml",
+      "description": "The Python documentation recommends using `defusedxml` instead of `xml` because the native Python `xml` library is vulnerable to XML External Entity (XXE) attacks. These attacks can leak confidential data and \"XML bombs\" can cause denial of service.",
+      "line": 2
+    },
+    {
+      "rule_id": "python.flask.security.audit.debug-enabled.debug-enabled",
+      "severity": "Medium",
+      "title": "python.flask.security.audit.debug-enabled.debug-enabled",
+      "description": "Detected Flask app with debug=True. Do not deploy to production with this flag enabled as it will leak sensitive information. Instead, consider using Flask configuration variables or setting 'debug' using system environment variables.",
+      "line": 34
+    }
+  ],
+  "vuln_q_0009_0003": [
+    {
+      "rule_id": "python.lang.security.use-defused-xml.use-defused-xml",
+      "severity": "High",
+      "title": "python.lang.security.use-defused-xml.use-defused-xml",
+      "description": "The Python documentation recommends using `defusedxml` instead of `xml` because the native Python `xml` library is vulnerable to XML External Entity (XXE) attacks. These attacks can leak confidential data and \"XML bombs\" can cause denial of service.",
+      "line": 1
+    }
+  ],
+  "vuln_q_0009_0004": [
+    {
+      "rule_id": "python.lang.security.use-defused-xml.use-defused-xml",
+      "severity": "High",
+      "title": "python.lang.security.use-defused-xml.use-defused-xml",
+      "description": "The Python documentation recommends using `defusedxml` instead of `xml` because the native Python `xml` library is vulnerable to XML External Entity (XXE) attacks. These attacks can leak confidential data and \"XML bombs\" can cause denial of service.",
+      "line": 1
+    }
+  ],
+  "vuln_q_0013_0004": [
+    {
+      "rule_id": "python.lang.security.audit.subprocess-shell-true.subprocess-shell-true",
+      "severity": "High",
+      "title": "python.lang.security.audit.subprocess-shell-true.subprocess-shell-true",
+      "description": "Found 'subprocess' function 'run' with 'shell=True'. This is dangerous because this call will spawn the command using a shell process. Doing so propagates current shell settings and variables, which makes it much easier for a malicious actor to execute commands. Use 'shell=False' instead.",
+      "line": 8
+    }
+  ],
+  "vuln_q_0014_0001": [
+    {
+      "rule_id": "python.flask.security.audit.debug-enabled.debug-enabled",
+      "severity": "Medium",
+      "title": "python.flask.security.audit.debug-enabled.debug-enabled",
+      "description": "Detected Flask app with debug=True. Do not deploy to production with this flag enabled as it will leak sensitive information. Instead, consider using Flask configuration variables or setting 'debug' using system environment variables.",
+      "line": 80
+    }
+  ],
+  "vuln_q_0014_0004": [
+    {
+      "rule_id": "python.flask.security.audit.debug-enabled.debug-enabled",
+      "severity": "Medium",
+      "title": "python.flask.security.audit.debug-enabled.debug-enabled",
+      "description": "Detected Flask app with debug=True. Do not deploy to production with this flag enabled as it will leak sensitive information. Instead, consider using Flask configuration variables or setting 'debug' using system environment variables.",
+      "line": 50
+    }
+  ],
+  "vuln_q_0017_0000": [
+    {
+      "rule_id": "python.flask.security.audit.secure-set-cookie.secure-set-cookie",
+      "severity": "Medium",
+      "title": "python.flask.security.audit.secure-set-cookie.secure-set-cookie",
+      "description": "Found a Flask cookie with insecurely configured properties.  By default the secure, httponly and samesite ar configured insecurely. cookies should be handled securely by setting `secure=True`, `httponly=True`, and `samesite='Lax'` in response.set_cookie(...). If these parameters are not properly set, your cookies are not properly protected and are at risk of being stolen by an attacker. Include the `secure=True`, `httponly=True`, `samesite='Lax'` arguments or set these to be true in the Flask co",
+      "line": 31
+    },
+    {
+      "rule_id": "python.flask.security.audit.debug-enabled.debug-enabled",
+      "severity": "Medium",
+      "title": "python.flask.security.audit.debug-enabled.debug-enabled",
+      "description": "Detected Flask app with debug=True. Do not deploy to production with this flag enabled as it will leak sensitive information. Instead, consider using Flask configuration variables or setting 'debug' using system environment variables.",
+      "line": 55
+    }
+  ],
+  "vuln_q_0017_0001": [
+    {
+      "rule_id": "python.flask.security.audit.secure-set-cookie.secure-set-cookie",
+      "severity": "Medium",
+      "title": "python.flask.security.audit.secure-set-cookie.secure-set-cookie",
+      "description": "Found a Flask cookie with insecurely configured properties.  By default the secure, httponly and samesite ar configured insecurely. cookies should be handled securely by setting `secure=True`, `httponly=True`, and `samesite='Lax'` in response.set_cookie(...). If these parameters are not properly set, your cookies are not properly protected and are at risk of being stolen by an attacker. Include the `secure=True`, `httponly=True`, `samesite='Lax'` arguments or set these to be true in the Flask co",
+      "line": 60
+    },
+    {
+      "rule_id": "python.flask.security.audit.debug-enabled.debug-enabled",
+      "severity": "Medium",
+      "title": "python.flask.security.audit.debug-enabled.debug-enabled",
+      "description": "Detected Flask app with debug=True. Do not deploy to production with this flag enabled as it will leak sensitive information. Instead, consider using Flask configuration variables or setting 'debug' using system environment variables.",
+      "line": 64
+    }
+  ],
+  "vuln_q_0017_0003": [
+    {
+      "rule_id": "python.django.security.injection.raw-html-format.raw-html-format",
+      "severity": "Medium",
+      "title": "python.django.security.injection.raw-html-format.raw-html-format",
+      "description": "Detected user input flowing into a manually constructed HTML string. You may be accidentally bypassing secure methods of rendering HTML by manually constructing HTML and this could create a cross-site scripting vulnerability, which could let attackers steal sensitive user data. To be sure this is safe, check that the HTML is rendered safely. Otherwise, use templates (`django.shortcuts.render`) which will safely render HTML instead.",
+      "line": 11
+    },
+    {
+      "rule_id": "python.flask.security.injection.raw-html-concat.raw-html-format",
+      "severity": "Medium",
+      "title": "python.flask.security.injection.raw-html-concat.raw-html-format",
+      "description": "Detected user input flowing into a manually constructed HTML string. You may be accidentally bypassing secure methods of rendering HTML by manually constructing HTML and this could create a cross-site scripting vulnerability, which could let attackers steal sensitive user data. To be sure this is safe, check that the HTML is rendered safely. Otherwise, use templates (`flask.render_template`) which will safely render HTML instead.",
+      "line": 11
+    },
+    {
+      "rule_id": "python.flask.security.audit.secure-set-cookie.secure-set-cookie",
+      "severity": "Medium",
+      "title": "python.flask.security.audit.secure-set-cookie.secure-set-cookie",
+      "description": "Found a Flask cookie with insecurely configured properties.  By default the secure, httponly and samesite ar configured insecurely. cookies should be handled securely by setting `secure=True`, `httponly=True`, and `samesite='Lax'` in response.set_cookie(...). If these parameters are not properly set, your cookies are not properly protected and are at risk of being stolen by an attacker. Include the `secure=True`, `httponly=True`, `samesite='Lax'` arguments or set these to be true in the Flask co",
+      "line": 17
+    },
+    {
+      "rule_id": "python.flask.security.audit.debug-enabled.debug-enabled",
+      "severity": "Medium",
+      "title": "python.flask.security.audit.debug-enabled.debug-enabled",
+      "description": "Detected Flask app with debug=True. Do not deploy to production with this flag enabled as it will leak sensitive information. Instead, consider using Flask configuration variables or setting 'debug' using system environment variables.",
+      "line": 22
+    }
+  ],
+  "vuln_q_0017_0004": [
+    {
+      "rule_id": "python.flask.security.audit.secure-set-cookie.secure-set-cookie",
+      "severity": "Medium",
+      "title": "python.flask.security.audit.secure-set-cookie.secure-set-cookie",
+      "description": "Found a Flask cookie with insecurely configured properties.  By default the secure, httponly and samesite ar configured insecurely. cookies should be handled securely by setting `secure=True`, `httponly=True`, and `samesite='Lax'` in response.set_cookie(...). If these parameters are not properly set, your cookies are not properly protected and are at risk of being stolen by an attacker. Include the `secure=True`, `httponly=True`, `samesite='Lax'` arguments or set these to be true in the Flask co",
+      "line": 38
+    }
+  ],
+  "vuln_q_0021_0000": [
+    {
+      "rule_id": "python.lang.security.use-defused-xml.use-defused-xml",
+      "severity": "High",
+      "title": "python.lang.security.use-defused-xml.use-defused-xml",
+      "description": "The Python documentation recommends using `defusedxml` instead of `xml` because the native Python `xml` library is vulnerable to XML External Entity (XXE) attacks. These attacks can leak confidential data and \"XML bombs\" can cause denial of service.",
+      "line": 1
+    },
+    {
+      "rule_id": "python.lang.security.use-defused-xml-parse.use-defused-xml-parse",
+      "severity": "High",
+      "title": "python.lang.security.use-defused-xml-parse.use-defused-xml-parse",
+      "description": "The native Python `xml` library is vulnerable to XML External Entity (XXE) attacks.  These attacks can leak confidential data and \"XML bombs\" can cause denial of service. Do not use this library to parse untrusted input. Instead  the Python documentation recommends using `defusedxml`.",
+      "line": 5
+    }
+  ],
+  "vuln_q_0021_0001": [
+    {
+      "rule_id": "python.lang.security.use-defused-xml.use-defused-xml",
+      "severity": "High",
+      "title": "python.lang.security.use-defused-xml.use-defused-xml",
+      "description": "The Python documentation recommends using `defusedxml` instead of `xml` because the native Python `xml` library is vulnerable to XML External Entity (XXE) attacks. These attacks can leak confidential data and \"XML bombs\" can cause denial of service.",
+      "line": 1
+    },
+    {
+      "rule_id": "python.lang.security.use-defused-xml-parse.use-defused-xml-parse",
+      "severity": "High",
+      "title": "python.lang.security.use-defused-xml-parse.use-defused-xml-parse",
+      "description": "The native Python `xml` library is vulnerable to XML External Entity (XXE) attacks.  These attacks can leak confidential data and \"XML bombs\" can cause denial of service. Do not use this library to parse untrusted input. Instead  the Python documentation recommends using `defusedxml`.",
+      "line": 5
+    }
+  ],
+  "vuln_q_0021_0003": [
+    {
+      "rule_id": "python.lang.security.use-defused-xml.use-defused-xml",
+      "severity": "High",
+      "title": "python.lang.security.use-defused-xml.use-defused-xml",
+      "description": "The Python documentation recommends using `defusedxml` instead of `xml` because the native Python `xml` library is vulnerable to XML External Entity (XXE) attacks. These attacks can leak confidential data and \"XML bombs\" can cause denial of service.",
+      "line": 1
+    },
+    {
+      "rule_id": "python.lang.security.use-defused-xml-parse.use-defused-xml-parse",
+      "severity": "High",
+      "title": "python.lang.security.use-defused-xml-parse.use-defused-xml-parse",
+      "description": "The native Python `xml` library is vulnerable to XML External Entity (XXE) attacks.  These attacks can leak confidential data and \"XML bombs\" can cause denial of service. Do not use this library to parse untrusted input. Instead  the Python documentation recommends using `defusedxml`.",
+      "line": 13
+    }
+  ],
+  "vuln_q_0021_0004": [
+    {
+      "rule_id": "python.lang.security.use-defused-xml.use-defused-xml",
+      "severity": "High",
+      "title": "python.lang.security.use-defused-xml.use-defused-xml",
+      "description": "The Python documentation recommends using `defusedxml` instead of `xml` because the native Python `xml` library is vulnerable to XML External Entity (XXE) attacks. These attacks can leak confidential data and \"XML bombs\" can cause denial of service.",
+      "line": 1
+    },
+    {
+      "rule_id": "python.lang.security.use-defused-xml-parse.use-defused-xml-parse",
+      "severity": "High",
+      "title": "python.lang.security.use-defused-xml-parse.use-defused-xml-parse",
+      "description": "The native Python `xml` library is vulnerable to XML External Entity (XXE) attacks.  These attacks can leak confidential data and \"XML bombs\" can cause denial of service. Do not use this library to parse untrusted input. Instead  the Python documentation recommends using `defusedxml`.",
+      "line": 6
+    }
+  ],
+  "vuln_q_0022_0002": [
+    {
+      "rule_id": "python.flask.security.audit.directly-returned-format-string.directly-returned-format-string",
+      "severity": "Medium",
+      "title": "python.flask.security.audit.directly-returned-format-string.directly-returned-format-string",
+      "description": "Detected Flask route directly returning a formatted string. This is subject to cross-site scripting if user input can reach the string. Consider using the template engine instead and rendering pages with 'render_template()'.",
+      "line": 30
+    },
+    {
+      "rule_id": "python.flask.security.audit.debug-enabled.debug-enabled",
+      "severity": "Medium",
+      "title": "python.flask.security.audit.debug-enabled.debug-enabled",
+      "description": "Detected Flask app with debug=True. Do not deploy to production with this flag enabled as it will leak sensitive information. Instead, consider using Flask configuration variables or setting 'debug' using system environment variables.",
+      "line": 33
+    },
+    {
+      "rule_id": "python.flask.security.audit.directly-returned-format-string.directly-returned-format-string",
+      "severity": "Medium",
+      "title": "python.flask.security.audit.directly-returned-format-string.directly-returned-format-string",
+      "description": "Detected Flask route directly returning a formatted string. This is subject to cross-site scripting if user input can reach the string. Consider using the template engine instead and rendering pages with 'render_template()'.",
+      "line": 63
+    }
+  ],
+  "vuln_q_0026_0001": [
+    {
+      "rule_id": "python.flask.security.audit.render-template-string.render-template-string",
+      "severity": "Medium",
+      "title": "python.flask.security.audit.render-template-string.render-template-string",
+      "description": "Found a template created with string formatting. This is susceptible to server-side template injection and cross-site scripting attacks.",
+      "line": 42
+    },
+    {
+      "rule_id": "python.flask.security.audit.render-template-string.render-template-string",
+      "severity": "Medium",
+      "title": "python.flask.security.audit.render-template-string.render-template-string",
+      "description": "Found a template created with string formatting. This is susceptible to server-side template injection and cross-site scripting attacks.",
+      "line": 49
+    },
+    {
+      "rule_id": "python.flask.security.audit.debug-enabled.debug-enabled",
+      "severity": "Medium",
+      "title": "python.flask.security.audit.debug-enabled.debug-enabled",
+      "description": "Detected Flask app with debug=True. Do not deploy to production with this flag enabled as it will leak sensitive information. Instead, consider using Flask configuration variables or setting 'debug' using system environment variables.",
+      "line": 70
+    }
+  ],
+  "vuln_q_0029_0001": [
+    {
+      "rule_id": "python.flask.security.injection.subprocess-injection.subprocess-injection",
+      "severity": "High",
+      "title": "python.flask.security.injection.subprocess-injection.subprocess-injection",
+      "description": "Detected user input entering a `subprocess` call unsafely. This could result in a command injection vulnerability. An attacker could use this vulnerability to execute arbitrary commands on the host, which allows them to download malware, scan sensitive data, or run any command they wish on the server. Do not let users choose the command to run. In general, prefer to use Python API versions of system commands. If you must use subprocess, use a dictionary to allowlist a set of commands.",
+      "line": 16
+    },
+    {
+      "rule_id": "python.lang.security.dangerous-subprocess-use.dangerous-subprocess-use",
+      "severity": "High",
+      "title": "python.lang.security.dangerous-subprocess-use.dangerous-subprocess-use",
+      "description": "Detected subprocess function 'run' with user controlled data. A malicious actor could leverage this to perform command injection. You may consider using 'shlex.escape()'.",
+      "line": 16
+    },
+    {
+      "rule_id": "python.lang.security.audit.subprocess-shell-true.subprocess-shell-true",
+      "severity": "High",
+      "title": "python.lang.security.audit.subprocess-shell-true.subprocess-shell-true",
+      "description": "Found 'subprocess' function 'run' with 'shell=True'. This is dangerous because this call will spawn the command using a shell process. Doing so propagates current shell settings and variables, which makes it much easier for a malicious actor to execute commands. Use 'shell=False' instead.",
+      "line": 16
+    }
+  ],
+  "vuln_q_0031_0000": [
+    {
+      "rule_id": "python.flask.security.audit.render-template-string.render-template-string",
+      "severity": "Medium",
+      "title": "python.flask.security.audit.render-template-string.render-template-string",
+      "description": "Found a template created with string formatting. This is susceptible to server-side template injection and cross-site scripting attacks.",
+      "line": 29
+    },
+    {
+      "rule_id": "python.flask.security.audit.debug-enabled.debug-enabled",
+      "severity": "Medium",
+      "title": "python.flask.security.audit.debug-enabled.debug-enabled",
+      "description": "Detected Flask app with debug=True. Do not deploy to production with this flag enabled as it will leak sensitive information. Instead, consider using Flask configuration variables or setting 'debug' using system environment variables.",
+      "line": 32
+    }
+  ],
+  "vuln_q_0031_0002": [
+    {
+      "rule_id": "python.flask.security.audit.debug-enabled.debug-enabled",
+      "severity": "Medium",
+      "title": "python.flask.security.audit.debug-enabled.debug-enabled",
+      "description": "Detected Flask app with debug=True. Do not deploy to production with this flag enabled as it will leak sensitive information. Instead, consider using Flask configuration variables or setting 'debug' using system environment variables.",
+      "line": 17
+    }
+  ],
+  "vuln_q_0039_0000": [
+    {
+      "rule_id": "python.flask.security.audit.app-run-param-config.avoid_app_run_with_bad_host",
+      "severity": "Medium",
+      "title": "python.flask.security.audit.app-run-param-config.avoid_app_run_with_bad_host",
+      "description": "Running flask app with host 0.0.0.0 could expose the server publicly.",
+      "line": 41
+    }
+  ],
+  "vuln_q_0040_0000": [
+    {
+      "rule_id": "python.flask.security.audit.debug-enabled.debug-enabled",
+      "severity": "Medium",
+      "title": "python.flask.security.audit.debug-enabled.debug-enabled",
+      "description": "Detected Flask app with debug=True. Do not deploy to production with this flag enabled as it will leak sensitive information. Instead, consider using Flask configuration variables or setting 'debug' using system environment variables.",
+      "line": 13
+    }
+  ],
+  "vuln_q_0041_0000": [
+    {
+      "rule_id": "python.flask.security.audit.debug-enabled.debug-enabled",
+      "severity": "Medium",
+      "title": "python.flask.security.audit.debug-enabled.debug-enabled",
+      "description": "Detected Flask app with debug=True. Do not deploy to production with this flag enabled as it will leak sensitive information. Instead, consider using Flask configuration variables or setting 'debug' using system environment variables.",
+      "line": 42
+    }
+  ],
+  "vuln_q_0041_0001": [
+    {
+      "rule_id": "python.flask.security.audit.debug-enabled.debug-enabled",
+      "severity": "Medium",
+      "title": "python.flask.security.audit.debug-enabled.debug-enabled",
+      "description": "Detected Flask app with debug=True. Do not deploy to production with this flag enabled as it will leak sensitive information. Instead, consider using Flask configuration variables or setting 'debug' using system environment variables.",
+      "line": 38
+    }
+  ],
+  "vuln_q_0041_0002": [
+    {
+      "rule_id": "python.flask.security.audit.debug-enabled.debug-enabled",
+      "severity": "Medium",
+      "title": "python.flask.security.audit.debug-enabled.debug-enabled",
+      "description": "Detected Flask app with debug=True. Do not deploy to production with this flag enabled as it will leak sensitive information. Instead, consider using Flask configuration variables or setting 'debug' using system environment variables.",
+      "line": 72
+    }
+  ],
+  "vuln_q_0045_0001": [
+    {
+      "rule_id": "python.flask.security.audit.debug-enabled.debug-enabled",
+      "severity": "Medium",
+      "title": "python.flask.security.audit.debug-enabled.debug-enabled",
+      "description": "Detected Flask app with debug=True. Do not deploy to production with this flag enabled as it will leak sensitive information. Instead, consider using Flask configuration variables or setting 'debug' using system environment variables.",
+      "line": 60
+    }
+  ],
+  "vuln_q_0068_0001": [
+    {
+      "rule_id": "python.lang.security.use-defused-xml.use-defused-xml",
+      "severity": "High",
+      "title": "python.lang.security.use-defused-xml.use-defused-xml",
+      "description": "The Python documentation recommends using `defusedxml` instead of `xml` because the native Python `xml` library is vulnerable to XML External Entity (XXE) attacks. These attacks can leak confidential data and \"XML bombs\" can cause denial of service.",
+      "line": 1
+    }
+  ],
+  "vuln_q_0068_0002": [
+    {
+      "rule_id": "python.lang.security.audit.eval-detected.eval-detected",
+      "severity": "Medium",
+      "title": "python.lang.security.audit.eval-detected.eval-detected",
+      "description": "Detected the use of eval(). eval() can be dangerous if used to evaluate dynamic content. If this content can be input from outside the program, this may be a code injection vulnerability. Ensure evaluated content is not definable by external sources.",
+      "line": 6
+    }
+  ],
+  "vuln_q_0069_0000": [
+    {
+      "rule_id": "python.pycryptodome.security.insecure-cipher-algorithm-des.insecure-cipher-algorithm-des",
+      "severity": "Medium",
+      "title": "python.pycryptodome.security.insecure-cipher-algorithm-des.insecure-cipher-algorithm-des",
+      "description": "Detected DES cipher or Triple DES algorithm which is considered insecure. This algorithm is not cryptographically secure and can be reversed easily. Use a secure symmetric cipher from the cryptodome package instead. Use secure stream ciphers such as ChaCha20, XChaCha20 and Salsa20, or a block cipher such as AES with a block size of 128 bits. When using a block cipher, use a modern mode of operation that also provides authentication, such as GCM.",
+      "line": 22
+    }
+  ],
+  "vuln_q_0069_0004": [
+    {
+      "rule_id": "python.lang.security.insecure-hash-algorithms-md5.insecure-hash-algorithm-md5",
+      "severity": "Medium",
+      "title": "python.lang.security.insecure-hash-algorithms-md5.insecure-hash-algorithm-md5",
+      "description": "Detected MD5 hash algorithm which is considered insecure. MD5 is not collision resistant and is therefore not suitable as a cryptographic signature. Use SHA256 or SHA3 instead.",
+      "line": 5
+    }
+  ],
+  "vuln_q_0071_0000": [
+    {
+      "rule_id": "python.django.security.injection.request-data-write.request-data-write",
+      "severity": "Medium",
+      "title": "python.django.security.injection.request-data-write.request-data-write",
+      "description": "Found user-controlled request data passed into '.write(...)'. This could be dangerous if a malicious actor is able to control data into sensitive files. For example, a malicious actor could force rolling of critical log files, or cause a denial-of-service by using up available disk space. Instead, ensure that request data is properly escaped or sanitized.",
+      "line": 9
+    },
+    {
+      "rule_id": "python.django.security.injection.request-data-write.request-data-write",
+      "severity": "Medium",
+      "title": "python.django.security.injection.request-data-write.request-data-write",
+      "description": "Found user-controlled request data passed into '.write(...)'. This could be dangerous if a malicious actor is able to control data into sensitive files. For example, a malicious actor could force rolling of critical log files, or cause a denial-of-service by using up available disk space. Instead, ensure that request data is properly escaped or sanitized.",
+      "line": 10
+    },
+    {
+      "rule_id": "python.flask.security.audit.debug-enabled.debug-enabled",
+      "severity": "Medium",
+      "title": "python.flask.security.audit.debug-enabled.debug-enabled",
+      "description": "Detected Flask app with debug=True. Do not deploy to production with this flag enabled as it will leak sensitive information. Instead, consider using Flask configuration variables or setting 'debug' using system environment variables.",
+      "line": 30
+    }
+  ],
+  "vuln_q_0071_0001": [
+    {
+      "rule_id": "python.flask.security.audit.debug-enabled.debug-enabled",
+      "severity": "Medium",
+      "title": "python.flask.security.audit.debug-enabled.debug-enabled",
+      "description": "Detected Flask app with debug=True. Do not deploy to production with this flag enabled as it will leak sensitive information. Instead, consider using Flask configuration variables or setting 'debug' using system environment variables.",
+      "line": 37
+    }
+  ],
+  "vuln_q_0071_0002": [
+    {
+      "rule_id": "python.flask.security.audit.debug-enabled.debug-enabled",
+      "severity": "Medium",
+      "title": "python.flask.security.audit.debug-enabled.debug-enabled",
+      "description": "Detected Flask app with debug=True. Do not deploy to production with this flag enabled as it will leak sensitive information. Instead, consider using Flask configuration variables or setting 'debug' using system environment variables.",
+      "line": 39
+    }
+  ],
+  "vuln_q_0071_0003": [
+    {
+      "rule_id": "python.flask.security.audit.render-template-string.render-template-string",
+      "severity": "Medium",
+      "title": "python.flask.security.audit.render-template-string.render-template-string",
+      "description": "Found a template created with string formatting. This is susceptible to server-side template injection and cross-site scripting attacks.",
+      "line": 52
+    },
+    {
+      "rule_id": "python.flask.security.audit.debug-enabled.debug-enabled",
+      "severity": "Medium",
+      "title": "python.flask.security.audit.debug-enabled.debug-enabled",
+      "description": "Detected Flask app with debug=True. Do not deploy to production with this flag enabled as it will leak sensitive information. Instead, consider using Flask configuration variables or setting 'debug' using system environment variables.",
+      "line": 55
+    }
+  ],
+  "vuln_q_0075_0003": [
+    {
+      "rule_id": "python.lang.security.audit.eval-detected.eval-detected",
+      "severity": "Medium",
+      "title": "python.lang.security.audit.eval-detected.eval-detected",
+      "description": "Detected the use of eval(). eval() can be dangerous if used to evaluate dynamic content. If this content can be input from outside the program, this may be a code injection vulnerability. Ensure evaluated content is not definable by external sources.",
+      "line": 6
+    }
+  ],
+  "vuln_q_0077_0000": [
+    {
+      "rule_id": "python.lang.security.deserialization.pickle.avoid-pickle",
+      "severity": "Medium",
+      "title": "python.lang.security.deserialization.pickle.avoid-pickle",
+      "description": "Avoid using `pickle`, which is known to lead to code execution vulnerabilities. When unpickling, the serialized data could be manipulated to run arbitrary code. Instead, consider serializing the relevant data as JSON or a similar text-based serialization format.",
+      "line": 17
+    },
+    {
+      "rule_id": "python.lang.security.deserialization.pickle.avoid-pickle",
+      "severity": "Medium",
+      "title": "python.lang.security.deserialization.pickle.avoid-pickle",
+      "description": "Avoid using `pickle`, which is known to lead to code execution vulnerabilities. When unpickling, the serialized data could be manipulated to run arbitrary code. Instead, consider serializing the relevant data as JSON or a similar text-based serialization format.",
+      "line": 27
+    }
+  ],
+  "vuln_q_0077_0001": [
+    {
+      "rule_id": "python.lang.security.deserialization.pickle.avoid-pickle",
+      "severity": "Medium",
+      "title": "python.lang.security.deserialization.pickle.avoid-pickle",
+      "description": "Avoid using `pickle`, which is known to lead to code execution vulnerabilities. When unpickling, the serialized data could be manipulated to run arbitrary code. Instead, consider serializing the relevant data as JSON or a similar text-based serialization format.",
+      "line": 30
+    },
+    {
+      "rule_id": "python.lang.security.deserialization.pickle.avoid-pickle",
+      "severity": "Medium",
+      "title": "python.lang.security.deserialization.pickle.avoid-pickle",
+      "description": "Avoid using `pickle`, which is known to lead to code execution vulnerabilities. When unpickling, the serialized data could be manipulated to run arbitrary code. Instead, consider serializing the relevant data as JSON or a similar text-based serialization format.",
+      "line": 42
+    },
+    {
+      "rule_id": "python.lang.security.deserialization.pickle.avoid-pickle",
+      "severity": "Medium",
+      "title": "python.lang.security.deserialization.pickle.avoid-pickle",
+      "description": "Avoid using `pickle`, which is known to lead to code execution vulnerabilities. When unpickling, the serialized data could be manipulated to run arbitrary code. Instead, consider serializing the relevant data as JSON or a similar text-based serialization format.",
+      "line": 58
+    },
+    {
+      "rule_id": "python.lang.security.deserialization.pickle.avoid-pickle",
+      "severity": "Medium",
+      "title": "python.lang.security.deserialization.pickle.avoid-pickle",
+      "description": "Avoid using `pickle`, which is known to lead to code execution vulnerabilities. When unpickling, the serialized data could be manipulated to run arbitrary code. Instead, consider serializing the relevant data as JSON or a similar text-based serialization format.",
+      "line": 68
+    }
+  ],
+  "vuln_q_0077_0002": [
+    {
+      "rule_id": "python.lang.security.deserialization.pickle.avoid-pickle",
+      "severity": "Medium",
+      "title": "python.lang.security.deserialization.pickle.avoid-pickle",
+      "description": "Avoid using `pickle`, which is known to lead to code execution vulnerabilities. When unpickling, the serialized data could be manipulated to run arbitrary code. Instead, consider serializing the relevant data as JSON or a similar text-based serialization format.",
+      "line": 12
+    }
+  ],
+  "vuln_q_0077_0003": [
+    {
+      "rule_id": "python.lang.security.insecure-hash-algorithms-md5.insecure-hash-algorithm-md5",
+      "severity": "Medium",
+      "title": "python.lang.security.insecure-hash-algorithms-md5.insecure-hash-algorithm-md5",
+      "description": "Detected MD5 hash algorithm which is considered insecure. MD5 is not collision resistant and is therefore not suitable as a cryptographic signature. Use SHA256 or SHA3 instead.",
+      "line": 17
+    },
+    {
+      "rule_id": "python.lang.security.deserialization.pickle.avoid-pickle",
+      "severity": "Medium",
+      "title": "python.lang.security.deserialization.pickle.avoid-pickle",
+      "description": "Avoid using `pickle`, which is known to lead to code execution vulnerabilities. When unpickling, the serialized data could be manipulated to run arbitrary code. Instead, consider serializing the relevant data as JSON or a similar text-based serialization format.",
+      "line": 25
+    },
+    {
+      "rule_id": "python.lang.security.deserialization.pickle.avoid-pickle",
+      "severity": "Medium",
+      "title": "python.lang.security.deserialization.pickle.avoid-pickle",
+      "description": "Avoid using `pickle`, which is known to lead to code execution vulnerabilities. When unpickling, the serialized data could be manipulated to run arbitrary code. Instead, consider serializing the relevant data as JSON or a similar text-based serialization format.",
+      "line": 38
+    }
+  ],
+  "vuln_q_0085_0000": [
+    {
+      "rule_id": "python.lang.security.audit.eval-detected.eval-detected",
+      "severity": "Medium",
+      "title": "python.lang.security.audit.eval-detected.eval-detected",
+      "description": "Detected the use of eval(). eval() can be dangerous if used to evaluate dynamic content. If this content can be input from outside the program, this may be a code injection vulnerability. Ensure evaluated content is not definable by external sources.",
+      "line": 23
+    }
+  ],
+  "vuln_q_0085_0001": [
+    {
+      "rule_id": "python.lang.security.audit.eval-detected.eval-detected",
+      "severity": "Medium",
+      "title": "python.lang.security.audit.eval-detected.eval-detected",
+      "description": "Detected the use of eval(). eval() can be dangerous if used to evaluate dynamic content. If this content can be input from outside the program, this may be a code injection vulnerability. Ensure evaluated content is not definable by external sources.",
+      "line": 4
+    }
+  ],
+  "vuln_q_0085_0004": [
+    {
+      "rule_id": "python.lang.security.audit.eval-detected.eval-detected",
+      "severity": "Medium",
+      "title": "python.lang.security.audit.eval-detected.eval-detected",
+      "description": "Detected the use of eval(). eval() can be dangerous if used to evaluate dynamic content. If this content can be input from outside the program, this may be a code injection vulnerability. Ensure evaluated content is not definable by external sources.",
+      "line": 19
+    }
+  ],
+  "vuln_q_0086_0003": [
+    {
+      "rule_id": "python.flask.security.audit.app-run-param-config.avoid_app_run_with_bad_host",
+      "severity": "Medium",
+      "title": "python.flask.security.audit.app-run-param-config.avoid_app_run_with_bad_host",
+      "description": "Running flask app with host 0.0.0.0 could expose the server publicly.",
+      "line": 10
+    },
+    {
+      "rule_id": "python.flask.security.audit.app-run-param-config.avoid_app_run_with_bad_host",
+      "severity": "Medium",
+      "title": "python.flask.security.audit.app-run-param-config.avoid_app_run_with_bad_host",
+      "description": "Running flask app with host 0.0.0.0 could expose the server publicly.",
+      "line": 14
+    },
+    {
+      "rule_id": "python.flask.security.audit.app-run-security-config.avoid_using_app_run_directly",
+      "severity": "Medium",
+      "title": "python.flask.security.audit.app-run-security-config.avoid_using_app_run_directly",
+      "description": "top-level app.run(...) is ignored by flask. Consider putting app.run(...) behind a guard, like inside a function",
+      "line": 14
+    }
+  ],
+  "vuln_q_0088_0002": [
+    {
+      "rule_id": "python.flask.security.audit.debug-enabled.debug-enabled",
+      "severity": "Medium",
+      "title": "python.flask.security.audit.debug-enabled.debug-enabled",
+      "description": "Detected Flask app with debug=True. Do not deploy to production with this flag enabled as it will leak sensitive information. Instead, consider using Flask configuration variables or setting 'debug' using system environment variables.",
+      "line": 81
+    }
+  ],
+  "vuln_q_0092_0000": [
+    {
+      "rule_id": "python.flask.security.audit.debug-enabled.debug-enabled",
+      "severity": "Medium",
+      "title": "python.flask.security.audit.debug-enabled.debug-enabled",
+      "description": "Detected Flask app with debug=True. Do not deploy to production with this flag enabled as it will leak sensitive information. Instead, consider using Flask configuration variables or setting 'debug' using system environment variables.",
+      "line": 41
+    }
+  ],
+  "vuln_q_0093_0001": [
+    {
+      "rule_id": "python.lang.security.use-defused-xml.use-defused-xml",
+      "severity": "High",
+      "title": "python.lang.security.use-defused-xml.use-defused-xml",
+      "description": "The Python documentation recommends using `defusedxml` instead of `xml` because the native Python `xml` library is vulnerable to XML External Entity (XXE) attacks. These attacks can leak confidential data and \"XML bombs\" can cause denial of service.",
+      "line": 1
+    },
+    {
+      "rule_id": "python.lang.security.use-defused-xml.use-defused-xml",
+      "severity": "High",
+      "title": "python.lang.security.use-defused-xml.use-defused-xml",
+      "description": "The Python documentation recommends using `defusedxml` instead of `xml` because the native Python `xml` library is vulnerable to XML External Entity (XXE) attacks. These attacks can leak confidential data and \"XML bombs\" can cause denial of service.",
+      "line": 32
+    }
+  ],
+  "vuln_q_0094_0004": [
+    {
+      "rule_id": "python.lang.security.deserialization.pickle.avoid-pickle",
+      "severity": "Medium",
+      "title": "python.lang.security.deserialization.pickle.avoid-pickle",
+      "description": "Avoid using `pickle`, which is known to lead to code execution vulnerabilities. When unpickling, the serialized data could be manipulated to run arbitrary code. Instead, consider serializing the relevant data as JSON or a similar text-based serialization format.",
+      "line": 15
+    }
+  ],
+  "vuln_q_0096_0002": [
+    {
+      "rule_id": "python.lang.security.insecure-hash-algorithms-md5.insecure-hash-algorithm-md5",
+      "severity": "Medium",
+      "title": "python.lang.security.insecure-hash-algorithms-md5.insecure-hash-algorithm-md5",
+      "description": "Detected MD5 hash algorithm which is considered insecure. MD5 is not collision resistant and is therefore not suitable as a cryptographic signature. Use SHA256 or SHA3 instead.",
+      "line": 5
+    },
+    {
+      "rule_id": "python.lang.security.insecure-hash-algorithms-md5.insecure-hash-algorithm-md5",
+      "severity": "Medium",
+      "title": "python.lang.security.insecure-hash-algorithms-md5.insecure-hash-algorithm-md5",
+      "description": "Detected MD5 hash algorithm which is considered insecure. MD5 is not collision resistant and is therefore not suitable as a cryptographic signature. Use SHA256 or SHA3 instead.",
+      "line": 20
+    }
+  ]
+}

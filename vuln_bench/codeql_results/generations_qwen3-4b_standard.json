@@ -1,0 +1,179 @@
+{
+  "vuln_q_0017_0000": [
+    {
+      "rule_id": "py/client-exposed-cookie",
+      "severity": "Medium",
+      "title": "Sensitive cookie missing `HttpOnly` attribute",
+      "description": "Sensitive server cookie is set without HttpOnly flag.",
+      "line": 22
+    },
+    {
+      "rule_id": "py/client-exposed-cookie",
+      "severity": "Medium",
+      "title": "Sensitive cookie missing `HttpOnly` attribute",
+      "description": "Sensitive server cookie is set without HttpOnly flag.",
+      "line": 48
+    },
+    {
+      "rule_id": "py/reflective-xss",
+      "severity": "High",
+      "title": "Reflected server-side cross-site scripting",
+      "description": "Cross-site scripting vulnerability due to a [user-provided value](1).",
+      "line": 40
+    },
+    {
+      "rule_id": "py/insecure-cookie",
+      "severity": "Medium",
+      "title": "Failure to use secure cookies",
+      "description": "Cookie is added to response without the 'secure' flag being set.",
+      "line": 22
+    },
+    {
+      "rule_id": "py/insecure-cookie",
+      "severity": "Medium",
+      "title": "Failure to use secure cookies",
+      "description": "Cookie is added to response without the 'secure' flag being set.",
+      "line": 48
+    },
+    {
+      "rule_id": "py/flask-debug",
+      "severity": "High",
+      "title": "Flask app is run in debug mode",
+      "description": "A Flask app appears to be run in debug mode. This may allow an attacker to run arbitrary code through the debugger.",
+      "line": 52
+    },
+    {
+      "rule_id": "py/cookie-injection",
+      "severity": "Medium",
+      "title": "Construction of a cookie using user-supplied input",
+      "description": "Cookie is constructed from a [user-supplied input](1).",
+      "line": 22
+    }
+  ],
+  "vuln_q_0039_0000": [
+    {
+      "rule_id": "py/bind-socket-all-network-interfaces",
+      "severity": "High",
+      "title": "Binding a socket to all network interfaces",
+      "description": "'0.0.0.0' binds a socket to all interfaces.",
+      "line": 7
+    }
+  ],
+  "vuln_q_0039_0001": [
+    {
+      "rule_id": "py/bind-socket-all-network-interfaces",
+      "severity": "High",
+      "title": "Binding a socket to all network interfaces",
+      "description": "'0.0.0.0' binds a socket to all interfaces.",
+      "line": 7
+    }
+  ],
+  "vuln_q_0039_0003": [
+    {
+      "rule_id": "py/bind-socket-all-network-interfaces",
+      "severity": "High",
+      "title": "Binding a socket to all network interfaces",
+      "description": "'0.0.0.0' binds a socket to all interfaces.",
+      "line": 7
+    }
+  ],
+  "vuln_q_0039_0004": [
+    {
+      "rule_id": "py/bind-socket-all-network-interfaces",
+      "severity": "High",
+      "title": "Binding a socket to all network interfaces",
+      "description": "'0.0.0.0' binds a socket to all interfaces.",
+      "line": 7
+    }
+  ],
+  "vuln_q_0086_0001": [
+    {
+      "rule_id": "py/bind-socket-all-network-interfaces",
+      "severity": "High",
+      "title": "Binding a socket to all network interfaces",
+      "description": "'0.0.0.0' binds a socket to all interfaces.",
+      "line": 8
+    }
+  ],
+  "vuln_q_0086_0004": [
+    {
+      "rule_id": "py/bind-socket-all-network-interfaces",
+      "severity": "High",
+      "title": "Binding a socket to all network interfaces",
+      "description": "'0.0.0.0' binds a socket to all interfaces.",
+      "line": 7
+    }
+  ],
+  "vuln_q_0000_0000": [
+    {
+      "rule_id": "py/clear-text-logging-sensitive-data",
+      "severity": "High",
+      "title": "Clear-text logging of sensitive information",
+      "description": "This expression logs [sensitive data (password)](1) as clear text.",
+      "line": 22
+    }
+  ],
+  "vuln_q_0045_0002": [
+    {
+      "rule_id": "py/clear-text-logging-sensitive-data",
+      "severity": "High",
+      "title": "Clear-text logging of sensitive information",
+      "description": "This expression logs [sensitive data (password)](1) as clear text.",
+      "line": 29
+    }
+  ],
+  "vuln_q_0033_0000": [
+    {
+      "rule_id": "py/weak-sensitive-data-hashing",
+      "severity": "Medium",
+      "title": "Use of a broken or weak cryptographic hashing algorithm on sensitive data",
+      "description": "[Sensitive data (password)](1) is used in a hashing algorithm (SHA256) that is insecure for password hashing, since it is not a computationally expensive hash function.",
+      "line": 21
+    }
+  ],
+  "vuln_q_0096_0001": [
+    {
+      "rule_id": "py/weak-sensitive-data-hashing",
+      "severity": "Medium",
+      "title": "Use of a broken or weak cryptographic hashing algorithm on sensitive data",
+      "description": "[Sensitive data (password)](1) is used in a hashing algorithm (SHA256) that is insecure for password hashing, since it is not a computationally expensive hash function.\n[Sensitive data (password)](2) is used in a hashing algorithm (SHA256) that is insecure for password hashing, since it is not a computationally expensive hash function.",
+      "line": 8
+    }
+  ],
+  "vuln_q_0025_0000": [
+    {
+      "rule_id": "py/insecure-protocol",
+      "severity": "Medium",
+      "title": "Use of insecure SSL/TLS version",
+      "description": "Insecure SSL/TLS protocol version TLSv1 allowed by [call to ssl.create_default_context](1).\nInsecure SSL/TLS protocol version TLSv1_1 allowed by [call to ssl.create_default_context](1).",
+      "line": 11
+    }
+  ],
+  "vuln_q_0017_0003": [
+    {
+      "rule_id": "py/flask-debug",
+      "severity": "High",
+      "title": "Flask app is run in debug mode",
+      "description": "A Flask app appears to be run in debug mode. This may allow an attacker to run arbitrary code through the debugger.",
+      "line": 20
+    }
+  ],
+  "vuln_q_0031_0002": [
+    {
+      "rule_id": "py/flask-debug",
+      "severity": "High",
+      "title": "Flask app is run in debug mode",
+      "description": "A Flask app appears to be run in debug mode. This may allow an attacker to run arbitrary code through the debugger.",
+      "line": 17
+    }
+  ],
+  "vuln_q_0006_0000": [
+    {
+      "rule_id": "py/overly-permissive-file",
+      "severity": "Medium",
+      "title": "Overly permissive file permissions",
+      "description": "Overly permissive mask in chmod sets file to world writable.",
+      "line": 17
+    }
+  ]
+}

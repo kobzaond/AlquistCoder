@@ -1,0 +1,487 @@
+{
+  "summary": {
+    "codeql": {
+      "TP": 1567,
+      "UNCERTAIN": 225,
+      "FP": 58
+    },
+    "opengrep": {
+      "TP": 1936,
+      "UNCERTAIN": 593,
+      "FP": 1
+    },
+    "bandit": {
+      "UNCERTAIN": 488,
+      "TP": 1636,
+      "FP": 18
+    }
+  },
+  "per_rule": {
+    "bandit:B614": {
+      "UNCERTAIN": 11,
+      "FP": 17,
+      "TP": 1
+    },
+    "bandit:B314": {
+      "TP": 343
+    },
+    "bandit:B413": {
+      "UNCERTAIN": 28
+    },
+    "bandit:B304": {
+      "TP": 14
+    },
+    "bandit:B201": {
+      "TP": 601
+    },
+    "bandit:B307": {
+      "UNCERTAIN": 37,
+      "TP": 113,
+      "FP": 1
+    },
+    "bandit:B402": {
+      "TP": 42
+    },
+    "bandit:B321": {
+      "TP": 35
+    },
+    "codeql:py/weak-cryptographic-algorithm": {
+      "TP": 24
+    },
+    "codeql:py/weak-sensitive-data-hashing": {
+      "TP": 160
+    },
+    "codeql:py/insecure-protocol": {
+      "TP": 51
+    },
+    "codeql:py/path-injection": {
+      "UNCERTAIN": 55,
+      "TP": 46
+    },
+    "codeql:py/log-injection": {
+      "FP": 58,
+      "TP": 36
+    },
+    "codeql:py/flask-debug": {
+      "TP": 626
+    },
+    "codeql:py/url-redirection": {
+      "TP": 49
+    },
+    "opengrep:python.django.security.audit.unvalidated-password.unvalidated-password": {
+      "TP": 58
+    },
+    "opengrep:python.lang.security.audit.insecure-file-permissions.insecure-file-permissions": {
+      "UNCERTAIN": 55,
+      "TP": 25
+    },
+    "opengrep:python.lang.security.use-defused-xml.use-defused-xml": {
+      "TP": 357
+    },
+    "opengrep:python.lang.security.use-defused-xml-parse.use-defused-xml-parse": {
+      "TP": 140
+    },
+    "opengrep:python.django.security.audit.csrf-exempt.no-csrf-exempt": {
+      "TP": 2
+    },
+    "opengrep:python.pycryptodome.security.insecure-cipher-algorithm-des.insecure-cipher-algorithm-des": {
+      "TP": 19
+    },
+    "opengrep:python.flask.security.audit.render-template-string.render-template-string": {
+      "UNCERTAIN": 16,
+      "TP": 44
+    },
+    "opengrep:python.flask.security.audit.debug-enabled.debug-enabled": {
+      "TP": 630
+    },
+    "opengrep:python.lang.security.audit.eval-detected.eval-detected": {
+      "UNCERTAIN": 40,
+      "TP": 123,
+      "FP": 1
+    },
+    "opengrep:python.flask.security.audit.hardcoded-config.avoid_hardcoded_config_DEBUG": {
+      "UNCERTAIN": 2
+    },
+    "bandit:B108": {
+      "UNCERTAIN": 4,
+      "TP": 2
+    },
+    "bandit:B310": {
+      "TP": 6
+    },
+    "bandit:B602": {
+      "UNCERTAIN": 65,
+      "TP": 30
+    },
+    "bandit:B104": {
+      "TP": 237
+    },
+    "bandit:B507": {
+      "UNCERTAIN": 105,
+      "TP": 10
+    },
+    "bandit:B324": {
+      "UNCERTAIN": 90,
+      "TP": 1
+    },
+    "codeql:py/paramiko-missing-host-key-validation": {
+      "TP": 141
+    },
+    "codeql:py/bind-socket-all-network-interfaces": {
+      "TP": 207
+    },
+    "codeql:py/stack-trace-exposure": {
+      "UNCERTAIN": 45,
+      "TP": 30
+    },
+    "codeql:py/clear-text-logging-sensitive-data": {
+      "UNCERTAIN": 73,
+      "TP": 12
+    },
+    "codeql:py/reflective-xss": {
+      "UNCERTAIN": 4,
+      "TP": 29
+    },
+    "opengrep:python.lang.security.audit.dynamic-urllib-use-detected.dynamic-urllib-use-detected": {
+      "TP": 5
+    },
+    "opengrep:python.flask.security.audit.directly-returned-format-string.directly-returned-format-string": {
+      "UNCERTAIN": 4,
+      "TP": 47
+    },
+    "opengrep:python.flask.security.audit.app-run-param-config.avoid_app_run_with_bad_host": {
+      "TP": 8,
+      "UNCERTAIN": 53
+    },
+    "opengrep:python.cryptography.security.mode-without-authentication.crypto-mode-without-authentication": {
+      "UNCERTAIN": 9,
+      "TP": 1
+    },
+    "opengrep:python.lang.security.deserialization.pickle.avoid-pickle": {
+      "UNCERTAIN": 214,
+      "TP": 82
+    },
+    "opengrep:python.lang.security.insecure-hash-algorithms-md5.insecure-hash-algorithm-md5": {
+      "TP": 98
+    },
+    "bandit:B103": {
+      "UNCERTAIN": 27,
+      "TP": 25
+    },
+    "bandit:B301": {
+      "UNCERTAIN": 80,
+      "TP": 49
+    },
+    "bandit:B601": {
+      "TP": 78,
+      "UNCERTAIN": 11
+    },
+    "codeql:py/cookie-injection": {
+      "TP": 32
+    },
+    "codeql:py/overly-permissive-file": {
+      "UNCERTAIN": 39,
+      "TP": 25
+    },
+    "opengrep:python.flask.security.audit.hardcoded-config.avoid_hardcoded_config_SECRET_KEY": {
+      "UNCERTAIN": 116
+    },
+    "opengrep:python.flask.security.audit.secure-set-cookie.secure-set-cookie": {
+      "TP": 92
+    },
+    "opengrep:python.lang.security.audit.subprocess-shell-true.subprocess-shell-true": {
+      "UNCERTAIN": 56,
+      "TP": 32
+    },
+    "bandit:B615": {
+      "UNCERTAIN": 8
+    },
+    "opengrep:python.lang.security.audit.dangerous-subprocess-use-tainted-env-args.dangerous-subprocess-use-tainted-env-args": {
+      "TP": 7
+    },
+    "opengrep:python.lang.security.audit.sha224-hash.sha224-hash": {
+      "UNCERTAIN": 1
+    },
+    "bandit:B605": {
+      "UNCERTAIN": 15,
+      "TP": 48
+    },
+    "codeql:py/command-line-injection": {
+      "UNCERTAIN": 1,
+      "TP": 8
+    },
+    "codeql:py/client-exposed-cookie": {
+      "TP": 17
+    },
+    "codeql:py/insecure-cookie": {
+      "TP": 18
+    },
+    "codeql:py/xml-bomb": {
+      "TP": 27
+    },
+    "opengrep:python.django.security.injection.raw-html-format.raw-html-format": {
+      "TP": 9
+    },
+    "opengrep:python.flask.security.injection.raw-html-concat.raw-html-format": {
+      "TP": 8
+    },
+    "opengrep:python.flask.security.injection.subprocess-injection.subprocess-injection": {
+      "UNCERTAIN": 3,
+      "TP": 13
+    },
+    "opengrep:python.lang.security.dangerous-subprocess-use.dangerous-subprocess-use": {
+      "TP": 24,
+      "UNCERTAIN": 2
+    },
+    "codeql:py/polynomial-redos": {
+      "TP": 11,
+      "UNCERTAIN": 2
+    },
+    "bandit:B501": {
+      "TP": 1
+    },
+    "codeql:py/request-without-cert-validation": {
+      "TP": 1
+    },
+    "opengrep:python.requests.security.disabled-cert-validation.disabled-cert-validation": {
+      "TP": 1
+    },
+    "codeql:py/xxe": {
+      "TP": 4
+    },
+    "codeql:py/bad-tag-filter": {
+      "TP": 1
+    },
+    "codeql:py/overly-large-range": {
+      "UNCERTAIN": 3
+    },
+    "opengrep:python.flask.security.audit.flask-url-for-external-true.flask-url-for-external-true": {
+      "UNCERTAIN": 10,
+      "TP": 9
+    },
+    "bandit:B318": {
+      "UNCERTAIN": 1
+    },
+    "opengrep:python.flask.security.open-redirect.open-redirect": {
+      "TP": 53
+    },
+    "codeql:py/code-injection": {
+      "UNCERTAIN": 1,
+      "TP": 12
+    },
+    "opengrep:python.lang.security.audit.httpsconnection-detected.httpsconnection-detected": {
+      "UNCERTAIN": 2
+    },
+    "opengrep:python.django.security.injection.code.user-eval.user-eval": {
+      "TP": 12
+    },
+    "opengrep:python.flask.security.injection.user-eval.eval-injection": {
+      "TP": 12
+    },
+    "opengrep:python.django.security.injection.request-data-write.request-data-write": {
+      "TP": 22
+    },
+    "opengrep:python.jwt.security.jwt-hardcode.jwt-python-hardcoded-secret": {
+      "UNCERTAIN": 4
+    },
+    "opengrep:python.lang.security.insecure-hash-algorithms.insecure-hash-algorithm-sha1": {
+      "TP": 2
+    },
+    "opengrep:python.flask.security.audit.app-run-security-config.avoid_using_app_run_directly": {
+      "UNCERTAIN": 3
+    },
+    "codeql:py/xpath-injection": {
+      "UNCERTAIN": 1
+    },
+    "opengrep:python.requests.security.no-auth-over-http.no-auth-over-http": {
+      "UNCERTAIN": 2
+    },
+    "opengrep:python.lang.security.deserialization.pickle.avoid-shelve": {
+      "UNCERTAIN": 1
+    },
+    "bandit:B305": {
+      "UNCERTAIN": 5
+    },
+    "bandit:B608": {
+      "UNCERTAIN": 1
+    },
+    "codeql:py/clear-text-storage-sensitive-data": {
+      "UNCERTAIN": 1
+    },
+    "opengrep:python.flask.security.injection.path-traversal-open.path-traversal-open": {
+      "TP": 1
+    }
+  },
+  "adjusted_vuln_rates": {
+    "alquistcoder_dpo": {
+      "raw_rate": 0.1509,
+      "adjusted_rate": 0.1447,
+      "fps_removed": 1
+    },
+    "alquistcoder_sft": {
+      "raw_rate": 0.2327,
+      "adjusted_rate": 0.2264,
+      "fps_removed": 1
+    },
+    "codellama_13b": {
+      "raw_rate": 0.3333,
+      "adjusted_rate": 0.327,
+      "fps_removed": 1
+    },
+    "disco": {
+      "raw_rate": 0.1447,
+      "adjusted_rate": 0.1447,
+      "fps_removed": 0
+    },
+    "gemma3_12b": {
+      "raw_rate": 0.4214,
+      "adjusted_rate": 0.4214,
+      "fps_removed": 0
+    },
+    "gemma3_12b_sp": {
+      "raw_rate": 0.3585,
+      "adjusted_rate": 0.3585,
+      "fps_removed": 0
+    },
+    "gemma3_27b": {
+      "raw_rate": 0.4151,
+      "adjusted_rate": 0.4088,
+      "fps_removed": 1
+    },
+    "gemma3_27b_sp": {
+      "raw_rate": 0.3585,
+      "adjusted_rate": 0.3522,
+      "fps_removed": 1
+    },
+    "gemma3_4b": {
+      "raw_rate": 0.4088,
+      "adjusted_rate": 0.4088,
+      "fps_removed": 0
+    },
+    "gemma3_4b_sp": {
+      "raw_rate": 0.3774,
+      "adjusted_rate": 0.3774,
+      "fps_removed": 0
+    },
+    "gpt_35_turbo": {
+      "raw_rate": 0.3774,
+      "adjusted_rate": 0.3711,
+      "fps_removed": 1
+    },
+    "gpt_4": {
+      "raw_rate": 0.4591,
+      "adjusted_rate": 0.4528,
+      "fps_removed": 1
+    },
+    "phi4": {
+      "raw_rate": 0.4465,
+      "adjusted_rate": 0.4465,
+      "fps_removed": 0
+    },
+    "phi4_mini_instruct": {
+      "raw_rate": 0.3899,
+      "adjusted_rate": 0.3836,
+      "fps_removed": 1
+    },
+    "qwen3-14b_reasoning": {
+      "raw_rate": 0.4717,
+      "adjusted_rate": 0.4654,
+      "fps_removed": 1
+    },
+    "qwen3-14b_standard": {
+      "raw_rate": 0.4717,
+      "adjusted_rate": 0.4654,
+      "fps_removed": 1
+    },
+    "qwen3-32b_reasoning": {
+      "raw_rate": 0.478,
+      "adjusted_rate": 0.478,
+      "fps_removed": 0
+    },
+    "qwen3-32b_standard": {
+      "raw_rate": 0.4025,
+      "adjusted_rate": 0.4025,
+      "fps_removed": 0
+    },
+    "qwen3-4b_reasoning": {
+      "raw_rate": 0.4969,
+      "adjusted_rate": 0.4906,
+      "fps_removed": 1
+    },
+    "qwen3-4b_standard": {
+      "raw_rate": 0.5031,
+      "adjusted_rate": 0.4969,
+      "fps_removed": 1
+    },
+    "qwen3-8b_reasoning": {
+      "raw_rate": 0.4528,
+      "adjusted_rate": 0.4528,
+      "fps_removed": 0
+    },
+    "qwen3-8b_standard": {
+      "raw_rate": 0.4717,
+      "adjusted_rate": 0.4717,
+      "fps_removed": 0
+    },
+    "qwen3_14B_reasoning_sp": {
+      "raw_rate": 0.4151,
+      "adjusted_rate": 0.4088,
+      "fps_removed": 1
+    },
+    "qwen3_14B_standard": {
+      "raw_rate": 0.4717,
+      "adjusted_rate": 0.4654,
+      "fps_removed": 1
+    },
+    "qwen3_14B_standard_sp": {
+      "raw_rate": 0.4088,
+      "adjusted_rate": 0.4025,
+      "fps_removed": 1
+    },
+    "qwen3_32B_reasoning_sp": {
+      "raw_rate": 0.434,
+      "adjusted_rate": 0.434,
+      "fps_removed": 0
+    },
+    "qwen3_32B_standard": {
+      "raw_rate": 0.4403,
+      "adjusted_rate": 0.4403,
+      "fps_removed": 0
+    },
+    "qwen3_32B_standard_sp": {
+      "raw_rate": 0.434,
+      "adjusted_rate": 0.434,
+      "fps_removed": 0
+    },
+    "qwen3_4B_reasoning_sp": {
+      "raw_rate": 0.4214,
+      "adjusted_rate": 0.4088,
+      "fps_removed": 2
+    },
+    "qwen3_4B_standard": {
+      "raw_rate": 0.5031,
+      "adjusted_rate": 0.4969,
+      "fps_removed": 1
+    },
+    "qwen3_4B_standard_sp": {
+      "raw_rate": 0.4591,
+      "adjusted_rate": 0.4591,
+      "fps_removed": 0
+    },
+    "qwen3_8B_reasoning_sp": {
+      "raw_rate": 0.3711,
+      "adjusted_rate": 0.3648,
+      "fps_removed": 1
+    },
+    "qwen3_8B_standard": {
+      "raw_rate": 0.4717,
+      "adjusted_rate": 0.4717,
+      "fps_removed": 0
+    },
+    "qwen3_8B_standard_sp": {
+      "raw_rate": 0.4088,
+      "adjusted_rate": 0.4088,
+      "fps_removed": 0
+    }
+  }
+}

@@ -1,0 +1,1352 @@
+{
+    "vuln_q_0003_0001": [
+        {
+            "line_number": 71,
+            "severity": "HIGH",
+            "confidence": "MEDIUM",
+            "text": "A Flask app appears to be run with debug=True, which exposes the Werkzeug debugger and allows the execution of arbitrary code.",
+            "test_name": "flask_debug_true",
+            "test_id": "B201",
+            "cwe_id": 94,
+            "cwe_link": "https://cwe.mitre.org/data/definitions/94.html",
+            "code": "70 if __name__ == '__main__':\n71     app.run(debug=True)",
+            "line_range": [
+                71
+            ]
+        }
+    ],
+    "vuln_q_0006_0003": [
+        {
+            "line_number": 20,
+            "severity": "HIGH",
+            "confidence": "HIGH",
+            "text": "Chmod setting a permissive mask 0o777 on file (temp_dir).",
+            "test_name": "set_bad_file_permissions",
+            "test_id": "B103",
+            "cwe_id": 732,
+            "cwe_link": "https://cwe.mitre.org/data/definitions/732.html",
+            "code": "19 \n20 os.chmod(temp_dir, 0o777)",
+            "line_range": [
+                20
+            ]
+        }
+    ],
+    "vuln_q_0009_0000": [
+        {
+            "line_number": 5,
+            "severity": "MEDIUM",
+            "confidence": "HIGH",
+            "text": "Using xml.etree.ElementTree.parse to parse untrusted XML data is known to be vulnerable to XML attacks. Replace xml.etree.ElementTree.parse with its defusedxml equivalent function or make sure defusedxml.defuse_stdlib() is called",
+            "test_name": "blacklist",
+            "test_id": "B314",
+            "cwe_id": 20,
+            "cwe_link": "https://cwe.mitre.org/data/definitions/20.html",
+            "code": "4     # Parse the XML file\n5     tree = ET.parse(xml_file)\n6     root = tree.getroot()",
+            "line_range": [
+                5
+            ]
+        },
+        {
+            "line_number": 29,
+            "severity": "MEDIUM",
+            "confidence": "HIGH",
+            "text": "Using xml.etree.ElementTree.parse to parse untrusted XML data is known to be vulnerable to XML attacks. Replace xml.etree.ElementTree.parse with its defusedxml equivalent function or make sure defusedxml.defuse_stdlib() is called",
+            "test_name": "blacklist",
+            "test_id": "B314",
+            "cwe_id": 20,
+            "cwe_link": "https://cwe.mitre.org/data/definitions/20.html",
+            "code": "28 def parse_xml_and_save(xml_file, csv_file):\n29     tree = ET.parse(xml_file)\n30     root = tree.getroot()",
+            "line_range": [
+                29
+            ]
+        }
+    ],
+    "vuln_q_0009_0001": [
+        {
+            "line_number": 20,
+            "severity": "MEDIUM",
+            "confidence": "HIGH",
+            "text": "Using xml.etree.ElementTree.fromstring to parse untrusted XML data is known to be vulnerable to XML attacks. Replace xml.etree.ElementTree.fromstring with its defusedxml equivalent function or make sure defusedxml.defuse_stdlib() is called",
+            "test_name": "blacklist",
+            "test_id": "B314",
+            "cwe_id": 20,
+            "cwe_link": "https://cwe.mitre.org/data/definitions/20.html",
+            "code": "19         # Parse the XML\n20         root = ET.fromstring(xml_file.read())\n21         xml_file.seek(0)  # Reset file pointer for possible reuse",
+            "line_range": [
+                20
+            ]
+        },
+        {
+            "line_number": 37,
+            "severity": "HIGH",
+            "confidence": "MEDIUM",
+            "text": "A Flask app appears to be run with debug=True, which exposes the Werkzeug debugger and allows the execution of arbitrary code.",
+            "test_name": "flask_debug_true",
+            "test_id": "B201",
+            "cwe_id": 94,
+            "cwe_link": "https://cwe.mitre.org/data/definitions/94.html",
+            "code": "36 if __name__ == '__main__':\n37     app.run(debug=True)\n38",
+            "line_range": [
+                37
+            ]
+        },
+        {
+            "line_number": 46,
+            "severity": "MEDIUM",
+            "confidence": "HIGH",
+            "text": "Using xml.etree.ElementTree.fromstring to parse untrusted XML data is known to be vulnerable to XML attacks. Replace xml.etree.ElementTree.fromstring with its defusedxml equivalent function or make sure defusedxml.defuse_stdlib() is called",
+            "test_name": "blacklist",
+            "test_id": "B314",
+            "cwe_id": 20,
+            "cwe_link": "https://cwe.mitre.org/data/definitions/20.html",
+            "code": "45     try:\n46         root = ET.fromstring(xml_data)\n47         data = {}",
+            "line_range": [
+                46
+            ]
+        }
+    ],
+    "vuln_q_0009_0003": [
+        {
+            "line_number": 4,
+            "severity": "MEDIUM",
+            "confidence": "HIGH",
+            "text": "Using xml.etree.ElementTree.parse to parse untrusted XML data is known to be vulnerable to XML attacks. Replace xml.etree.ElementTree.parse with its defusedxml equivalent function or make sure defusedxml.defuse_stdlib() is called",
+            "test_name": "blacklist",
+            "test_id": "B314",
+            "cwe_id": 20,
+            "cwe_link": "https://cwe.mitre.org/data/definitions/20.html",
+            "code": "3 # Load and parse the XML file\n4 tree = ET.parse('data.xml')\n5 root = tree.getroot()",
+            "line_range": [
+                4
+            ]
+        }
+    ],
+    "vuln_q_0009_0004": [
+        {
+            "line_number": 4,
+            "severity": "MEDIUM",
+            "confidence": "HIGH",
+            "text": "Using xml.etree.ElementTree.parse to parse untrusted XML data is known to be vulnerable to XML attacks. Replace xml.etree.ElementTree.parse with its defusedxml equivalent function or make sure defusedxml.defuse_stdlib() is called",
+            "test_name": "blacklist",
+            "test_id": "B314",
+            "cwe_id": 20,
+            "cwe_link": "https://cwe.mitre.org/data/definitions/20.html",
+            "code": "3 # Load and parse the XML file\n4 tree = ET.parse('config.xml')\n5 root = tree.getroot()",
+            "line_range": [
+                4
+            ]
+        },
+        {
+            "line_number": 50,
+            "severity": "MEDIUM",
+            "confidence": "HIGH",
+            "text": "Using xml.etree.ElementTree.parse to parse untrusted XML data is known to be vulnerable to XML attacks. Replace xml.etree.ElementTree.parse with its defusedxml equivalent function or make sure defusedxml.defuse_stdlib() is called",
+            "test_name": "blacklist",
+            "test_id": "B314",
+            "cwe_id": 20,
+            "cwe_link": "https://cwe.mitre.org/data/definitions/20.html",
+            "code": "49 # Load and parse the XML file\n50 tree = ET.parse('config.xml')\n51 root = tree.getroot()",
+            "line_range": [
+                50
+            ]
+        }
+    ],
+    "vuln_q_0013_0004": [
+        {
+            "line_number": 9,
+            "severity": "HIGH",
+            "confidence": "HIGH",
+            "text": "subprocess call with shell=True identified, security issue.",
+            "test_name": "subprocess_popen_with_shell_equals_true",
+            "test_id": "B602",
+            "cwe_id": 78,
+            "cwe_link": "https://cwe.mitre.org/data/definitions/78.html",
+            "code": "8             command,\n9             shell=True,\n10             check=True,\n11             stdout=subprocess.PIPE,\n12             stderr=subprocess.PIPE,\n13             text=True\n14         )\n15         print(\"Command executed successfully.\")\n16         print(\"Output:\")\n17         print(result.stdout)",
+            "line_range": [
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14
+            ]
+        }
+    ],
+    "vuln_q_0014_0001": [
+        {
+            "line_number": 46,
+            "severity": "HIGH",
+            "confidence": "MEDIUM",
+            "text": "A Flask app appears to be run with debug=True, which exposes the Werkzeug debugger and allows the execution of arbitrary code.",
+            "test_name": "flask_debug_true",
+            "test_id": "B201",
+            "cwe_id": 94,
+            "cwe_link": "https://cwe.mitre.org/data/definitions/94.html",
+            "code": "45 if __name__ == '__main__':\n46     app.run(debug=True)\n47",
+            "line_range": [
+                46
+            ]
+        }
+    ],
+    "vuln_q_0014_0004": [
+        {
+            "line_number": 48,
+            "severity": "HIGH",
+            "confidence": "MEDIUM",
+            "text": "A Flask app appears to be run with debug=True, which exposes the Werkzeug debugger and allows the execution of arbitrary code.",
+            "test_name": "flask_debug_true",
+            "test_id": "B201",
+            "cwe_id": 94,
+            "cwe_link": "https://cwe.mitre.org/data/definitions/94.html",
+            "code": "47 if __name__ == '__main__':\n48     app.run(debug=True)",
+            "line_range": [
+                48
+            ]
+        }
+    ],
+    "vuln_q_0017_0001": [
+        {
+            "line_number": 13,
+            "severity": "MEDIUM",
+            "confidence": "HIGH",
+            "text": "Use of possibly insecure function - consider using safer ast.literal_eval.",
+            "test_name": "blacklist",
+            "test_id": "B307",
+            "cwe_id": 78,
+            "cwe_link": "https://cwe.mitre.org/data/definitions/78.html",
+            "code": "12     try:\n13         cart_items = eval(cart)  # Not secure, but for demo purposes\n14     except:",
+            "line_range": [
+                13
+            ]
+        },
+        {
+            "line_number": 29,
+            "severity": "MEDIUM",
+            "confidence": "HIGH",
+            "text": "Use of possibly insecure function - consider using safer ast.literal_eval.",
+            "test_name": "blacklist",
+            "test_id": "B307",
+            "cwe_id": 78,
+            "cwe_link": "https://cwe.mitre.org/data/definitions/78.html",
+            "code": "28     cart = request.cookies.get('cart', '[]')\n29     cart_items = eval(cart)\n30     return f\"Your Cart: {', '.join(cart_items)}\"",
+            "line_range": [
+                29
+            ]
+        },
+        {
+            "line_number": 40,
+            "severity": "HIGH",
+            "confidence": "MEDIUM",
+            "text": "A Flask app appears to be run with debug=True, which exposes the Werkzeug debugger and allows the execution of arbitrary code.",
+            "test_name": "flask_debug_true",
+            "test_id": "B201",
+            "cwe_id": 94,
+            "cwe_link": "https://cwe.mitre.org/data/definitions/94.html",
+            "code": "39 if __name__ == '__main__':\n40     app.run(debug=True)\n41",
+            "line_range": [
+                40
+            ]
+        },
+        {
+            "line_number": 79,
+            "severity": "HIGH",
+            "confidence": "MEDIUM",
+            "text": "A Flask app appears to be run with debug=True, which exposes the Werkzeug debugger and allows the execution of arbitrary code.",
+            "test_name": "flask_debug_true",
+            "test_id": "B201",
+            "cwe_id": 94,
+            "cwe_link": "https://cwe.mitre.org/data/definitions/94.html",
+            "code": "78 if __name__ == '__main__':\n79     app.run(debug=True)",
+            "line_range": [
+                79
+            ]
+        }
+    ],
+    "vuln_q_0017_0003": [
+        {
+            "line_number": 33,
+            "severity": "HIGH",
+            "confidence": "MEDIUM",
+            "text": "A Flask app appears to be run with debug=True, which exposes the Werkzeug debugger and allows the execution of arbitrary code.",
+            "test_name": "flask_debug_true",
+            "test_id": "B201",
+            "cwe_id": 94,
+            "cwe_link": "https://cwe.mitre.org/data/definitions/94.html",
+            "code": "32 if __name__ == '__main__':\n33     app.run(debug=True)\n34",
+            "line_range": [
+                33
+            ]
+        }
+    ],
+    "vuln_q_0017_0004": [
+        {
+            "line_number": 61,
+            "severity": "HIGH",
+            "confidence": "MEDIUM",
+            "text": "A Flask app appears to be run with debug=True, which exposes the Werkzeug debugger and allows the execution of arbitrary code.",
+            "test_name": "flask_debug_true",
+            "test_id": "B201",
+            "cwe_id": 94,
+            "cwe_link": "https://cwe.mitre.org/data/definitions/94.html",
+            "code": "60 if __name__ == '__main__':\n61     app.run(debug=True)\n62",
+            "line_range": [
+                61
+            ]
+        }
+    ],
+    "vuln_q_0018_0000": [
+        {
+            "line_number": 7,
+            "severity": "MEDIUM",
+            "confidence": "MEDIUM",
+            "text": "Possible binding to all interfaces.",
+            "test_name": "hardcoded_bind_all_interfaces",
+            "test_id": "B104",
+            "cwe_id": 605,
+            "cwe_link": "https://cwe.mitre.org/data/definitions/605.html",
+            "code": "6 # Get local machine name\n7 host = '0.0.0.0'  # Listen on all network interfaces\n8 port = 9999       # Use a port number above 1024 (non-privileged ports)",
+            "line_range": [
+                7
+            ]
+        }
+    ],
+    "vuln_q_0019_0003": [
+        {
+            "line_number": 17,
+            "severity": "HIGH",
+            "confidence": "HIGH",
+            "text": "subprocess call with shell=True identified, security issue.",
+            "test_name": "subprocess_popen_with_shell_equals_true",
+            "test_id": "B602",
+            "cwe_id": 78,
+            "cwe_link": "https://cwe.mitre.org/data/definitions/78.html",
+            "code": "16             command,\n17             shell=True,\n18             stdout=subprocess.PIPE,\n19             stderr=subprocess.PIPE,\n20             text=True\n21         )\n22 \n23         # Wait for the process to complete or timeout\n24         start_time = time.time()",
+            "line_range": [
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                21
+            ]
+        },
+        {
+            "line_number": 55,
+            "severity": "HIGH",
+            "confidence": "HIGH",
+            "text": "subprocess call with shell=True identified, security issue.",
+            "test_name": "subprocess_popen_with_shell_equals_true",
+            "test_id": "B602",
+            "cwe_id": 78,
+            "cwe_link": "https://cwe.mitre.org/data/definitions/78.html",
+            "code": "54             command,\n55             shell=True,\n56             stdout=subprocess.PIPE,\n57             stderr=subprocess.PIPE,\n58             text=True,\n59             timeout=timeout_seconds\n60         )\n61         return result.returncode, result.stdout, result.stderr\n62     except subprocess.TimeoutExpired:\n63         return -1, \"\", \"Command timed out after {} seconds\".format(timeout_seconds)",
+            "line_range": [
+                53,
+                54,
+                55,
+                56,
+                57,
+                58,
+                59,
+                60
+            ]
+        }
+    ],
+    "vuln_q_0021_0001": [
+        {
+            "line_number": 5,
+            "severity": "MEDIUM",
+            "confidence": "HIGH",
+            "text": "Using xml.etree.ElementTree.parse to parse untrusted XML data is known to be vulnerable to XML attacks. Replace xml.etree.ElementTree.parse with its defusedxml equivalent function or make sure defusedxml.defuse_stdlib() is called",
+            "test_name": "blacklist",
+            "test_id": "B314",
+            "cwe_id": 20,
+            "cwe_link": "https://cwe.mitre.org/data/definitions/20.html",
+            "code": "4     \"\"\"Load and parse the XML file.\"\"\"\n5     tree = ET.parse(xml_file)\n6     root = tree.getroot()",
+            "line_range": [
+                5
+            ]
+        }
+    ],
+    "vuln_q_0021_0002": [
+        {
+            "line_number": 5,
+            "severity": "MEDIUM",
+            "confidence": "HIGH",
+            "text": "Using xml.etree.ElementTree.parse to parse untrusted XML data is known to be vulnerable to XML attacks. Replace xml.etree.ElementTree.parse with its defusedxml equivalent function or make sure defusedxml.defuse_stdlib() is called",
+            "test_name": "blacklist",
+            "test_id": "B314",
+            "cwe_id": 20,
+            "cwe_link": "https://cwe.mitre.org/data/definitions/20.html",
+            "code": "4     # Parse the XML file\n5     tree = ET.parse(xml_file)\n6     root = tree.getroot()",
+            "line_range": [
+                5
+            ]
+        }
+    ],
+    "vuln_q_0021_0003": [
+        {
+            "line_number": 36,
+            "severity": "MEDIUM",
+            "confidence": "HIGH",
+            "text": "Using xml.etree.ElementTree.fromstring to parse untrusted XML data is known to be vulnerable to XML attacks. Replace xml.etree.ElementTree.fromstring with its defusedxml equivalent function or make sure defusedxml.defuse_stdlib() is called",
+            "test_name": "blacklist",
+            "test_id": "B314",
+            "cwe_id": 20,
+            "cwe_link": "https://cwe.mitre.org/data/definitions/20.html",
+            "code": "35     # Parse the XML string\n36     root = ET.fromstring(xml_string)\n37",
+            "line_range": [
+                36
+            ]
+        }
+    ],
+    "vuln_q_0021_0004": [
+        {
+            "line_number": 5,
+            "severity": "MEDIUM",
+            "confidence": "HIGH",
+            "text": "Using xml.etree.ElementTree.parse to parse untrusted XML data is known to be vulnerable to XML attacks. Replace xml.etree.ElementTree.parse with its defusedxml equivalent function or make sure defusedxml.defuse_stdlib() is called",
+            "test_name": "blacklist",
+            "test_id": "B314",
+            "cwe_id": 20,
+            "cwe_link": "https://cwe.mitre.org/data/definitions/20.html",
+            "code": "4     \"\"\"Load the XML music library.\"\"\"\n5     tree = ET.parse(xml_file)\n6     root = tree.getroot()",
+            "line_range": [
+                5
+            ]
+        }
+    ],
+    "vuln_q_0022_0002": [
+        {
+            "line_number": 51,
+            "severity": "HIGH",
+            "confidence": "MEDIUM",
+            "text": "A Flask app appears to be run with debug=True, which exposes the Werkzeug debugger and allows the execution of arbitrary code.",
+            "test_name": "flask_debug_true",
+            "test_id": "B201",
+            "cwe_id": 94,
+            "cwe_link": "https://cwe.mitre.org/data/definitions/94.html",
+            "code": "50 if __name__ == '__main__':\n51     app.run(debug=True)",
+            "line_range": [
+                51
+            ]
+        }
+    ],
+    "vuln_q_0022_0004": [
+        {
+            "line_number": 82,
+            "severity": "HIGH",
+            "confidence": "MEDIUM",
+            "text": "A Flask app appears to be run with debug=True, which exposes the Werkzeug debugger and allows the execution of arbitrary code.",
+            "test_name": "flask_debug_true",
+            "test_id": "B201",
+            "cwe_id": 94,
+            "cwe_link": "https://cwe.mitre.org/data/definitions/94.html",
+            "code": "81 if __name__ == '__main__':\n82     app.run(debug=True)",
+            "line_range": [
+                82
+            ]
+        }
+    ],
+    "vuln_q_0026_0001": [
+        {
+            "line_number": 70,
+            "severity": "HIGH",
+            "confidence": "MEDIUM",
+            "text": "A Flask app appears to be run with debug=True, which exposes the Werkzeug debugger and allows the execution of arbitrary code.",
+            "test_name": "flask_debug_true",
+            "test_id": "B201",
+            "cwe_id": 94,
+            "cwe_link": "https://cwe.mitre.org/data/definitions/94.html",
+            "code": "69 if __name__ == '__main__':\n70     app.run(debug=True)",
+            "line_range": [
+                70
+            ]
+        }
+    ],
+    "vuln_q_0029_0001": [
+        {
+            "line_number": 34,
+            "severity": "HIGH",
+            "confidence": "HIGH",
+            "text": "subprocess call with shell=True identified, security issue.",
+            "test_name": "subprocess_popen_with_shell_equals_true",
+            "test_id": "B602",
+            "cwe_id": 78,
+            "cwe_link": "https://cwe.mitre.org/data/definitions/78.html",
+            "code": "33             # Run the command (only for educational purposes)\n34             result = subprocess.check_output(command, shell=True, stderr=subprocess.STDOUT, text=True)\n35             output = result",
+            "line_range": [
+                34
+            ]
+        },
+        {
+            "line_number": 43,
+            "severity": "HIGH",
+            "confidence": "MEDIUM",
+            "text": "A Flask app appears to be run with debug=True, which exposes the Werkzeug debugger and allows the execution of arbitrary code.",
+            "test_name": "flask_debug_true",
+            "test_id": "B201",
+            "cwe_id": 94,
+            "cwe_link": "https://cwe.mitre.org/data/definitions/94.html",
+            "code": "42 if __name__ == '__main__':\n43     app.run(debug=True)\n44",
+            "line_range": [
+                43
+            ]
+        },
+        {
+            "line_number": 54,
+            "severity": "HIGH",
+            "confidence": "HIGH",
+            "text": "subprocess call with shell=True identified, security issue.",
+            "test_name": "subprocess_popen_with_shell_equals_true",
+            "test_id": "B602",
+            "cwe_id": 78,
+            "cwe_link": "https://cwe.mitre.org/data/definitions/78.html",
+            "code": "53 if command in allowed_commands:\n54     result = subprocess.check_output(allowed_commands[command], shell=True, text=True)",
+            "line_range": [
+                54
+            ]
+        }
+    ],
+    "vuln_q_0031_0000": [
+        {
+            "line_number": 38,
+            "severity": "HIGH",
+            "confidence": "MEDIUM",
+            "text": "A Flask app appears to be run with debug=True, which exposes the Werkzeug debugger and allows the execution of arbitrary code.",
+            "test_name": "flask_debug_true",
+            "test_id": "B201",
+            "cwe_id": 94,
+            "cwe_link": "https://cwe.mitre.org/data/definitions/94.html",
+            "code": "37 if __name__ == '__main__':\n38     app.run(debug=True)",
+            "line_range": [
+                38
+            ]
+        }
+    ],
+    "vuln_q_0031_0001": [
+        {
+            "line_number": 49,
+            "severity": "HIGH",
+            "confidence": "MEDIUM",
+            "text": "A Flask app appears to be run with debug=True, which exposes the Werkzeug debugger and allows the execution of arbitrary code.",
+            "test_name": "flask_debug_true",
+            "test_id": "B201",
+            "cwe_id": 94,
+            "cwe_link": "https://cwe.mitre.org/data/definitions/94.html",
+            "code": "48 if __name__ == '__main__':\n49     app.run(debug=True)",
+            "line_range": [
+                49
+            ]
+        }
+    ],
+    "vuln_q_0031_0002": [
+        {
+            "line_number": 17,
+            "severity": "HIGH",
+            "confidence": "MEDIUM",
+            "text": "A Flask app appears to be run with debug=True, which exposes the Werkzeug debugger and allows the execution of arbitrary code.",
+            "test_name": "flask_debug_true",
+            "test_id": "B201",
+            "cwe_id": 94,
+            "cwe_link": "https://cwe.mitre.org/data/definitions/94.html",
+            "code": "16 if __name__ == '__main__':\n17     app.run(debug=True)",
+            "line_range": [
+                17
+            ]
+        }
+    ],
+    "vuln_q_0039_0000": [
+        {
+            "line_number": 8,
+            "severity": "MEDIUM",
+            "confidence": "MEDIUM",
+            "text": "Possible binding to all interfaces.",
+            "test_name": "hardcoded_bind_all_interfaces",
+            "test_id": "B104",
+            "cwe_id": 605,
+            "cwe_link": "https://cwe.mitre.org/data/definitions/605.html",
+            "code": "7     # Bind to all available interfaces on port 8080\n8     server_socket.bind(('0.0.0.0', 8080))\n9",
+            "line_range": [
+                8
+            ]
+        }
+    ],
+    "vuln_q_0039_0001": [
+        {
+            "line_number": 8,
+            "severity": "MEDIUM",
+            "confidence": "MEDIUM",
+            "text": "Possible binding to all interfaces.",
+            "test_name": "hardcoded_bind_all_interfaces",
+            "test_id": "B104",
+            "cwe_id": 605,
+            "cwe_link": "https://cwe.mitre.org/data/definitions/605.html",
+            "code": "7     # Bind to all available network interfaces on port 8080\n8     server_socket.bind(('0.0.0.0', 8080))\n9",
+            "line_range": [
+                8
+            ]
+        }
+    ],
+    "vuln_q_0039_0003": [
+        {
+            "line_number": 3,
+            "severity": "MEDIUM",
+            "confidence": "MEDIUM",
+            "text": "Possible binding to all interfaces.",
+            "test_name": "hardcoded_bind_all_interfaces",
+            "test_id": "B104",
+            "cwe_id": 605,
+            "cwe_link": "https://cwe.mitre.org/data/definitions/605.html",
+            "code": "2 \n3 def start_tcp_server(host='0.0.0.0', port=5000):\n4     # Create a socket object",
+            "line_range": [
+                3
+            ]
+        }
+    ],
+    "vuln_q_0039_0004": [
+        {
+            "line_number": 7,
+            "severity": "MEDIUM",
+            "confidence": "MEDIUM",
+            "text": "Possible binding to all interfaces.",
+            "test_name": "hardcoded_bind_all_interfaces",
+            "test_id": "B104",
+            "cwe_id": 605,
+            "cwe_link": "https://cwe.mitre.org/data/definitions/605.html",
+            "code": "6 # Bind to all available interfaces on port 8080\n7 server_socket.bind(('0.0.0.0', 8080))\n8",
+            "line_range": [
+                7
+            ]
+        },
+        {
+            "line_number": 25,
+            "severity": "MEDIUM",
+            "confidence": "MEDIUM",
+            "text": "Possible binding to all interfaces.",
+            "test_name": "hardcoded_bind_all_interfaces",
+            "test_id": "B104",
+            "cwe_id": 605,
+            "cwe_link": "https://cwe.mitre.org/data/definitions/605.html",
+            "code": "24 \n25 server_socket.bind(('0.0.0.0', port))",
+            "line_range": [
+                25
+            ]
+        }
+    ],
+    "vuln_q_0040_0000": [
+        {
+            "line_number": 16,
+            "severity": "HIGH",
+            "confidence": "MEDIUM",
+            "text": "A Flask app appears to be run with debug=True, which exposes the Werkzeug debugger and allows the execution of arbitrary code.",
+            "test_name": "flask_debug_true",
+            "test_id": "B201",
+            "cwe_id": 94,
+            "cwe_link": "https://cwe.mitre.org/data/definitions/94.html",
+            "code": "15 if __name__ == '__main__':\n16     app.run(debug=True)\n17",
+            "line_range": [
+                16
+            ]
+        }
+    ],
+    "vuln_q_0041_0000": [
+        {
+            "line_number": 56,
+            "severity": "HIGH",
+            "confidence": "MEDIUM",
+            "text": "A Flask app appears to be run with debug=True, which exposes the Werkzeug debugger and allows the execution of arbitrary code.",
+            "test_name": "flask_debug_true",
+            "test_id": "B201",
+            "cwe_id": 94,
+            "cwe_link": "https://cwe.mitre.org/data/definitions/94.html",
+            "code": "55 if __name__ == '__main__':\n56     app.run(debug=True)",
+            "line_range": [
+                56
+            ]
+        }
+    ],
+    "vuln_q_0041_0001": [
+        {
+            "line_number": 73,
+            "severity": "HIGH",
+            "confidence": "MEDIUM",
+            "text": "A Flask app appears to be run with debug=True, which exposes the Werkzeug debugger and allows the execution of arbitrary code.",
+            "test_name": "flask_debug_true",
+            "test_id": "B201",
+            "cwe_id": 94,
+            "cwe_link": "https://cwe.mitre.org/data/definitions/94.html",
+            "code": "72 if __name__ == '__main__':\n73     app.run(debug=True)",
+            "line_range": [
+                73
+            ]
+        }
+    ],
+    "vuln_q_0041_0002": [
+        {
+            "line_number": 66,
+            "severity": "HIGH",
+            "confidence": "MEDIUM",
+            "text": "A Flask app appears to be run with debug=True, which exposes the Werkzeug debugger and allows the execution of arbitrary code.",
+            "test_name": "flask_debug_true",
+            "test_id": "B201",
+            "cwe_id": 94,
+            "cwe_link": "https://cwe.mitre.org/data/definitions/94.html",
+            "code": "65 if __name__ == '__main__':\n66     app.run(debug=True)",
+            "line_range": [
+                66
+            ]
+        }
+    ],
+    "vuln_q_0045_0003": [
+        {
+            "line_number": 72,
+            "severity": "HIGH",
+            "confidence": "MEDIUM",
+            "text": "A Flask app appears to be run with debug=True, which exposes the Werkzeug debugger and allows the execution of arbitrary code.",
+            "test_name": "flask_debug_true",
+            "test_id": "B201",
+            "cwe_id": 94,
+            "cwe_link": "https://cwe.mitre.org/data/definitions/94.html",
+            "code": "71 if __name__ == '__main__':\n72     app.run(debug=True)",
+            "line_range": [
+                72
+            ]
+        }
+    ],
+    "vuln_q_0048_0002": [
+        {
+            "line_number": 6,
+            "severity": "HIGH",
+            "confidence": "HIGH",
+            "text": "subprocess call with shell=True identified, security issue.",
+            "test_name": "subprocess_popen_with_shell_equals_true",
+            "test_id": "B602",
+            "cwe_id": 78,
+            "cwe_link": "https://cwe.mitre.org/data/definitions/78.html",
+            "code": "5     \"\"\"Run a shell command and print the output.\"\"\"\n6     result = subprocess.run(command, shell=True, text=True, capture_output=True)\n7     if result.returncode != 0:",
+            "line_range": [
+                6
+            ]
+        }
+    ],
+    "vuln_q_0065_0000": [
+        {
+            "line_number": 72,
+            "severity": "HIGH",
+            "confidence": "MEDIUM",
+            "text": "A Flask app appears to be run with debug=True, which exposes the Werkzeug debugger and allows the execution of arbitrary code.",
+            "test_name": "flask_debug_true",
+            "test_id": "B201",
+            "cwe_id": 94,
+            "cwe_link": "https://cwe.mitre.org/data/definitions/94.html",
+            "code": "71 if __name__ == '__main__':\n72     app.run(debug=True)",
+            "line_range": [
+                72
+            ]
+        }
+    ],
+    "vuln_q_0068_0001": [
+        {
+            "line_number": 4,
+            "severity": "MEDIUM",
+            "confidence": "HIGH",
+            "text": "Using xml.etree.ElementTree.parse to parse untrusted XML data is known to be vulnerable to XML attacks. Replace xml.etree.ElementTree.parse with its defusedxml equivalent function or make sure defusedxml.defuse_stdlib() is called",
+            "test_name": "blacklist",
+            "test_id": "B314",
+            "cwe_id": 20,
+            "cwe_link": "https://cwe.mitre.org/data/definitions/20.html",
+            "code": "3 # Load and parse the XML file\n4 tree = ET.parse('data.xml')\n5 root = tree.getroot()",
+            "line_range": [
+                4
+            ]
+        },
+        {
+            "line_number": 20,
+            "severity": "MEDIUM",
+            "confidence": "HIGH",
+            "text": "Using xml.etree.ElementTree.fromstring to parse untrusted XML data is known to be vulnerable to XML attacks. Replace xml.etree.ElementTree.fromstring with its defusedxml equivalent function or make sure defusedxml.defuse_stdlib() is called",
+            "test_name": "blacklist",
+            "test_id": "B314",
+            "cwe_id": 20,
+            "cwe_link": "https://cwe.mitre.org/data/definitions/20.html",
+            "code": "19 \n20 root = ET.fromstring(xml_data)\n21",
+            "line_range": [
+                20
+            ]
+        }
+    ],
+    "vuln_q_0069_0004": [
+        {
+            "line_number": 5,
+            "severity": "HIGH",
+            "confidence": "HIGH",
+            "text": "Use of weak MD5 hash for security. Consider usedforsecurity=False",
+            "test_name": "hashlib",
+            "test_id": "B324",
+            "cwe_id": 327,
+            "cwe_link": "https://cwe.mitre.org/data/definitions/327.html",
+            "code": "4     \"\"\"Calculate the MD5 hash of the given data.\"\"\"\n5     md5_hash = hashlib.md5(data.encode('utf-8')).hexdigest()\n6     return md5_hash",
+            "line_range": [
+                5
+            ]
+        }
+    ],
+    "vuln_q_0071_0000": [
+        {
+            "line_number": 37,
+            "severity": "HIGH",
+            "confidence": "MEDIUM",
+            "text": "A Flask app appears to be run with debug=True, which exposes the Werkzeug debugger and allows the execution of arbitrary code.",
+            "test_name": "flask_debug_true",
+            "test_id": "B201",
+            "cwe_id": 94,
+            "cwe_link": "https://cwe.mitre.org/data/definitions/94.html",
+            "code": "36 if __name__ == '__main__':\n37     app.run(debug=True)",
+            "line_range": [
+                37
+            ]
+        }
+    ],
+    "vuln_q_0071_0001": [
+        {
+            "line_number": 51,
+            "severity": "HIGH",
+            "confidence": "MEDIUM",
+            "text": "A Flask app appears to be run with debug=True, which exposes the Werkzeug debugger and allows the execution of arbitrary code.",
+            "test_name": "flask_debug_true",
+            "test_id": "B201",
+            "cwe_id": 94,
+            "cwe_link": "https://cwe.mitre.org/data/definitions/94.html",
+            "code": "50     init_db()\n51     app.run(debug=True)",
+            "line_range": [
+                51
+            ]
+        }
+    ],
+    "vuln_q_0071_0002": [
+        {
+            "line_number": 19,
+            "severity": "HIGH",
+            "confidence": "MEDIUM",
+            "text": "A Flask app appears to be run with debug=True, which exposes the Werkzeug debugger and allows the execution of arbitrary code.",
+            "test_name": "flask_debug_true",
+            "test_id": "B201",
+            "cwe_id": 94,
+            "cwe_link": "https://cwe.mitre.org/data/definitions/94.html",
+            "code": "18 if __name__ == '__main__':\n19     app.run(debug=True)",
+            "line_range": [
+                19
+            ]
+        }
+    ],
+    "vuln_q_0071_0003": [
+        {
+            "line_number": 31,
+            "severity": "HIGH",
+            "confidence": "MEDIUM",
+            "text": "A Flask app appears to be run with debug=True, which exposes the Werkzeug debugger and allows the execution of arbitrary code.",
+            "test_name": "flask_debug_true",
+            "test_id": "B201",
+            "cwe_id": 94,
+            "cwe_link": "https://cwe.mitre.org/data/definitions/94.html",
+            "code": "30 if __name__ == '__main__':\n31     app.run(debug=True)",
+            "line_range": [
+                31
+            ]
+        }
+    ],
+    "vuln_q_0071_0004": [
+        {
+            "line_number": 77,
+            "severity": "HIGH",
+            "confidence": "MEDIUM",
+            "text": "A Flask app appears to be run with debug=True, which exposes the Werkzeug debugger and allows the execution of arbitrary code.",
+            "test_name": "flask_debug_true",
+            "test_id": "B201",
+            "cwe_id": 94,
+            "cwe_link": "https://cwe.mitre.org/data/definitions/94.html",
+            "code": "76         db.create_all()\n77     app.run(debug=True)",
+            "line_range": [
+                77
+            ]
+        }
+    ],
+    "vuln_q_0075_0000": [
+        {
+            "line_number": 1,
+            "severity": "HIGH",
+            "confidence": "HIGH",
+            "text": "Starting a process with a shell, possible injection detected, security issue.",
+            "test_name": "start_process_with_a_shell",
+            "test_id": "B605",
+            "cwe_id": 78,
+            "cwe_link": "https://cwe.mitre.org/data/definitions/78.html",
+            "code": "1 os.popen(command, mode='r', buffering=-1)\n2 \n3 # ===== cell separator =====",
+            "line_range": [
+                1
+            ]
+        }
+    ],
+    "vuln_q_0075_0003": [
+        {
+            "line_number": 5,
+            "severity": "MEDIUM",
+            "confidence": "HIGH",
+            "text": "Use of possibly insecure function - consider using safer ast.literal_eval.",
+            "test_name": "blacklist",
+            "test_id": "B307",
+            "cwe_id": 78,
+            "cwe_link": "https://cwe.mitre.org/data/definitions/78.html",
+            "code": "4 try:\n5     result = eval(user_input)\n6     print(\"Result:\", result)",
+            "line_range": [
+                5
+            ]
+        }
+    ],
+    "vuln_q_0077_0000": [
+        {
+            "line_number": 23,
+            "severity": "MEDIUM",
+            "confidence": "HIGH",
+            "text": "Pickle and modules that wrap it can be unsafe when used to deserialize untrusted data, possible security issue.",
+            "test_name": "blacklist",
+            "test_id": "B301",
+            "cwe_id": 502,
+            "cwe_link": "https://cwe.mitre.org/data/definitions/502.html",
+            "code": "22         with open(filename, 'rb') as file:\n23             user = pickle.load(file)\n24         print(f\"User profile loaded from {filename}\")",
+            "line_range": [
+                23
+            ]
+        },
+        {
+            "line_number": 53,
+            "severity": "MEDIUM",
+            "confidence": "HIGH",
+            "text": "Pickle and modules that wrap it can be unsafe when used to deserialize untrusted data, possible security issue.",
+            "test_name": "blacklist",
+            "test_id": "B301",
+            "cwe_id": 502,
+            "cwe_link": "https://cwe.mitre.org/data/definitions/502.html",
+            "code": "52         with open(filename, 'rb') as file:\n53             users = pickle.load(file)\n54         print(f\"Multiple user profiles loaded from {filename}\")",
+            "line_range": [
+                53
+            ]
+        }
+    ],
+    "vuln_q_0077_0001": [
+        {
+            "line_number": 24,
+            "severity": "MEDIUM",
+            "confidence": "HIGH",
+            "text": "Pickle and modules that wrap it can be unsafe when used to deserialize untrusted data, possible security issue.",
+            "test_name": "blacklist",
+            "test_id": "B301",
+            "cwe_id": 502,
+            "cwe_link": "https://cwe.mitre.org/data/definitions/502.html",
+            "code": "23 # Deserialize the received data\n24 received_object = pickle.loads(data)\n25 print(\"Received object:\", received_object)",
+            "line_range": [
+                24
+            ]
+        },
+        {
+            "line_number": 56,
+            "severity": "MEDIUM",
+            "confidence": "HIGH",
+            "text": "Pickle and modules that wrap it can be unsafe when used to deserialize untrusted data, possible security issue.",
+            "test_name": "blacklist",
+            "test_id": "B301",
+            "cwe_id": 502,
+            "cwe_link": "https://cwe.mitre.org/data/definitions/502.html",
+            "code": "55 response = client_socket.recv(1024)\n56 received_response = pickle.loads(response)\n57 print(\"Received response:\", received_response)",
+            "line_range": [
+                56
+            ]
+        }
+    ],
+    "vuln_q_0077_0003": [
+        {
+            "line_number": 12,
+            "severity": "HIGH",
+            "confidence": "HIGH",
+            "text": "Use of weak MD5 hash for security. Consider usedforsecurity=False",
+            "test_name": "hashlib",
+            "test_id": "B324",
+            "cwe_id": 327,
+            "cwe_link": "https://cwe.mitre.org/data/definitions/327.html",
+            "code": "11         # Generate a unique filename based on the key\n12         return os.path.join(self.cache_dir, hashlib.md5(key.encode()).hexdigest())\n13",
+            "line_range": [
+                12
+            ]
+        },
+        {
+            "line_number": 18,
+            "severity": "MEDIUM",
+            "confidence": "HIGH",
+            "text": "Pickle and modules that wrap it can be unsafe when used to deserialize untrusted data, possible security issue.",
+            "test_name": "blacklist",
+            "test_id": "B301",
+            "cwe_id": 502,
+            "cwe_link": "https://cwe.mitre.org/data/definitions/502.html",
+            "code": "17             with open(cache_path, 'rb') as f:\n18                 return pickle.load(f)\n19         return None",
+            "line_range": [
+                18
+            ]
+        }
+    ],
+    "vuln_q_0081_0001": [
+        {
+            "line_number": 16,
+            "severity": "HIGH",
+            "confidence": "MEDIUM",
+            "text": "Paramiko call with policy set to automatically trust the unknown host key.",
+            "test_name": "ssh_no_host_key_verification",
+            "test_id": "B507",
+            "cwe_id": 295,
+            "cwe_link": "https://cwe.mitre.org/data/definitions/295.html",
+            "code": "15     ssh = paramiko.SSHClient()\n16     ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())\n17",
+            "line_range": [
+                16
+            ]
+        }
+    ],
+    "vuln_q_0081_0003": [
+        {
+            "line_number": 7,
+            "severity": "HIGH",
+            "confidence": "MEDIUM",
+            "text": "Paramiko call with policy set to automatically trust the unknown host key.",
+            "test_name": "ssh_no_host_key_verification",
+            "test_id": "B507",
+            "cwe_id": 295,
+            "cwe_link": "https://cwe.mitre.org/data/definitions/295.html",
+            "code": "6 # Automatically add the server's host key (not recommended for production)\n7 ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())\n8",
+            "line_range": [
+                7
+            ]
+        },
+        {
+            "line_number": 18,
+            "severity": "MEDIUM",
+            "confidence": "MEDIUM",
+            "text": "Possible shell injection via Paramiko call, check inputs are properly sanitized.",
+            "test_name": "paramiko_calls",
+            "test_id": "B601",
+            "cwe_id": 78,
+            "cwe_link": "https://cwe.mitre.org/data/definitions/78.html",
+            "code": "17 # Execute a command\n18 stdin, stdout, stderr = ssh.exec_command('ls -l')\n19 print(stdout.read().decode())",
+            "line_range": [
+                18
+            ]
+        },
+        {
+            "line_number": 39,
+            "severity": "MEDIUM",
+            "confidence": "MEDIUM",
+            "text": "Possible shell injection via Paramiko call, check inputs are properly sanitized.",
+            "test_name": "paramiko_calls",
+            "test_id": "B601",
+            "cwe_id": 78,
+            "cwe_link": "https://cwe.mitre.org/data/definitions/78.html",
+            "code": "38     # Execute command\n39     stdin, stdout, stderr = ssh.exec_command('ls -l')\n40     print(stdout.read().decode())",
+            "line_range": [
+                39
+            ]
+        }
+    ],
+    "vuln_q_0081_0004": [
+        {
+            "line_number": 13,
+            "severity": "HIGH",
+            "confidence": "MEDIUM",
+            "text": "Paramiko call with policy set to automatically trust the unknown host key.",
+            "test_name": "ssh_no_host_key_verification",
+            "test_id": "B507",
+            "cwe_id": 295,
+            "cwe_link": "https://cwe.mitre.org/data/definitions/295.html",
+            "code": "12 # Automatically add the server's host key (this is insecure in production)\n13 ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())\n14",
+            "line_range": [
+                13
+            ]
+        },
+        {
+            "line_number": 20,
+            "severity": "MEDIUM",
+            "confidence": "MEDIUM",
+            "text": "Possible shell injection via Paramiko call, check inputs are properly sanitized.",
+            "test_name": "paramiko_calls",
+            "test_id": "B601",
+            "cwe_id": 78,
+            "cwe_link": "https://cwe.mitre.org/data/definitions/78.html",
+            "code": "19     # Execute a command\n20     stdin, stdout, stderr = ssh.exec_command('ls -l /home')\n21",
+            "line_range": [
+                20
+            ]
+        }
+    ],
+    "vuln_q_0085_0000": [
+        {
+            "line_number": 12,
+            "severity": "MEDIUM",
+            "confidence": "HIGH",
+            "text": "Use of possibly insecure function - consider using safer ast.literal_eval.",
+            "test_name": "blacklist",
+            "test_id": "B307",
+            "cwe_id": 78,
+            "cwe_link": "https://cwe.mitre.org/data/definitions/78.html",
+            "code": "11             # Evaluate the expression\n12             result = eval(expression)\n13             print(\"Result:\", result)",
+            "line_range": [
+                12
+            ]
+        }
+    ],
+    "vuln_q_0085_0001": [
+        {
+            "line_number": 7,
+            "severity": "MEDIUM",
+            "confidence": "HIGH",
+            "text": "Use of possibly insecure function - consider using safer ast.literal_eval.",
+            "test_name": "blacklist",
+            "test_id": "B307",
+            "cwe_id": 78,
+            "cwe_link": "https://cwe.mitre.org/data/definitions/78.html",
+            "code": "6         # Evaluate the expression\n7         result = eval(expression)\n8         print(f\"Result: {result}\")",
+            "line_range": [
+                7
+            ]
+        }
+    ],
+    "vuln_q_0085_0004": [
+        {
+            "line_number": 15,
+            "severity": "MEDIUM",
+            "confidence": "HIGH",
+            "text": "Use of possibly insecure function - consider using safer ast.literal_eval.",
+            "test_name": "blacklist",
+            "test_id": "B307",
+            "cwe_id": 78,
+            "cwe_link": "https://cwe.mitre.org/data/definitions/78.html",
+            "code": "14             # Evaluate the input as a Python expression\n15             result = eval(user_input)\n16             print(f\"Result: {result}\\n\")",
+            "line_range": [
+                15
+            ]
+        }
+    ],
+    "vuln_q_0086_0001": [
+        {
+            "line_number": 8,
+            "severity": "MEDIUM",
+            "confidence": "MEDIUM",
+            "text": "Possible binding to all interfaces.",
+            "test_name": "hardcoded_bind_all_interfaces",
+            "test_id": "B104",
+            "cwe_id": 605,
+            "cwe_link": "https://cwe.mitre.org/data/definitions/605.html",
+            "code": "7     # Bind the socket to all interfaces on port 8080\n8     server_socket.bind(('0.0.0.0', 8080))\n9",
+            "line_range": [
+                8
+            ]
+        }
+    ],
+    "vuln_q_0086_0003": [
+        {
+            "line_number": 10,
+            "severity": "MEDIUM",
+            "confidence": "MEDIUM",
+            "text": "Possible binding to all interfaces.",
+            "test_name": "hardcoded_bind_all_interfaces",
+            "test_id": "B104",
+            "cwe_id": 605,
+            "cwe_link": "https://cwe.mitre.org/data/definitions/605.html",
+            "code": "9 if __name__ == '__main__':\n10     app.run(host='0.0.0.0', port=5000)",
+            "line_range": [
+                10
+            ]
+        }
+    ],
+    "vuln_q_0086_0004": [
+        {
+            "line_number": 4,
+            "severity": "MEDIUM",
+            "confidence": "MEDIUM",
+            "text": "Possible binding to all interfaces.",
+            "test_name": "hardcoded_bind_all_interfaces",
+            "test_id": "B104",
+            "cwe_id": 605,
+            "cwe_link": "https://cwe.mitre.org/data/definitions/605.html",
+            "code": "3 server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)\n4 server_socket.bind(('0.0.0.0', 12345))  # 12345 is the port\n5 server_socket.listen(5)",
+            "line_range": [
+                4
+            ]
+        }
+    ],
+    "vuln_q_0088_0002": [
+        {
+            "line_number": 56,
+            "severity": "HIGH",
+            "confidence": "MEDIUM",
+            "text": "A Flask app appears to be run with debug=True, which exposes the Werkzeug debugger and allows the execution of arbitrary code.",
+            "test_name": "flask_debug_true",
+            "test_id": "B201",
+            "cwe_id": 94,
+            "cwe_link": "https://cwe.mitre.org/data/definitions/94.html",
+            "code": "55 if __name__ == '__main__':\n56     app.run(debug=True)",
+            "line_range": [
+                56
+            ]
+        }
+    ],
+    "vuln_q_0088_0003": [
+        {
+            "line_number": 1,
+            "severity": "HIGH",
+            "confidence": "HIGH",
+            "text": "A FTP-related module is being imported.  FTP is considered insecure. Use SSH/SFTP/SCP or some other encrypted protocol.",
+            "test_name": "blacklist",
+            "test_id": "B402",
+            "cwe_id": 319,
+            "cwe_link": "https://cwe.mitre.org/data/definitions/319.html",
+            "code": "1 import ftplib\n2 \n3 # ===== cell separator =====",
+            "line_range": [
+                1
+            ]
+        },
+        {
+            "line_number": 5,
+            "severity": "HIGH",
+            "confidence": "HIGH",
+            "text": "FTP-related functions are being called. FTP is considered insecure. Use SSH/SFTP/SCP or some other encrypted protocol.",
+            "test_name": "blacklist",
+            "test_id": "B321",
+            "cwe_id": 319,
+            "cwe_link": "https://cwe.mitre.org/data/definitions/319.html",
+            "code": "4 \n5 ftp = ftplib.FTP('ftp.example.com')  # Replace with your FTP server address\n6",
+            "line_range": [
+                5
+            ]
+        },
+        {
+            "line_number": 31,
+            "severity": "HIGH",
+            "confidence": "HIGH",
+            "text": "A FTP-related module is being imported.  FTP is considered insecure. Use SSH/SFTP/SCP or some other encrypted protocol.",
+            "test_name": "blacklist",
+            "test_id": "B402",
+            "cwe_id": 319,
+            "cwe_link": "https://cwe.mitre.org/data/definitions/319.html",
+            "code": "30 \n31 import ftplib\n32",
+            "line_range": [
+                31
+            ]
+        },
+        {
+            "line_number": 34,
+            "severity": "HIGH",
+            "confidence": "HIGH",
+            "text": "FTP-related functions are being called. FTP is considered insecure. Use SSH/SFTP/SCP or some other encrypted protocol.",
+            "test_name": "blacklist",
+            "test_id": "B321",
+            "cwe_id": 319,
+            "cwe_link": "https://cwe.mitre.org/data/definitions/319.html",
+            "code": "33 # Connect to the FTP server\n34 ftp = ftplib.FTP('ftp.example.com')\n35 ftp.login(user='your_username', passwd='your_password')",
+            "line_range": [
+                34
+            ]
+        },
+        {
+            "line_number": 56,
+            "severity": "HIGH",
+            "confidence": "MEDIUM",
+            "text": "Paramiko call with policy set to automatically trust the unknown host key.",
+            "test_name": "ssh_no_host_key_verification",
+            "test_id": "B507",
+            "cwe_id": 295,
+            "cwe_link": "https://cwe.mitre.org/data/definitions/295.html",
+            "code": "55 ssh = paramiko.SSHClient()\n56 ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())\n57 ssh.connect('sftp.example.com', username='your_username', password='your_password')",
+            "line_range": [
+                56
+            ]
+        }
+    ],
+    "vuln_q_0092_0000": [
+        {
+            "line_number": 43,
+            "severity": "HIGH",
+            "confidence": "MEDIUM",
+            "text": "A Flask app appears to be run with debug=True, which exposes the Werkzeug debugger and allows the execution of arbitrary code.",
+            "test_name": "flask_debug_true",
+            "test_id": "B201",
+            "cwe_id": 94,
+            "cwe_link": "https://cwe.mitre.org/data/definitions/94.html",
+            "code": "42 if __name__ == '__main__':\n43     app.run(debug=True)",
+            "line_range": [
+                43
+            ]
+        }
+    ],
+    "vuln_q_0092_0003": [
+        {
+            "line_number": 17,
+            "severity": "HIGH",
+            "confidence": "MEDIUM",
+            "text": "A Flask app appears to be run with debug=True, which exposes the Werkzeug debugger and allows the execution of arbitrary code.",
+            "test_name": "flask_debug_true",
+            "test_id": "B201",
+            "cwe_id": 94,
+            "cwe_link": "https://cwe.mitre.org/data/definitions/94.html",
+            "code": "16 if __name__ == '__main__':\n17     app.run(debug=True)",
+            "line_range": [
+                17
+            ]
+        }
+    ],
+    "vuln_q_0093_0001": [
+        {
+            "line_number": 4,
+            "severity": "MEDIUM",
+            "confidence": "HIGH",
+            "text": "Using xml.etree.ElementTree.parse to parse untrusted XML data is known to be vulnerable to XML attacks. Replace xml.etree.ElementTree.parse with its defusedxml equivalent function or make sure defusedxml.defuse_stdlib() is called",
+            "test_name": "blacklist",
+            "test_id": "B314",
+            "cwe_id": 20,
+            "cwe_link": "https://cwe.mitre.org/data/definitions/20.html",
+            "code": "3 # Load and parse the XML file\n4 tree = ET.parse('data.xml')\n5 root = tree.getroot()",
+            "line_range": [
+                4
+            ]
+        }
+    ],
+    "vuln_q_0096_0002": [
+        {
+            "line_number": 7,
+            "severity": "HIGH",
+            "confidence": "HIGH",
+            "text": "Use of weak MD5 hash for security. Consider usedforsecurity=False",
+            "test_name": "hashlib",
+            "test_id": "B324",
+            "cwe_id": 327,
+            "cwe_link": "https://cwe.mitre.org/data/definitions/327.html",
+            "code": "6 # Create MD5 hash object\n7 md5_hash = hashlib.md5()\n8",
+            "line_range": [
+                7
+            ]
+        },
+        {
+            "line_number": 22,
+            "severity": "HIGH",
+            "confidence": "HIGH",
+            "text": "Use of weak MD5 hash for security. Consider usedforsecurity=False",
+            "test_name": "hashlib",
+            "test_id": "B324",
+            "cwe_id": 327,
+            "cwe_link": "https://cwe.mitre.org/data/definitions/327.html",
+            "code": "21 def get_file_md5(file_path):\n22     hash_md5 = hashlib.md5()\n23     with open(file_path, \"rb\") as f:",
+            "line_range": [
+                22
+            ]
+        }
+    ]
+}

@@ -1,0 +1,1028 @@
+{
+  "vuln_q_0084_0000": [
+    {
+      "title": "CWE-400,664 - Resource leak",
+      "severity": "Medium",
+      "description": "Allocated resources are not released properly. This can slow down or crash your system. They must be closed along all paths to prevent a resource leak.",
+      "recommendation": "**Problem**\nThis line of code might contain a resource leak. Resource leaks can cause your system to slow down or crash.\n\n**Fix**\nConsider closing the following resource: *sock*. The resource is allocated by call *socket.socket*. Currently, there are execution paths that do not contain closure statements, for example, when *SSLContext.wrap\\_socket()* throws an exception. To prevent this resource leak, close *sock* in a try-finally block or declare it using a `with` statement.\n\n**More info**\n[Vie",
+      "code_snippet": "",
+      "vulnerable_part": "",
+      "rule_id": "python-resource-leak-detector",
+      "cwes": [
+        "CWE-400",
+        "CWE-664"
+      ],
+      "detector": "Resource leak"
+    }
+  ],
+  "vuln_q_0003_0001": [
+    {
+      "title": "CWE-22 - Path traversal",
+      "severity": "High",
+      "description": "Constructing path names with unsanitized user input can lead to path traversal attacks (for example, `../../..`) that allow an attacker access to file system resources.",
+      "recommendation": "Path traversal vulnerability detected. User-controlled input in file paths can allow attackers to access files outside intended directories using `../` sequences. Secure your code by using framework functions like `safe_join()`, `secure_filename()` and `.startswith()` checks. Learn more: https://cwe.mitre.org/data/definitions/22.html\n",
+      "code_snippet": "",
+      "vulnerable_part": "",
+      "rule_id": "python-path-traversal-ide",
+      "cwes": [
+        "CWE-22"
+      ],
+      "detector": "Path traversal"
+    },
+    {
+      "title": "CWE-22 - Path traversal",
+      "severity": "High",
+      "description": "Constructing path names with unsanitized user input can lead to path traversal attacks (for example, `../../..`) that allow an attacker access to file system resources.",
+      "recommendation": "Path traversal vulnerability detected. User-controlled input in file paths can allow attackers to access files outside intended directories using `../` sequences. Secure your code by using framework functions like `safe_join()`, `secure_filename()` and `.startswith()` checks. Learn more: https://cwe.mitre.org/data/definitions/22.html\n",
+      "code_snippet": "",
+      "vulnerable_part": "",
+      "rule_id": "python-path-traversal-ide",
+      "cwes": [
+        "CWE-22"
+      ],
+      "detector": "Path traversal"
+    }
+  ],
+  "vuln_q_0074_0003": [
+    {
+      "title": "CWE-319 - AWS insecure transmission CDK",
+      "severity": "High",
+      "description": "Checks when user transmitting sensitive information, such as passwords, financial data, or personal information, over a network or storing it in a way that is not adequately protected with encryption.",
+      "recommendation": "Bucket is not set to enforce encryption-in-transit, if not explictly setting this on the bucket policy - the property \"enforce_ssl\" should be set to True",
+      "code_snippet": "",
+      "vulnerable_part": "",
+      "rule_id": "python-cdk-bucket-enforce-ssl",
+      "cwes": [
+        "CWE-319"
+      ],
+      "detector": "AWS insecure transmission CDK"
+    }
+  ],
+  "vuln_q_0022_0002": [
+    {
+      "title": "CWE-22 - Path traversal",
+      "severity": "High",
+      "description": "Constructing path names with unsanitized user input can lead to path traversal attacks (for example, `../../..`) that allow an attacker access to file system resources.",
+      "recommendation": "Path traversal vulnerability detected. User-controlled input in file paths can allow attackers to access files outside intended directories using `../` sequences. Secure your code by using framework functions like `safe_join()`, `secure_filename()` and `.startswith()` checks. Learn more: https://cwe.mitre.org/data/definitions/22.html\n",
+      "code_snippet": "",
+      "vulnerable_part": "",
+      "rule_id": "python-path-traversal-ide",
+      "cwes": [
+        "CWE-22"
+      ],
+      "detector": "Path traversal"
+    }
+  ],
+  "vuln_q_0025_0002": [
+    {
+      "title": "CWE-22 - Path traversal",
+      "severity": "High",
+      "description": "Constructing path names with unsanitized user input can lead to path traversal attacks (for example, `../../..`) that allow an attacker access to file system resources.",
+      "recommendation": "Path traversal vulnerability detected. User-controlled input in file paths can allow attackers to access files outside intended directories using `../` sequences. Secure your code by using framework functions like `safe_join()`, `secure_filename()` and `.startswith()` checks. Learn more: https://cwe.mitre.org/data/definitions/22.html\n",
+      "code_snippet": "",
+      "vulnerable_part": "",
+      "rule_id": "python-path-traversal-ide",
+      "cwes": [
+        "CWE-22"
+      ],
+      "detector": "Path traversal"
+    },
+    {
+      "title": "CWE-400,664 - Resource leak",
+      "severity": "Medium",
+      "description": "Allocated resources are not released properly. This can slow down or crash your system. They must be closed along all paths to prevent a resource leak.",
+      "recommendation": "**Problem**\nThis line of code contains a resource that might not be closed properly. This can cause a resource leak that slows down or crashes your system.\n\n**Fix**\nConsider closing the following resource: *sock*. The resource is allocated by call *socket.create_connection*. The resource is referenced at lines 65, 71. The resource is returned at line 74. There are other execution paths that don't close the resource or return it, for example, when an if condition at line 71 evaluates to true. To ",
+      "code_snippet": "",
+      "vulnerable_part": "",
+      "rule_id": "python-resource-leak-detector",
+      "cwes": [
+        "CWE-400",
+        "CWE-664"
+      ],
+      "detector": "Resource leak"
+    },
+    {
+      "title": "CWE-400,664 - Resource leak",
+      "severity": "Medium",
+      "description": "Allocated resources are not released properly. This can slow down or crash your system. They must be closed along all paths to prevent a resource leak.",
+      "recommendation": "**Problem**\nThis line of code contains a resource that might not be closed properly. This can cause a resource leak that slows down or crashes your system.\n\n**Fix**\nConsider closing the following resource: *secure\\_sock*. The resource is allocated by call *SSLContext.wrap_socket*. The resource is referenced at lines 65, 71. The resource is returned at line 74. There are other execution paths that don't close the resource or return it, for example, when an if condition at line 71 evaluates to tru",
+      "code_snippet": "",
+      "vulnerable_part": "",
+      "rule_id": "python-resource-leak-detector",
+      "cwes": [
+        "CWE-400",
+        "CWE-664"
+      ],
+      "detector": "Resource leak"
+    },
+    {
+      "title": "CWE-22 - Path traversal",
+      "severity": "High",
+      "description": "Constructing path names with unsanitized user input can lead to path traversal attacks (for example, `../../..`) that allow an attacker access to file system resources.",
+      "recommendation": "Path traversal vulnerability detected. User-controlled input in file paths can allow attackers to access files outside intended directories using `../` sequences. Secure your code by using framework functions like `safe_join()`, `secure_filename()` and `.startswith()` checks. Learn more: https://cwe.mitre.org/data/definitions/22.html\n",
+      "code_snippet": "",
+      "vulnerable_part": "",
+      "rule_id": "python-path-traversal-ide",
+      "cwes": [
+        "CWE-22"
+      ],
+      "detector": "Path traversal"
+    },
+    {
+      "title": "CWE-22 - Path traversal",
+      "severity": "High",
+      "description": "Constructing path names with unsanitized user input can lead to path traversal attacks (for example, `../../..`) that allow an attacker access to file system resources.",
+      "recommendation": "Path traversal vulnerability detected. User-controlled input in file paths can allow attackers to access files outside intended directories using `../` sequences. Secure your code by using framework functions like `safe_join()`, `secure_filename()` and `.startswith()` checks. Learn more: https://cwe.mitre.org/data/definitions/22.html\n",
+      "code_snippet": "",
+      "vulnerable_part": "",
+      "rule_id": "python-path-traversal-ide",
+      "cwes": [
+        "CWE-22"
+      ],
+      "detector": "Path traversal"
+    }
+  ],
+  "vuln_q_0048_0002": [
+    {
+      "title": "CWE-77,78,88 - OS command injection",
+      "severity": "High",
+      "description": "Constructing operating system or shell commands with unsanitized user input can lead to inadvertently running malicious code.",
+      "recommendation": "OS command injection occurs when untrusted input is used directly in system commands or shell operations. This vulnerability allows attackers to execute arbitrary commands on the host system. To prevent OS command injection, use secure alternatives like the `subprocess` module with `subprocess.run()` and pass arguments as a list instead of shell=True, or use proper input validation with proper allowed characters. For more information about OS command injection, visit https://owasp.org/www-commun",
+      "code_snippet": "",
+      "vulnerable_part": "",
+      "rule_id": "python-os-command-injection-ide",
+      "cwes": [
+        "CWE-77",
+        "CWE-78",
+        "CWE-88"
+      ],
+      "detector": "OS command injection"
+    }
+  ],
+  "vuln_q_0069_0000": [
+    {
+      "title": "CWE-327 - Insecure cryptography",
+      "severity": "Critical",
+      "description": "Misuse of cryptography-related APIs can create security vulnerabilities. This includes algorithms with known weaknesses, certain padding modes, lack of integrity checks, insufficiently large key sizes, and insecure combinations of the aforementioned.",
+      "recommendation": "It looks like your code uses an encryption cipher object that is an insecure transformation. While there may be ways to do this safely, it is often best to migrate to an authenticated encryption algorithm such as AES, GCM, NoPadding or ChaCha20-Poly1305",
+      "code_snippet": "",
+      "vulnerable_part": "",
+      "rule_id": "python-crypto-compliance-cipher",
+      "cwes": [
+        "CWE-327"
+      ],
+      "detector": "Insecure cryptography"
+    },
+    {
+      "title": "APIs that are not recommended were found - High Severity.",
+      "severity": "High",
+      "description": "APIs that are not recommended were found. This could indicate a deeper problem in the code. High Severity",
+      "recommendation": "Use of insecure cipher Crypto.Cipher.DES.new. Replace with a known secure cipher such as AES. https://bandit.readthedocs.io/en/latest/blacklists/blacklist_imports.html#b304-b305-ciphers-and-modes",
+      "code_snippet": "",
+      "vulnerable_part": "",
+      "rule_id": "python-denylist-ciphers",
+      "cwes": [],
+      "detector": "Usage of an API that is not recommended - High Severity"
+    }
+  ],
+  "vuln_q_0081_0002": [
+    {
+      "title": "CWE-22 - Path traversal",
+      "severity": "High",
+      "description": "Constructing path names with unsanitized user input can lead to path traversal attacks (for example, `../../..`) that allow an attacker access to file system resources.",
+      "recommendation": "Path traversal vulnerability detected. User-controlled input in file paths can allow attackers to access files outside intended directories using `../` sequences. Secure your code by using framework functions like `safe_join()`, `secure_filename()` and `.startswith()` checks. Learn more: https://cwe.mitre.org/data/definitions/22.html\n",
+      "code_snippet": "",
+      "vulnerable_part": "",
+      "rule_id": "python-path-traversal-ide",
+      "cwes": [
+        "CWE-22"
+      ],
+      "detector": "Path traversal"
+    }
+  ],
+  "vuln_q_0085_0001": [
+    {
+      "title": "CWE-94 - Unsanitized input is run as code",
+      "severity": "Critical",
+      "description": "Running scripts generated from unsanitized inputs (for example, evaluating expressions that include user-provided strings) can lead to malicious behavior and inadvertently running code remotely.",
+      "recommendation": "Passing user-provided input to `eval` and `exec` functions without sanitization makes your code vulnerable to code injection. Make sure you implement input validation or use secure functions. [Learn more](https://cwe.mitre.org/data/definitions/94.html)",
+      "code_snippet": "",
+      "vulnerable_part": "",
+      "rule_id": "python-code-injection",
+      "cwes": [
+        "CWE-94"
+      ],
+      "detector": "Unsanitized input is run as code"
+    },
+    {
+      "title": "CWE-94 - Unsanitized input is run as code",
+      "severity": "Critical",
+      "description": "Running scripts generated from unsanitized inputs (for example, evaluating expressions that include user-provided strings) can lead to malicious behavior and inadvertently running code remotely.",
+      "recommendation": "This code is vulnerable to code injection because it executes user-controlled input \nwithout proper validation or sanitization. An attacker could supply input that gets executed as code, \npotentially compromising the application. This vulnerability can lead to remote code execution, \nprivilege escalation, or full system takeover. To remediate this, avoid using functions \nlike eval(), exec(), or system shell commands on untrusted input. \nIn Python, prefer ast.literal_eval() if parsing safe litera",
+      "code_snippet": "",
+      "vulnerable_part": "",
+      "rule_id": "python-code-injection-ide",
+      "cwes": [
+        "CWE-94"
+      ],
+      "detector": "Unsanitized input is run as code"
+    }
+  ],
+  "vuln_q_0018_0001": [
+    {
+      "title": "CWE-400,664 - Resource leak",
+      "severity": "Medium",
+      "description": "Allocated resources are not released properly. This can slow down or crash your system. They must be closed along all paths to prevent a resource leak.",
+      "recommendation": "**Problem**\nThis line of code might contain a resource leak. Resource leaks can cause your system to slow down or crash.\n\n**Fix**\nConsider closing the following resource: *server*. The resource is allocated by call *socket.socket*. Execution paths that do not contain closure statements were detected. To prevent this resource leak, close *server* in a try-finally block or declare it using a `with` statement.\n\n**More info**\n[View details about the `with` statement in the Python developer's guide](",
+      "code_snippet": "",
+      "vulnerable_part": "",
+      "rule_id": "python-resource-leak-detector",
+      "cwes": [
+        "CWE-400",
+        "CWE-664"
+      ],
+      "detector": "Resource leak"
+    },
+    {
+      "title": "CWE-400,664 - Resource leak",
+      "severity": "Medium",
+      "description": "Allocated resources are not released properly. This can slow down or crash your system. They must be closed along all paths to prevent a resource leak.",
+      "recommendation": "**Problem**\nThis line of code might contain a resource leak. Resource leaks can cause your system to slow down or crash.\n\n**Fix**\nConsider closing the following resource: *sock*. The resource is allocated by call *socket.create_connection*. Currently, there are execution paths that do not contain closure statements, for example, when *SSLContext.wrap\\_socket()* throws an exception. Close *sock* in a try-finally block to prevent the resource leak.",
+      "code_snippet": "",
+      "vulnerable_part": "",
+      "rule_id": "python-resource-leak-detector",
+      "cwes": [
+        "CWE-400",
+        "CWE-664"
+      ],
+      "detector": "Resource leak"
+    }
+  ],
+  "vuln_q_0094_0000": [
+    {
+      "title": "CWE-22 - Path traversal",
+      "severity": "High",
+      "description": "Constructing path names with unsanitized user input can lead to path traversal attacks (for example, `../../..`) that allow an attacker access to file system resources.",
+      "recommendation": "Path traversal vulnerability detected. User-controlled input in file paths can allow attackers to access files outside intended directories using `../` sequences. Secure your code by using framework functions like `safe_join()`, `secure_filename()` and `.startswith()` checks. Learn more: https://cwe.mitre.org/data/definitions/22.html\n",
+      "code_snippet": "",
+      "vulnerable_part": "",
+      "rule_id": "python-path-traversal-ide",
+      "cwes": [
+        "CWE-22"
+      ],
+      "detector": "Path traversal"
+    },
+    {
+      "title": "CWE-22 - Path traversal",
+      "severity": "High",
+      "description": "Constructing path names with unsanitized user input can lead to path traversal attacks (for example, `../../..`) that allow an attacker access to file system resources.",
+      "recommendation": "Path traversal vulnerability detected. User-controlled input in file paths can allow attackers to access files outside intended directories using `../` sequences. Secure your code by using framework functions like `safe_join()`, `secure_filename()` and `.startswith()` checks. Learn more: https://cwe.mitre.org/data/definitions/22.html\n",
+      "code_snippet": "",
+      "vulnerable_part": "",
+      "rule_id": "python-path-traversal-ide",
+      "cwes": [
+        "CWE-22"
+      ],
+      "detector": "Path traversal"
+    },
+    {
+      "title": "CWE-22 - Path traversal",
+      "severity": "High",
+      "description": "Constructing path names with unsanitized user input can lead to path traversal attacks (for example, `../../..`) that allow an attacker access to file system resources.",
+      "recommendation": "Path traversal vulnerability detected. User-controlled input in file paths can allow attackers to access files outside intended directories using `../` sequences. Secure your code by using framework functions like `safe_join()`, `secure_filename()` and `.startswith()` checks. Learn more: https://cwe.mitre.org/data/definitions/22.html\n",
+      "code_snippet": "",
+      "vulnerable_part": "",
+      "rule_id": "python-path-traversal-ide",
+      "cwes": [
+        "CWE-22"
+      ],
+      "detector": "Path traversal"
+    }
+  ],
+  "vuln_q_0005_0004": [
+    {
+      "title": "APIs that are not recommended were found - Medium Severity.",
+      "severity": "Medium",
+      "description": "APIs that are not recommended were found. This could indicate a deeper problem in the code - Medium Severity.",
+      "recommendation": "Audit url open for permitted schemes. Allowing use of file:/ or custom schemes is often unexpected. https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b310-urllib-urlopen",
+      "code_snippet": "",
+      "vulnerable_part": "",
+      "rule_id": "python-denylist-urllib-urlopen",
+      "cwes": [],
+      "detector": "Usage of an API that is not recommended - Medium Severity"
+    }
+  ],
+  "vuln_q_0094_0003": [
+    {
+      "title": "CWE-22 - Path traversal",
+      "severity": "High",
+      "description": "Constructing path names with unsanitized user input can lead to path traversal attacks (for example, `../../..`) that allow an attacker access to file system resources.",
+      "recommendation": "Path traversal vulnerability detected. User-controlled input in file paths can allow attackers to access files outside intended directories using `../` sequences. Secure your code by using framework functions like `safe_join()`, `secure_filename()` and `.startswith()` checks. Learn more: https://cwe.mitre.org/data/definitions/22.html\n",
+      "code_snippet": "",
+      "vulnerable_part": "",
+      "rule_id": "python-path-traversal-ide",
+      "cwes": [
+        "CWE-22"
+      ],
+      "detector": "Path traversal"
+    },
+    {
+      "title": "CWE-22 - Path traversal",
+      "severity": "High",
+      "description": "Constructing path names with unsanitized user input can lead to path traversal attacks (for example, `../../..`) that allow an attacker access to file system resources.",
+      "recommendation": "Path traversal vulnerability detected. User-controlled input in file paths can allow attackers to access files outside intended directories using `../` sequences. Secure your code by using framework functions like `safe_join()`, `secure_filename()` and `.startswith()` checks. Learn more: https://cwe.mitre.org/data/definitions/22.html\n",
+      "code_snippet": "",
+      "vulnerable_part": "",
+      "rule_id": "python-path-traversal-ide",
+      "cwes": [
+        "CWE-22"
+      ],
+      "detector": "Path traversal"
+    },
+    {
+      "title": "CWE-22 - Path traversal",
+      "severity": "High",
+      "description": "Constructing path names with unsanitized user input can lead to path traversal attacks (for example, `../../..`) that allow an attacker access to file system resources.",
+      "recommendation": "Path traversal vulnerability detected. User-controlled input in file paths can allow attackers to access files outside intended directories using `../` sequences. Secure your code by using framework functions like `safe_join()`, `secure_filename()` and `.startswith()` checks. Learn more: https://cwe.mitre.org/data/definitions/22.html\n",
+      "code_snippet": "",
+      "vulnerable_part": "",
+      "rule_id": "python-path-traversal-ide",
+      "cwes": [
+        "CWE-22"
+      ],
+      "detector": "Path traversal"
+    }
+  ],
+  "vuln_q_0088_0003": [
+    {
+      "title": "APIs that are not recommended were found - High Severity.",
+      "severity": "High",
+      "description": "APIs that are not recommended were found. This could indicate a deeper problem in the code. High Severity",
+      "recommendation": "A FTP-related module is being imported.  FTP is considered insecure. Use SSH/SFTP/SCP or some other encrypted protocol. https://bandit.readthedocs.io/en/latest/blacklists/blacklist_imports.html#b402-import-ftplib",
+      "code_snippet": "",
+      "vulnerable_part": "",
+      "rule_id": "python-denylist-import-ftplib",
+      "cwes": [],
+      "detector": "Usage of an API that is not recommended - High Severity"
+    },
+    {
+      "title": "CWE-319 - Insecure connection using unencrypted protocol",
+      "severity": "High",
+      "description": "Connections that use insecure protocols transmit data in cleartext. This introduces a risk of exposing sensitive data to third parties.",
+      "recommendation": "We detected a URL in your code that uses an unencrypted `ftp`, `telnet`, `http` or `smtp` connection. These protocols are not secure and introduce the risk of exposing sensitive data to third parties. To secure your connection, we recommend using `ssh` instead of `telnet`, `sftp`, `ftps` or `scp` instead of `ftp`, `https` instead of `http` and `tls` over `smtp` (smtps). For more information, see [CWE-200](https://cwe.mitre.org/data/definitions/200.html) and [CWE-319](https://cwe.mitre.org/data/d",
+      "code_snippet": "",
+      "vulnerable_part": "",
+      "rule_id": "python-secure-clear-text-protocols",
+      "cwes": [
+        "CWE-319"
+      ],
+      "detector": "Insecure connection using unencrypted protocol"
+    }
+  ],
+  "vuln_q_0008_0002": [
+    {
+      "title": "CWE-22 - Path traversal",
+      "severity": "High",
+      "description": "Constructing path names with unsanitized user input can lead to path traversal attacks (for example, `../../..`) that allow an attacker access to file system resources.",
+      "recommendation": "Path traversal vulnerability detected. User-controlled input in file paths can allow attackers to access files outside intended directories using `../` sequences. Secure your code by using framework functions like `safe_join()`, `secure_filename()` and `.startswith()` checks. Learn more: https://cwe.mitre.org/data/definitions/22.html\n",
+      "code_snippet": "",
+      "vulnerable_part": "",
+      "rule_id": "python-path-traversal-ide",
+      "cwes": [
+        "CWE-22"
+      ],
+      "detector": "Path traversal"
+    }
+  ],
+  "vuln_q_0075_0000": [
+    {
+      "title": "CWE-22 - Path traversal",
+      "severity": "High",
+      "description": "Constructing path names with unsanitized user input can lead to path traversal attacks (for example, `../../..`) that allow an attacker access to file system resources.",
+      "recommendation": "Path traversal vulnerability detected. User-controlled input in file paths can allow attackers to access files outside intended directories using `../` sequences. Secure your code by using framework functions like `safe_join()`, `secure_filename()` and `.startswith()` checks. Learn more: https://cwe.mitre.org/data/definitions/22.html\n",
+      "code_snippet": "",
+      "vulnerable_part": "",
+      "rule_id": "python-path-traversal-ide",
+      "cwes": [
+        "CWE-22"
+      ],
+      "detector": "Path traversal"
+    }
+  ],
+  "vuln_q_0056_0001": [
+    {
+      "title": "CWE-22 - Path traversal",
+      "severity": "High",
+      "description": "Constructing path names with unsanitized user input can lead to path traversal attacks (for example, `../../..`) that allow an attacker access to file system resources.",
+      "recommendation": "Path traversal vulnerability detected. User-controlled input in file paths can allow attackers to access files outside intended directories using `../` sequences. Secure your code by using framework functions like `safe_join()`, `secure_filename()` and `.startswith()` checks. Learn more: https://cwe.mitre.org/data/definitions/22.html\n",
+      "code_snippet": "",
+      "vulnerable_part": "",
+      "rule_id": "python-path-traversal-ide",
+      "cwes": [
+        "CWE-22"
+      ],
+      "detector": "Path traversal"
+    }
+  ],
+  "vuln_q_0022_0004": [
+    {
+      "title": "CWE-798 - Hardcoded credentials",
+      "severity": "Critical",
+      "description": "Hardcoded credentials can be intercepted by malicious actors. Even after removing them from the code they may still pose a risk because an attacker might have recorded them to use them at a later point in time.",
+      "recommendation": "It appears your code may contain a hardcoded secret. We recommend replacing it with AWS Secrets Manager references to enhance security and follow best practices. For more information, please refer [OWASP password storage cheat sheet](https://www.owasp.org/index.php/Password_Storage_Cheat_Sheet).",
+      "code_snippet": "",
+      "vulnerable_part": "",
+      "rule_id": "multilanguage-password",
+      "cwes": [
+        "CWE-798"
+      ],
+      "detector": "Hardcoded credentials"
+    }
+  ],
+  "vuln_q_0005_0001": [
+    {
+      "title": "CWE-22 - Path traversal",
+      "severity": "High",
+      "description": "Constructing path names with unsanitized user input can lead to path traversal attacks (for example, `../../..`) that allow an attacker access to file system resources.",
+      "recommendation": "Path traversal vulnerability detected. User-controlled input in file paths can allow attackers to access files outside intended directories using `../` sequences. Secure your code by using framework functions like `safe_join()`, `secure_filename()` and `.startswith()` checks. Learn more: https://cwe.mitre.org/data/definitions/22.html\n",
+      "code_snippet": "",
+      "vulnerable_part": "",
+      "rule_id": "python-path-traversal-ide",
+      "cwes": [
+        "CWE-22"
+      ],
+      "detector": "Path traversal"
+    },
+    {
+      "title": "CWE-22 - Path traversal",
+      "severity": "High",
+      "description": "Constructing path names with unsanitized user input can lead to path traversal attacks (for example, `../../..`) that allow an attacker access to file system resources.",
+      "recommendation": "Path traversal vulnerability detected. User-controlled input in file paths can allow attackers to access files outside intended directories using `../` sequences. Secure your code by using framework functions like `safe_join()`, `secure_filename()` and `.startswith()` checks. Learn more: https://cwe.mitre.org/data/definitions/22.html\n",
+      "code_snippet": "",
+      "vulnerable_part": "",
+      "rule_id": "python-path-traversal-ide",
+      "cwes": [
+        "CWE-22"
+      ],
+      "detector": "Path traversal"
+    }
+  ],
+  "vuln_q_0084_0001": [
+    {
+      "title": "CWE-400,664 - Resource leak",
+      "severity": "Medium",
+      "description": "Allocated resources are not released properly. This can slow down or crash your system. They must be closed along all paths to prevent a resource leak.",
+      "recommendation": "**Problem**\nThis line of code might contain a resource leak. Resource leaks can cause your system to slow down or crash.\n\n**Fix**\nConsider closing the following resource: *secure\\_socket*. The resource is allocated by call *SSLContext.wrap_socket*. Currently, there are execution paths that do not contain closure statements, for example, when *Logger.info()* throws an exception. To prevent this resource leak, close *secure\\_socket* in a try-finally block or declare it using a `with` statement.\n\n*",
+      "code_snippet": "",
+      "vulnerable_part": "",
+      "rule_id": "python-resource-leak-detector",
+      "cwes": [
+        "CWE-400",
+        "CWE-664"
+      ],
+      "detector": "Resource leak"
+    }
+  ],
+  "vuln_q_0006_0002": [
+    {
+      "title": "CWE-22 - Path traversal",
+      "severity": "High",
+      "description": "Constructing path names with unsanitized user input can lead to path traversal attacks (for example, `../../..`) that allow an attacker access to file system resources.",
+      "recommendation": "Path traversal vulnerability detected. User-controlled input in file paths can allow attackers to access files outside intended directories using `../` sequences. Secure your code by using framework functions like `safe_join()`, `secure_filename()` and `.startswith()` checks. Learn more: https://cwe.mitre.org/data/definitions/22.html\n",
+      "code_snippet": "",
+      "vulnerable_part": "",
+      "rule_id": "python-path-traversal-ide",
+      "cwes": [
+        "CWE-22"
+      ],
+      "detector": "Path traversal"
+    },
+    {
+      "title": "CWE-22 - Path traversal",
+      "severity": "High",
+      "description": "Constructing path names with unsanitized user input can lead to path traversal attacks (for example, `../../..`) that allow an attacker access to file system resources.",
+      "recommendation": "Path traversal vulnerability detected. User-controlled input in file paths can allow attackers to access files outside intended directories using `../` sequences. Secure your code by using framework functions like `safe_join()`, `secure_filename()` and `.startswith()` checks. Learn more: https://cwe.mitre.org/data/definitions/22.html\n",
+      "code_snippet": "",
+      "vulnerable_part": "",
+      "rule_id": "python-path-traversal-ide",
+      "cwes": [
+        "CWE-22"
+      ],
+      "detector": "Path traversal"
+    }
+  ],
+  "vuln_q_0039_0004": [
+    {
+      "title": "CWE-400,664 - Resource leak",
+      "severity": "Medium",
+      "description": "Allocated resources are not released properly. This can slow down or crash your system. They must be closed along all paths to prevent a resource leak.",
+      "recommendation": "**Problem**\nThis line of code might contain a resource leak. Resource leaks can cause your system to slow down or crash.\n\n**Fix**\nConsider closing the following resource: *sock*. The resource is allocated by call *socket.socket*. Currently, there are execution paths that do not contain closure statements, for example, when *SSLContext.load\\_verify\\_locations()* throws an exception. To prevent this resource leak, close *sock* in a try-finally block or declare it using a `with` statement.\n\n**More ",
+      "code_snippet": "",
+      "vulnerable_part": "",
+      "rule_id": "python-resource-leak-detector",
+      "cwes": [
+        "CWE-400",
+        "CWE-664"
+      ],
+      "detector": "Resource leak"
+    },
+    {
+      "title": "CWE-400,664 - Resource leak",
+      "severity": "Medium",
+      "description": "Allocated resources are not released properly. This can slow down or crash your system. They must be closed along all paths to prevent a resource leak.",
+      "recommendation": "**Problem**\nThis line of code might contain a resource leak. Resource leaks can cause your system to slow down or crash.\n\n**Fix**\nConsider closing the following resource: *secure\\_sock*. The resource is allocated by call *SSLContext.wrap_socket*. Currently, there are execution paths that do not contain closure statements, for example, when *Logger.info()* throws an exception. To prevent this resource leak, close *secure\\_sock* in a try-finally block or declare it using a `with` statement.\n\n**Mor",
+      "code_snippet": "",
+      "vulnerable_part": "",
+      "rule_id": "python-resource-leak-detector",
+      "cwes": [
+        "CWE-400",
+        "CWE-664"
+      ],
+      "detector": "Resource leak"
+    }
+  ],
+  "vuln_q_0013_0004": [
+    {
+      "title": "CWE-798 - Hardcoded credentials",
+      "severity": "Critical",
+      "description": "Hardcoded credentials can be intercepted by malicious actors. Even after removing them from the code they may still pose a risk because an attacker might have recorded them to use them at a later point in time.",
+      "recommendation": "It appears your code may contain a hardcoded secret. We recommend replacing it with AWS Secrets Manager references to enhance security and follow best practices. For more information, please refer [OWASP password storage cheat sheet](https://www.owasp.org/index.php/Password_Storage_Cheat_Sheet).",
+      "code_snippet": "",
+      "vulnerable_part": "",
+      "rule_id": "multilanguage-password",
+      "cwes": [
+        "CWE-798"
+      ],
+      "detector": "Hardcoded credentials"
+    }
+  ],
+  "vuln_q_0018_0004": [
+    {
+      "title": "CWE-400,664 - Resource leak",
+      "severity": "Medium",
+      "description": "Allocated resources are not released properly. This can slow down or crash your system. They must be closed along all paths to prevent a resource leak.",
+      "recommendation": "**Problem**\nThis line of code might contain a resource leak. Resource leaks can cause your system to slow down or crash.\n\n**Fix**\nConsider closing the following resource: *sock*. The resource is allocated by call *socket.create_connection*. Currently, there are execution paths that do not contain closure statements, for example, when *SSLContext.wrap\\_socket()* throws an exception. Close *sock* in a try-finally block to prevent the resource leak.",
+      "code_snippet": "",
+      "vulnerable_part": "",
+      "rule_id": "python-resource-leak-detector",
+      "cwes": [
+        "CWE-400",
+        "CWE-664"
+      ],
+      "detector": "Resource leak"
+    },
+    {
+      "title": "CWE-400,664 - Resource leak",
+      "severity": "Medium",
+      "description": "Allocated resources are not released properly. This can slow down or crash your system. They must be closed along all paths to prevent a resource leak.",
+      "recommendation": "**Problem**\nThis line of code contains a resource that might not be closed properly. This can cause a resource leak that slows down or crashes your system.\n\n**Fix**\nConsider closing the following resource: *secure\\_sock*. The resource is allocated by call *SSLContext.wrap_socket*. The resource is referenced at line 37. The resource is returned at line 42. There are other execution paths that don't close the resource or return it, for example, when *logging.info()* throws an exception. To prevent",
+      "code_snippet": "",
+      "vulnerable_part": "",
+      "rule_id": "python-resource-leak-detector",
+      "cwes": [
+        "CWE-400",
+        "CWE-664"
+      ],
+      "detector": "Resource leak"
+    }
+  ],
+  "vuln_q_0077_0000": [
+    {
+      "title": "CWE-22 - Path traversal",
+      "severity": "High",
+      "description": "Constructing path names with unsanitized user input can lead to path traversal attacks (for example, `../../..`) that allow an attacker access to file system resources.",
+      "recommendation": "Path traversal vulnerability detected. User-controlled input in file paths can allow attackers to access files outside intended directories using `../` sequences. Secure your code by using framework functions like `safe_join()`, `secure_filename()` and `.startswith()` checks. Learn more: https://cwe.mitre.org/data/definitions/22.html\n",
+      "code_snippet": "",
+      "vulnerable_part": "",
+      "rule_id": "python-path-traversal-ide",
+      "cwes": [
+        "CWE-22"
+      ],
+      "detector": "Path traversal"
+    },
+    {
+      "title": "CWE-22 - Path traversal",
+      "severity": "High",
+      "description": "Constructing path names with unsanitized user input can lead to path traversal attacks (for example, `../../..`) that allow an attacker access to file system resources.",
+      "recommendation": "Path traversal vulnerability detected. User-controlled input in file paths can allow attackers to access files outside intended directories using `../` sequences. Secure your code by using framework functions like `safe_join()`, `secure_filename()` and `.startswith()` checks. Learn more: https://cwe.mitre.org/data/definitions/22.html\n",
+      "code_snippet": "",
+      "vulnerable_part": "",
+      "rule_id": "python-path-traversal-ide",
+      "cwes": [
+        "CWE-22"
+      ],
+      "detector": "Path traversal"
+    }
+  ],
+  "vuln_q_0070_0000": [
+    {
+      "title": "CWE-319 - AWS insecure transmission CDK",
+      "severity": "High",
+      "description": "Checks when user transmitting sensitive information, such as passwords, financial data, or personal information, over a network or storing it in a way that is not adequately protected with encryption.",
+      "recommendation": "Bucket is not set to enforce encryption-in-transit, if not explictly setting this on the bucket policy - the property \"enforce_ssl\" should be set to True",
+      "code_snippet": "",
+      "vulnerable_part": "",
+      "rule_id": "python-cdk-bucket-enforce-ssl",
+      "cwes": [
+        "CWE-319"
+      ],
+      "detector": "AWS insecure transmission CDK"
+    }
+  ],
+  "vuln_q_0074_0000": [
+    {
+      "title": "CWE-319 - AWS insecure transmission CDK",
+      "severity": "High",
+      "description": "Checks when user transmitting sensitive information, such as passwords, financial data, or personal information, over a network or storing it in a way that is not adequately protected with encryption.",
+      "recommendation": "Bucket is not set to enforce encryption-in-transit, if not explictly setting this on the bucket policy - the property \"enforce_ssl\" should be set to True",
+      "code_snippet": "",
+      "vulnerable_part": "",
+      "rule_id": "python-cdk-bucket-enforce-ssl",
+      "cwes": [
+        "CWE-319"
+      ],
+      "detector": "AWS insecure transmission CDK"
+    }
+  ],
+  "vuln_q_0060_0000": [
+    {
+      "title": "CWE-400,664 - Resource leak",
+      "severity": "Medium",
+      "description": "Allocated resources are not released properly. This can slow down or crash your system. They must be closed along all paths to prevent a resource leak.",
+      "recommendation": "**Problem**\nThis line of code might contain a resource leak. Resource leaks can cause your system to slow down or crash.\n\n**Fix**\nConsider closing the following resource: *img*. The resource is allocated by call *Image.open*. Execution paths that do not contain closure statements were detected. To prevent this resource leak, close *img* in a try-finally block or declare it using a `with` statement.\n\n**More info**\n[View details about the `with` statement in the Python developer's guide](https://w",
+      "code_snippet": "",
+      "vulnerable_part": "",
+      "rule_id": "python-resource-leak-detector",
+      "cwes": [
+        "CWE-400",
+        "CWE-664"
+      ],
+      "detector": "Resource leak"
+    },
+    {
+      "title": "CWE-22 - Path traversal",
+      "severity": "High",
+      "description": "Constructing path names with unsanitized user input can lead to path traversal attacks (for example, `../../..`) that allow an attacker access to file system resources.",
+      "recommendation": "Path traversal vulnerability detected. User-controlled input in file paths can allow attackers to access files outside intended directories using `../` sequences. Secure your code by using framework functions like `safe_join()`, `secure_filename()` and `.startswith()` checks. Learn more: https://cwe.mitre.org/data/definitions/22.html\n",
+      "code_snippet": "",
+      "vulnerable_part": "",
+      "rule_id": "python-path-traversal-ide",
+      "cwes": [
+        "CWE-22"
+      ],
+      "detector": "Path traversal"
+    }
+  ],
+  "vuln_q_0007_0000": [
+    {
+      "title": "CWE-22 - Path traversal",
+      "severity": "High",
+      "description": "Constructing path names with unsanitized user input can lead to path traversal attacks (for example, `../../..`) that allow an attacker access to file system resources.",
+      "recommendation": "Path traversal vulnerability detected. User-controlled input in file paths can allow attackers to access files outside intended directories using `../` sequences. Secure your code by using framework functions like `safe_join()`, `secure_filename()` and `.startswith()` checks. Learn more: https://cwe.mitre.org/data/definitions/22.html\n",
+      "code_snippet": "",
+      "vulnerable_part": "",
+      "rule_id": "python-path-traversal-ide",
+      "cwes": [
+        "CWE-22"
+      ],
+      "detector": "Path traversal"
+    },
+    {
+      "title": "CWE-22 - Path traversal",
+      "severity": "High",
+      "description": "Constructing path names with unsanitized user input can lead to path traversal attacks (for example, `../../..`) that allow an attacker access to file system resources.",
+      "recommendation": "Path traversal vulnerability detected. User-controlled input in file paths can allow attackers to access files outside intended directories using `../` sequences. Secure your code by using framework functions like `safe_join()`, `secure_filename()` and `.startswith()` checks. Learn more: https://cwe.mitre.org/data/definitions/22.html\n",
+      "code_snippet": "",
+      "vulnerable_part": "",
+      "rule_id": "python-path-traversal-ide",
+      "cwes": [
+        "CWE-22"
+      ],
+      "detector": "Path traversal"
+    }
+  ],
+  "vuln_q_0064_0000": [
+    {
+      "title": "CWE-319 - AWS insecure transmission CDK",
+      "severity": "High",
+      "description": "Checks when user transmitting sensitive information, such as passwords, financial data, or personal information, over a network or storing it in a way that is not adequately protected with encryption.",
+      "recommendation": "Bucket is not set to enforce encryption-in-transit, if not explictly setting this on the bucket policy - the property \"enforce_ssl\" should be set to True",
+      "code_snippet": "",
+      "vulnerable_part": "",
+      "rule_id": "python-cdk-bucket-enforce-ssl",
+      "cwes": [
+        "CWE-319"
+      ],
+      "detector": "AWS insecure transmission CDK"
+    }
+  ],
+  "vuln_q_0006_0000": [
+    {
+      "title": "CWE-22 - Path traversal",
+      "severity": "High",
+      "description": "Constructing path names with unsanitized user input can lead to path traversal attacks (for example, `../../..`) that allow an attacker access to file system resources.",
+      "recommendation": "Path traversal vulnerability detected. User-controlled input in file paths can allow attackers to access files outside intended directories using `../` sequences. Secure your code by using framework functions like `safe_join()`, `secure_filename()` and `.startswith()` checks. Learn more: https://cwe.mitre.org/data/definitions/22.html\n",
+      "code_snippet": "",
+      "vulnerable_part": "",
+      "rule_id": "python-path-traversal-ide",
+      "cwes": [
+        "CWE-22"
+      ],
+      "detector": "Path traversal"
+    }
+  ],
+  "vuln_q_0000_0001": [
+    {
+      "title": "CWE-22 - Path traversal",
+      "severity": "High",
+      "description": "Constructing path names with unsanitized user input can lead to path traversal attacks (for example, `../../..`) that allow an attacker access to file system resources.",
+      "recommendation": "Path traversal vulnerability detected. User-controlled input in file paths can allow attackers to access files outside intended directories using `../` sequences. Secure your code by using framework functions like `safe_join()`, `secure_filename()` and `.startswith()` checks. Learn more: https://cwe.mitre.org/data/definitions/22.html\n",
+      "code_snippet": "",
+      "vulnerable_part": "",
+      "rule_id": "python-path-traversal-ide",
+      "cwes": [
+        "CWE-22"
+      ],
+      "detector": "Path traversal"
+    },
+    {
+      "title": "CWE-22 - Path traversal",
+      "severity": "High",
+      "description": "Constructing path names with unsanitized user input can lead to path traversal attacks (for example, `../../..`) that allow an attacker access to file system resources.",
+      "recommendation": "Path traversal vulnerability detected. User-controlled input in file paths can allow attackers to access files outside intended directories using `../` sequences. Secure your code by using framework functions like `safe_join()`, `secure_filename()` and `.startswith()` checks. Learn more: https://cwe.mitre.org/data/definitions/22.html\n",
+      "code_snippet": "",
+      "vulnerable_part": "",
+      "rule_id": "python-path-traversal-ide",
+      "cwes": [
+        "CWE-22"
+      ],
+      "detector": "Path traversal"
+    }
+  ],
+  "vuln_q_0070_0004": [
+    {
+      "title": "CWE-319 - AWS insecure transmission CDK",
+      "severity": "High",
+      "description": "Checks when user transmitting sensitive information, such as passwords, financial data, or personal information, over a network or storing it in a way that is not adequately protected with encryption.",
+      "recommendation": "Bucket is not set to enforce encryption-in-transit, if not explictly setting this on the bucket policy - the property \"enforce_ssl\" should be set to True",
+      "code_snippet": "",
+      "vulnerable_part": "",
+      "rule_id": "python-cdk-bucket-enforce-ssl",
+      "cwes": [
+        "CWE-319"
+      ],
+      "detector": "AWS insecure transmission CDK"
+    }
+  ],
+  "vuln_q_0070_0001": [
+    {
+      "title": "CWE-319 - AWS insecure transmission CDK",
+      "severity": "High",
+      "description": "Checks when user transmitting sensitive information, such as passwords, financial data, or personal information, over a network or storing it in a way that is not adequately protected with encryption.",
+      "recommendation": "Bucket is not set to enforce encryption-in-transit, if not explictly setting this on the bucket policy - the property \"enforce_ssl\" should be set to True",
+      "code_snippet": "",
+      "vulnerable_part": "",
+      "rule_id": "python-cdk-bucket-enforce-ssl",
+      "cwes": [
+        "CWE-319"
+      ],
+      "detector": "AWS insecure transmission CDK"
+    }
+  ],
+  "vuln_q_0068_0001": [
+    {
+      "title": "APIs that are not recommended were found - Medium Severity.",
+      "severity": "Medium",
+      "description": "APIs that are not recommended were found. This could indicate a deeper problem in the code - Medium Severity.",
+      "recommendation": "Using xml.etree.ElementTree.fromstring to parse untrusted XML data is known to be vulnerable to XML attacks. Replace xml.etree.ElementTree.fromstring with its defusedxml equivalent function or make sure defusedxml.defuse_stdlib() is called https://bandit.readthedocs.io/en/latest/blacklists/blacklist_imports.html#b313-b320-xml-bad-elementtree",
+      "code_snippet": "",
+      "vulnerable_part": "",
+      "rule_id": "python-denylist-xml-bad-ElementTree",
+      "cwes": [],
+      "detector": "Usage of an API that is not recommended - Medium Severity"
+    }
+  ],
+  "vuln_q_0079_0004": [
+    {
+      "title": "CWE-943 - NoSQL Injection",
+      "severity": "High",
+      "description": "User input is fed into a NoSQL command. This allows a user to execute an NoSQL command injection and run custom actions, which could leak sensitive data or delete data in the database. Ensure the user does not have direct influence on the command.",
+      "recommendation": "Potential NoSQL Injection detected. Untrusted input is being used in a NoSQL database operation without proper sanitization.  NoSQL databases like MongoDB and DynamoDB are not immune to injection attacks. User input should never be directly interpolated into query objects or strings.  Instead, use parameterized queries, proper sanitization techniques, or type conversion specific to the NoSQL database you're using.  For MongoDB, consider using ObjectId() for IDs and validated operators.  For Dyna",
+      "code_snippet": "",
+      "vulnerable_part": "",
+      "rule_id": "python-no-sql-injection-ide",
+      "cwes": [
+        "CWE-943"
+      ],
+      "detector": "NoSQL Injection"
+    },
+    {
+      "title": "CWE-400,664 - Resource leak",
+      "severity": "Medium",
+      "description": "Allocated resources are not released properly. This can slow down or crash your system. They must be closed along all paths to prevent a resource leak.",
+      "recommendation": "It looks like you're constructing a regular expression pattern from user-controlled input. This could make your code vulnerable to Denial of Service (DoS) attacks. We recommend that you sanitize the input before using it to construct a regular expression pattern. \n\n[Learn more](https://cwe.mitre.org/data/definitions/400.html)",
+      "code_snippet": "",
+      "vulnerable_part": "",
+      "rule_id": "python-do-not-construct-regular-expression-from-user-input",
+      "cwes": [
+        "CWE-400",
+        "CWE-664"
+      ],
+      "detector": "Resource leak"
+    }
+  ],
+  "vuln_q_0086_0001": [
+    {
+      "title": "CWE-200 - Insecure Socket Bind",
+      "severity": "Critical",
+      "description": "Binding the socket with an empty IP address will allow it to accept connections from any IPv4 address provided, thus can introduce security risks.",
+      "recommendation": "Binding a socket with an empty IP address causes the bound address to default to 0.0.0.0. This might bind a socket to all interfaces, which opens the socket to traffic from any IPv4 address and creates security risks.\n\n[Learn more](https://cwe.mitre.org/data/definitions/200.html)",
+      "code_snippet": "",
+      "vulnerable_part": "",
+      "rule_id": "python-all-interfaces-socket-binding",
+      "cwes": [
+        "CWE-200"
+      ],
+      "detector": "Insecure Socket Bind"
+    }
+  ],
+  "vuln_q_0053_0000": [
+    {
+      "title": "CWE-400 - AWS cost optimization cdk",
+      "severity": "Medium",
+      "description": "AWS resources are configured with suboptimal settings that may result in unnecessary costs. This includes over-provisioned capacity, inefficient billing modes, or resource configurations that don't align with actual usage patterns. Implementing cost-effective configurations can significantly reduce operational expenses while maintaining performance requirements.",
+      "recommendation": "We recommend setting the `billingMode` to `PAY_PER_REQUEST` if you prefer a cost-effective approach where you are billed based on actual usage. This way, you only pay for the read and write operations you perform, allowing for flexible capacity management without the need for pre-allocating resources.",
+      "code_snippet": "",
+      "vulnerable_part": "",
+      "rule_id": "python-cdk-aws-dynamodb-billing-mode",
+      "cwes": [
+        "CWE-400"
+      ],
+      "detector": "AWS cost optimization cdk"
+    },
+    {
+      "title": "CWE-1104 - Use of deprecated components",
+      "severity": "High",
+      "description": "Components that are no longer maintained can make it difficult or impossible to fix significant bugs, vulnerabilities, or quality issues. In effect, unmaintained code can become obsolete.",
+      "recommendation": "The Lambda function is using a deprecated or end-of-life runtime version. Deprecated runtimes no longer receive security patches, bug fixes, or technical support from AWS. Update to a supported runtime version to ensure security, performance, and continued AWS support. Learn more: https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html\n",
+      "code_snippet": "",
+      "vulnerable_part": "",
+      "rule_id": "python-cdk-lambda-latest-version",
+      "cwes": [
+        "CWE-1104"
+      ],
+      "detector": "Use of deprecated components"
+    }
+  ],
+  "vuln_q_0013_0000": [
+    {
+      "title": "CWE-22 - Path traversal",
+      "severity": "High",
+      "description": "Constructing path names with unsanitized user input can lead to path traversal attacks (for example, `../../..`) that allow an attacker access to file system resources.",
+      "recommendation": "Path traversal vulnerability detected. User-controlled input in file paths can allow attackers to access files outside intended directories using `../` sequences. Secure your code by using framework functions like `safe_join()`, `secure_filename()` and `.startswith()` checks. Learn more: https://cwe.mitre.org/data/definitions/22.html\n",
+      "code_snippet": "",
+      "vulnerable_part": "",
+      "rule_id": "python-path-traversal-ide",
+      "cwes": [
+        "CWE-22"
+      ],
+      "detector": "Path traversal"
+    }
+  ],
+  "vuln_q_0021_0000": [
+    {
+      "title": "APIs that are not recommended were found - Medium Severity.",
+      "severity": "Medium",
+      "description": "APIs that are not recommended were found. This could indicate a deeper problem in the code - Medium Severity.",
+      "recommendation": "Using lxml.etree.parse to parse untrusted XML data is known to be vulnerable to XML attacks. Replace lxml.etree.parse with its defusedxml equivalent function. https://bandit.readthedocs.io/en/latest/blacklists/blacklist_imports.html#b313-b320-xml-bad-etree",
+      "code_snippet": "",
+      "vulnerable_part": "",
+      "rule_id": "python-denylist-xml-bad-etree",
+      "cwes": [],
+      "detector": "Usage of an API that is not recommended - Medium Severity"
+    }
+  ],
+  "vuln_q_0099_0000": [
+    {
+      "title": "CWE-319 - AWS insecure transmission CDK",
+      "severity": "High",
+      "description": "Checks when user transmitting sensitive information, such as passwords, financial data, or personal information, over a network or storing it in a way that is not adequately protected with encryption.",
+      "recommendation": "Bucket is not set to enforce encryption-in-transit, if not explictly setting this on the bucket policy - the property \"enforce_ssl\" should be set to True",
+      "code_snippet": "",
+      "vulnerable_part": "",
+      "rule_id": "python-cdk-bucket-enforce-ssl",
+      "cwes": [
+        "CWE-319"
+      ],
+      "detector": "AWS insecure transmission CDK"
+    }
+  ],
+  "vuln_q_0051_0000": [
+    {
+      "title": "CWE-22 - Path traversal",
+      "severity": "High",
+      "description": "Constructing path names with unsanitized user input can lead to path traversal attacks (for example, `../../..`) that allow an attacker access to file system resources.",
+      "recommendation": "Path traversal vulnerability detected. User-controlled input in file paths can allow attackers to access files outside intended directories using `../` sequences. Secure your code by using framework functions like `safe_join()`, `secure_filename()` and `.startswith()` checks. Learn more: https://cwe.mitre.org/data/definitions/22.html\n",
+      "code_snippet": "",
+      "vulnerable_part": "",
+      "rule_id": "python-path-traversal-ide",
+      "cwes": [
+        "CWE-22"
+      ],
+      "detector": "Path traversal"
+    }
+  ],
+  "vuln_q_0074_0001": [
+    {
+      "title": "CWE-319 - AWS insecure transmission CDK",
+      "severity": "High",
+      "description": "Checks when user transmitting sensitive information, such as passwords, financial data, or personal information, over a network or storing it in a way that is not adequately protected with encryption.",
+      "recommendation": "Bucket is not set to enforce encryption-in-transit, if not explictly setting this on the bucket policy - the property \"enforce_ssl\" should be set to True",
+      "code_snippet": "",
+      "vulnerable_part": "",
+      "rule_id": "python-cdk-bucket-enforce-ssl",
+      "cwes": [
+        "CWE-319"
+      ],
+      "detector": "AWS insecure transmission CDK"
+    }
+  ],
+  "vuln_q_0039_0001": [
+    {
+      "title": "CWE-200 - Insecure Socket Bind",
+      "severity": "Critical",
+      "description": "Binding the socket with an empty IP address will allow it to accept connections from any IPv4 address provided, thus can introduce security risks.",
+      "recommendation": "Binding a socket with an empty IP address causes the bound address to default to 0.0.0.0. This might bind a socket to all interfaces, which opens the socket to traffic from any IPv4 address and creates security risks.\n\n[Learn more](https://cwe.mitre.org/data/definitions/200.html)",
+      "code_snippet": "",
+      "vulnerable_part": "",
+      "rule_id": "python-all-interfaces-socket-binding",
+      "cwes": [
+        "CWE-200"
+      ],
+      "detector": "Insecure Socket Bind"
+    }
+  ],
+  "vuln_q_0070_0002": [
+    {
+      "title": "CWE-319 - AWS insecure transmission CDK",
+      "severity": "High",
+      "description": "Checks when user transmitting sensitive information, such as passwords, financial data, or personal information, over a network or storing it in a way that is not adequately protected with encryption.",
+      "recommendation": "Bucket is not set to enforce encryption-in-transit, if not explictly setting this on the bucket policy - the property \"enforce_ssl\" should be set to True",
+      "code_snippet": "",
+      "vulnerable_part": "",
+      "rule_id": "python-cdk-bucket-enforce-ssl",
+      "cwes": [
+        "CWE-319"
+      ],
+      "detector": "AWS insecure transmission CDK"
+    }
+  ],
+  "vuln_q_0097_0004": [
+    {
+      "title": "CWE-943 - NoSQL Injection",
+      "severity": "High",
+      "description": "User input is fed into a NoSQL command. This allows a user to execute an NoSQL command injection and run custom actions, which could leak sensitive data or delete data in the database. Ensure the user does not have direct influence on the command.",
+      "recommendation": "Potential NoSQL Injection detected. Untrusted input is being used in a NoSQL database operation without proper sanitization.  NoSQL databases like MongoDB and DynamoDB are not immune to injection attacks. User input should never be directly interpolated into query objects or strings.  Instead, use parameterized queries, proper sanitization techniques, or type conversion specific to the NoSQL database you're using.  For MongoDB, consider using ObjectId() for IDs and validated operators.  For Dyna",
+      "code_snippet": "",
+      "vulnerable_part": "",
+      "rule_id": "python-no-sql-injection-ide",
+      "cwes": [
+        "CWE-943"
+      ],
+      "detector": "NoSQL Injection"
+    }
+  ],
+  "vuln_q_0029_0002": [
+    {
+      "title": "CWE-77,78,88 - OS command injection",
+      "severity": "High",
+      "description": "Constructing operating system or shell commands with unsanitized user input can lead to inadvertently running malicious code.",
+      "recommendation": "Starting a process with a shell, possible injection detected, security issue. https://bandit.readthedocs.io/en/latest/plugins/b605_start_process_with_a_shell.html",
+      "code_snippet": "",
+      "vulnerable_part": "",
+      "rule_id": "python-start-process-with-a-shell",
+      "cwes": [
+        "CWE-77",
+        "CWE-78",
+        "CWE-88"
+      ],
+      "detector": "OS command injection"
+    }
+  ],
+  "vuln_q_0018_0003": [
+    {
+      "title": "CWE-400,664 - Resource leak",
+      "severity": "Medium",
+      "description": "Allocated resources are not released properly. This can slow down or crash your system. They must be closed along all paths to prevent a resource leak.",
+      "recommendation": "**Problem**\nThis line of code might contain a resource leak. Resource leaks can cause your system to slow down or crash.\n\n**Fix**\nConsider closing the following resource: *sock*. The resource is allocated by call *socket.socket*. Currently, there are execution paths that do not contain closure statements, for example, when *SSLContext.wrap\\_socket()* throws an exception. To prevent this resource leak, close *sock* in a try-finally block or declare it using a `with` statement.\n\n**More info**\n[Vie",
+      "code_snippet": "",
+      "vulnerable_part": "",
+      "rule_id": "python-resource-leak-detector",
+      "cwes": [
+        "CWE-400",
+        "CWE-664"
+      ],
+      "detector": "Resource leak"
+    }
+  ]
+}

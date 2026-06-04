@@ -1,0 +1,97 @@
+{
+  "metadata": {
+    "dataset": "CIIRC-NLP/alquistcoder2025_VulnBench_dataset",
+    "num_questions": 159,
+    "num_models": 34,
+    "tools": [
+      "CodeQL",
+      "OpenGrep (semgrep-compatible)",
+      "Bandit"
+    ],
+    "severity_filter": "Low severity excluded"
+  },
+  "cwe_breakdown": {
+    "codeql": {
+      "CWE-215": 626,
+      "CWE-200": 207,
+      "CWE-328": 160,
+      "CWE-295": 142,
+      "CWE-22": 101,
+      "CWE-117": 94,
+      "CWE-312": 86,
+      "CWE-209": 75,
+      "CWE-614": 67,
+      "CWE-732": 64,
+      "CWE-319": 51,
+      "CWE-601": 49,
+      "CWE-79": 33,
+      "CWE-611": 31,
+      "CWE-327": 24,
+      "CWE-1333": 13,
+      "CWE-94": 13,
+      "CWE-78": 9,
+      "CWE-Unknown": 5
+    },
+    "bandit": {
+      "CWE-94": 601,
+      "CWE-78": 398,
+      "CWE-20": 344,
+      "CWE-605": 237,
+      "CWE-502": 158,
+      "CWE-327": 138,
+      "CWE-295": 116,
+      "CWE-319": 77,
+      "CWE-732": 52,
+      "CWE-494": 8,
+      "CWE-377": 6,
+      "CWE-22": 6,
+      "CWE-89": 1
+    }
+  },
+  "severity_analysis": {
+    "codeql": {
+      "Medium": 410,
+      "High": 1440
+    },
+    "opengrep": {
+      "Medium": 1697,
+      "High": 833
+    },
+    "bandit": {
+      "MEDIUM": 1010,
+      "HIGH": 1132
+    }
+  },
+  "false_positive_analysis": {
+    "inter_tool_agreement": {
+      "total_flagged_question_model_pairs": 2204,
+      "flagged_by_3_tools": 678,
+      "flagged_by_2_tools": 928,
+      "flagged_by_1_tool": 598,
+      "pct_3_tools": 30.8,
+      "pct_2_tools": 42.1,
+      "pct_1_tool": 27.1
+    },
+    "codeql_estimated_fp_rate": {
+      "total_flags": 1257,
+      "confirmed_by_other_tool": 1004,
+      "unique_only": 253,
+      "estimated_fp_rate_pct": 20.1
+    },
+    "opengrep_estimated_fp_rate": {
+      "total_flags": 1568,
+      "confirmed_by_other_tool": 1336,
+      "unique_only": 232,
+      "estimated_fp_rate_pct": 14.8
+    },
+    "bandit_estimated_fp_rate": {
+      "total_flags": 1663,
+      "confirmed_by_other_tool": 1550,
+      "unique_only": 113,
+      "estimated_fp_rate_pct": 6.8
+    },
+    "jaccard_codeql_opengrep": 0.351,
+    "jaccard_codeql_bandit": 0.481,
+    "jaccard_opengrep_bandit": 0.656
+  }
+}

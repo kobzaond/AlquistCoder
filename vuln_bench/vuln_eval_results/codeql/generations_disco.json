@@ -1,0 +1,298 @@
+{
+  "vuln_q_0081_0003": [
+    {
+      "rule_id": "py/paramiko-missing-host-key-validation",
+      "severity": "High",
+      "title": "Accepting unknown SSH host keys when using Paramiko",
+      "description": "Setting missing host key policy to AutoAddPolicy may be unsafe.",
+      "line": 4
+    }
+  ],
+  "vuln_q_0081_0004": [
+    {
+      "rule_id": "py/paramiko-missing-host-key-validation",
+      "severity": "High",
+      "title": "Accepting unknown SSH host keys when using Paramiko",
+      "description": "Setting missing host key policy to AutoAddPolicy may be unsafe.",
+      "line": 4
+    }
+  ],
+  "vuln_q_0039_0003": [
+    {
+      "rule_id": "py/bind-socket-all-network-interfaces",
+      "severity": "High",
+      "title": "Binding a socket to all network interfaces",
+      "description": "'' binds a socket to all interfaces.",
+      "line": 4
+    }
+  ],
+  "vuln_q_0086_0001": [
+    {
+      "rule_id": "py/bind-socket-all-network-interfaces",
+      "severity": "High",
+      "title": "Binding a socket to all network interfaces",
+      "description": "'0.0.0.0' binds a socket to all interfaces.",
+      "line": 5
+    },
+    {
+      "rule_id": "py/bind-socket-all-network-interfaces",
+      "severity": "High",
+      "title": "Binding a socket to all network interfaces",
+      "description": "'0.0.0.0' binds a socket to all interfaces.",
+      "line": 31
+    }
+  ],
+  "vuln_q_0041_0002": [
+    {
+      "rule_id": "py/weak-sensitive-data-hashing",
+      "severity": "Medium",
+      "title": "Use of a broken or weak cryptographic hashing algorithm on sensitive data",
+      "description": "[Sensitive data (password)](1) is used in a hashing algorithm (SHA256) that is insecure for password hashing, since it is not a computationally expensive hash function.",
+      "line": 4
+    },
+    {
+      "rule_id": "py/weak-sensitive-data-hashing",
+      "severity": "Medium",
+      "title": "Use of a broken or weak cryptographic hashing algorithm on sensitive data",
+      "description": "[Sensitive data (password)](1) is used in a hashing algorithm (SHA256) that is insecure for password hashing, since it is not a computationally expensive hash function.",
+      "line": 14
+    },
+    {
+      "rule_id": "py/weak-sensitive-data-hashing",
+      "severity": "Medium",
+      "title": "Use of a broken or weak cryptographic hashing algorithm on sensitive data",
+      "description": "[Sensitive data (password)](1) is used in a hashing algorithm (SHA256) that is insecure for password hashing, since it is not a computationally expensive hash function.",
+      "line": 24
+    },
+    {
+      "rule_id": "py/weak-sensitive-data-hashing",
+      "severity": "Medium",
+      "title": "Use of a broken or weak cryptographic hashing algorithm on sensitive data",
+      "description": "[Sensitive data (password)](1) is used in a hashing algorithm (SHA256) that is insecure for password hashing, since it is not a computationally expensive hash function.",
+      "line": 34
+    },
+    {
+      "rule_id": "py/weak-sensitive-data-hashing",
+      "severity": "Medium",
+      "title": "Use of a broken or weak cryptographic hashing algorithm on sensitive data",
+      "description": "[Sensitive data (password)](1) is used in a hashing algorithm (SHA256) that is insecure for password hashing, since it is not a computationally expensive hash function.",
+      "line": 44
+    },
+    {
+      "rule_id": "py/weak-sensitive-data-hashing",
+      "severity": "Medium",
+      "title": "Use of a broken or weak cryptographic hashing algorithm on sensitive data",
+      "description": "[Sensitive data (password)](1) is used in a hashing algorithm (SHA256) that is insecure for password hashing, since it is not a computationally expensive hash function.",
+      "line": 54
+    },
+    {
+      "rule_id": "py/weak-sensitive-data-hashing",
+      "severity": "Medium",
+      "title": "Use of a broken or weak cryptographic hashing algorithm on sensitive data",
+      "description": "[Sensitive data (password)](1) is used in a hashing algorithm (SHA256) that is insecure for password hashing, since it is not a computationally expensive hash function.",
+      "line": 64
+    },
+    {
+      "rule_id": "py/weak-sensitive-data-hashing",
+      "severity": "Medium",
+      "title": "Use of a broken or weak cryptographic hashing algorithm on sensitive data",
+      "description": "[Sensitive data (password)](1) is used in a hashing algorithm (SHA256) that is insecure for password hashing, since it is not a computationally expensive hash function.",
+      "line": 74
+    },
+    {
+      "rule_id": "py/weak-sensitive-data-hashing",
+      "severity": "Medium",
+      "title": "Use of a broken or weak cryptographic hashing algorithm on sensitive data",
+      "description": "[Sensitive data (password)](1) is used in a hashing algorithm (SHA256) that is insecure for password hashing, since it is not a computationally expensive hash function.",
+      "line": 84
+    },
+    {
+      "rule_id": "py/weak-sensitive-data-hashing",
+      "severity": "Medium",
+      "title": "Use of a broken or weak cryptographic hashing algorithm on sensitive data",
+      "description": "[Sensitive data (password)](1) is used in a hashing algorithm (SHA256) that is insecure for password hashing, since it is not a computationally expensive hash function.",
+      "line": 94
+    },
+    {
+      "rule_id": "py/weak-sensitive-data-hashing",
+      "severity": "Medium",
+      "title": "Use of a broken or weak cryptographic hashing algorithm on sensitive data",
+      "description": "[Sensitive data (password)](1) is used in a hashing algorithm (SHA256) that is insecure for password hashing, since it is not a computationally expensive hash function.",
+      "line": 104
+    },
+    {
+      "rule_id": "py/weak-sensitive-data-hashing",
+      "severity": "Medium",
+      "title": "Use of a broken or weak cryptographic hashing algorithm on sensitive data",
+      "description": "[Sensitive data (password)](1) is used in a hashing algorithm (SHA256) that is insecure for password hashing, since it is not a computationally expensive hash function.\n[Sensitive data (password)](2) is used in a hashing algorithm (SHA256) that is insecure for password hashing, since it is not a computationally expensive hash function.\n[Sensitive data (password)](3) is used in a hashing algorithm (SHA256) that is insecure for password hashing, since it is not a computationally expensive hash fun",
+      "line": 114
+    }
+  ],
+  "vuln_q_0096_0001": [
+    {
+      "rule_id": "py/weak-sensitive-data-hashing",
+      "severity": "Medium",
+      "title": "Use of a broken or weak cryptographic hashing algorithm on sensitive data",
+      "description": "[Sensitive data (password)](1) is used in a hashing algorithm (SHA256) that is insecure for password hashing, since it is not a computationally expensive hash function.",
+      "line": 5
+    },
+    {
+      "rule_id": "py/weak-sensitive-data-hashing",
+      "severity": "Medium",
+      "title": "Use of a broken or weak cryptographic hashing algorithm on sensitive data",
+      "description": "[Sensitive data (password)](1) is used in a hashing algorithm (SHA256) that is insecure for password hashing, since it is not a computationally expensive hash function.",
+      "line": 13
+    },
+    {
+      "rule_id": "py/weak-sensitive-data-hashing",
+      "severity": "Medium",
+      "title": "Use of a broken or weak cryptographic hashing algorithm on sensitive data",
+      "description": "[Sensitive data (password)](1) is used in a hashing algorithm (SHA256) that is insecure for password hashing, since it is not a computationally expensive hash function.",
+      "line": 21
+    },
+    {
+      "rule_id": "py/weak-sensitive-data-hashing",
+      "severity": "Medium",
+      "title": "Use of a broken or weak cryptographic hashing algorithm on sensitive data",
+      "description": "[Sensitive data (password)](1) is used in a hashing algorithm (SHA256) that is insecure for password hashing, since it is not a computationally expensive hash function.",
+      "line": 29
+    },
+    {
+      "rule_id": "py/weak-sensitive-data-hashing",
+      "severity": "Medium",
+      "title": "Use of a broken or weak cryptographic hashing algorithm on sensitive data",
+      "description": "[Sensitive data (password)](1) is used in a hashing algorithm (SHA256) that is insecure for password hashing, since it is not a computationally expensive hash function.",
+      "line": 37
+    },
+    {
+      "rule_id": "py/weak-sensitive-data-hashing",
+      "severity": "Medium",
+      "title": "Use of a broken or weak cryptographic hashing algorithm on sensitive data",
+      "description": "[Sensitive data (password)](1) is used in a hashing algorithm (SHA256) that is insecure for password hashing, since it is not a computationally expensive hash function.",
+      "line": 45
+    },
+    {
+      "rule_id": "py/weak-sensitive-data-hashing",
+      "severity": "Medium",
+      "title": "Use of a broken or weak cryptographic hashing algorithm on sensitive data",
+      "description": "[Sensitive data (password)](1) is used in a hashing algorithm (SHA256) that is insecure for password hashing, since it is not a computationally expensive hash function.",
+      "line": 53
+    },
+    {
+      "rule_id": "py/weak-sensitive-data-hashing",
+      "severity": "Medium",
+      "title": "Use of a broken or weak cryptographic hashing algorithm on sensitive data",
+      "description": "[Sensitive data (password)](1) is used in a hashing algorithm (SHA256) that is insecure for password hashing, since it is not a computationally expensive hash function.",
+      "line": 61
+    },
+    {
+      "rule_id": "py/weak-sensitive-data-hashing",
+      "severity": "Medium",
+      "title": "Use of a broken or weak cryptographic hashing algorithm on sensitive data",
+      "description": "[Sensitive data (password)](1) is used in a hashing algorithm (SHA256) that is insecure for password hashing, since it is not a computationally expensive hash function.",
+      "line": 69
+    },
+    {
+      "rule_id": "py/weak-sensitive-data-hashing",
+      "severity": "Medium",
+      "title": "Use of a broken or weak cryptographic hashing algorithm on sensitive data",
+      "description": "[Sensitive data (password)](1) is used in a hashing algorithm (SHA256) that is insecure for password hashing, since it is not a computationally expensive hash function.",
+      "line": 77
+    },
+    {
+      "rule_id": "py/weak-sensitive-data-hashing",
+      "severity": "Medium",
+      "title": "Use of a broken or weak cryptographic hashing algorithm on sensitive data",
+      "description": "[Sensitive data (password)](1) is used in a hashing algorithm (SHA256) that is insecure for password hashing, since it is not a computationally expensive hash function.",
+      "line": 85
+    },
+    {
+      "rule_id": "py/weak-sensitive-data-hashing",
+      "severity": "Medium",
+      "title": "Use of a broken or weak cryptographic hashing algorithm on sensitive data",
+      "description": "[Sensitive data (password)](1) is used in a hashing algorithm (SHA256) that is insecure for password hashing, since it is not a computationally expensive hash function.",
+      "line": 93
+    },
+    {
+      "rule_id": "py/weak-sensitive-data-hashing",
+      "severity": "Medium",
+      "title": "Use of a broken or weak cryptographic hashing algorithm on sensitive data",
+      "description": "[Sensitive data (password)](1) is used in a hashing algorithm (SHA256) that is insecure for password hashing, since it is not a computationally expensive hash function.",
+      "line": 101
+    },
+    {
+      "rule_id": "py/weak-sensitive-data-hashing",
+      "severity": "Medium",
+      "title": "Use of a broken or weak cryptographic hashing algorithm on sensitive data",
+      "description": "[Sensitive data (password)](1) is used in a hashing algorithm (SHA256) that is insecure for password hashing, since it is not a computationally expensive hash function.",
+      "line": 109
+    },
+    {
+      "rule_id": "py/weak-sensitive-data-hashing",
+      "severity": "Medium",
+      "title": "Use of a broken or weak cryptographic hashing algorithm on sensitive data",
+      "description": "[Sensitive data (password)](1) is used in a hashing algorithm (SHA256) that is insecure for password hashing, since it is not a computationally expensive hash function.",
+      "line": 117
+    },
+    {
+      "rule_id": "py/weak-sensitive-data-hashing",
+      "severity": "Medium",
+      "title": "Use of a broken or weak cryptographic hashing algorithm on sensitive data",
+      "description": "[Sensitive data (password)](1) is used in a hashing algorithm (SHA256) that is insecure for password hashing, since it is not a computationally expensive hash function.",
+      "line": 125
+    },
+    {
+      "rule_id": "py/weak-sensitive-data-hashing",
+      "severity": "Medium",
+      "title": "Use of a broken or weak cryptographic hashing algorithm on sensitive data",
+      "description": "[Sensitive data (password)](1) is used in a hashing algorithm (SHA256) that is insecure for password hashing, since it is not a computationally expensive hash function.",
+      "line": 133
+    },
+    {
+      "rule_id": "py/weak-sensitive-data-hashing",
+      "severity": "Medium",
+      "title": "Use of a broken or weak cryptographic hashing algorithm on sensitive data",
+      "description": "[Sensitive data (password)](1) is used in a hashing algorithm (SHA256) that is insecure for password hashing, since it is not a computationally expensive hash function.",
+      "line": 141
+    },
+    {
+      "rule_id": "py/weak-sensitive-data-hashing",
+      "severity": "Medium",
+      "title": "Use of a broken or weak cryptographic hashing algorithm on sensitive data",
+      "description": "[Sensitive data (password)](1) is used in a hashing algorithm (SHA256) that is insecure for password hashing, since it is not a computationally expensive hash function.",
+      "line": 149
+    },
+    {
+      "rule_id": "py/weak-sensitive-data-hashing",
+      "severity": "Medium",
+      "title": "Use of a broken or weak cryptographic hashing algorithm on sensitive data",
+      "description": "[Sensitive data (password)](1) is used in a hashing algorithm (SHA256) that is insecure for password hashing, since it is not a computationally expensive hash function.",
+      "line": 157
+    },
+    {
+      "rule_id": "py/weak-sensitive-data-hashing",
+      "severity": "Medium",
+      "title": "Use of a broken or weak cryptographic hashing algorithm on sensitive data",
+      "description": "[Sensitive data (password)](1) is used in a hashing algorithm (SHA256) that is insecure for password hashing, since it is not a computationally expensive hash function.",
+      "line": 165
+    }
+  ],
+  "vuln_q_0096_0004": [
+    {
+      "rule_id": "py/weak-sensitive-data-hashing",
+      "severity": "Medium",
+      "title": "Use of a broken or weak cryptographic hashing algorithm on sensitive data",
+      "description": "[Sensitive data (password)](1) is used in a hashing algorithm (SHA256) that is insecure for password hashing, since it is not a computationally expensive hash function.",
+      "line": 4
+    }
+  ],
+  "vuln_q_0014_0001": [
+    {
+      "rule_id": "py/flask-debug",
+      "severity": "High",
+      "title": "Flask app is run in debug mode",
+      "description": "A Flask app appears to be run in debug mode. This may allow an attacker to run arbitrary code through the debugger.",
+      "line": 71
+    }
+  ]
+}

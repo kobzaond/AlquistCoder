@@ -52,3 +52,34 @@ export OPENAI_API_KEY=""
 # python eval_gpt_bandit.py \
 #   --dataset test_questions.json \
 #   --model gpt-4
+
+# --- AWS Inspector evaluation (replaces CodeGuru) ---
+# Persistent scanning repo: ATC26-alquist-develop/vuln-bench-scanner
+# Project ID: project-69c2f59f-c8be-4718-8af0-337d41f2e567
+
+# Mode A: Pre-generated JSONL file (no vLLM needed)
+# python3 eval_vuln_with_inspector.py \
+#   --generations-file "generations_sft2__checkpoint-1000.jsonl" \
+#   --github-token "$GITHUB_TOKEN" \
+#   --region "us-east-1" \
+#   --ignore-severities "Low,Info" \
+#   --project-id "project-69c2f59f-c8be-4718-8af0-337d41f2e567" \
+#   --output "inspector_results.json"
+
+# Mode B: Full generation + Inspector scan
+# python3 eval_vuln_with_inspector.py \
+#   --model "$MODEL" \
+#   --dataset "$DATASET" \
+#   --system-prompt "$SYSTEM_PROMPT" \
+#   --github-token "$GITHUB_TOKEN" \
+#   --region "us-east-1" \
+#   --temperature 0.1 \
+#   --top-p 0.95 \
+#   --top-k 50 \
+#   --max-new-tokens 14000 \
+#   --max-model-len 4096 \
+#   --batch-size 20 \
+#   --seed 1234 \
+#   --ignore-severities "Low,Info" \
+#   --project-id "project-69c2f59f-c8be-4718-8af0-337d41f2e567" \
+#   --output "inspector_results.json"
