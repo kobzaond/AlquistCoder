@@ -1,0 +1,415 @@
+{
+  "metadata": {
+    "dataset": "CIIRC-NLP/alquistcoder2025_VulnBench_dataset",
+    "num_questions": 159,
+    "num_unique_models": 33,
+    "duplicates_removed": [
+      "qwen3-14b_standard",
+      "qwen3-4b_standard",
+      "qwen3-8b_standard"
+    ],
+    "tools": [
+      "codeql",
+      "opengrep",
+      "bandit"
+    ]
+  },
+  "per_model_summary": [
+    {
+      "model": "alquistcoder_dpo",
+      "extractable": 151,
+      "codeql_rate": 7.28,
+      "semgrep_rate": 8.61,
+      "bandit_rate": 3.97,
+      "avg_rate": 6.62,
+      "union_rate": 15.89
+    },
+    {
+      "model": "alquistcoder_sft",
+      "extractable": 140,
+      "codeql_rate": 13.57,
+      "semgrep_rate": 12.86,
+      "bandit_rate": 12.86,
+      "avg_rate": 13.1,
+      "union_rate": 26.43
+    },
+    {
+      "model": "disco",
+      "extractable": 81,
+      "codeql_rate": 9.88,
+      "semgrep_rate": 18.52,
+      "bandit_rate": 17.28,
+      "avg_rate": 15.23,
+      "union_rate": 28.4
+    },
+    {
+      "model": "gemma3_12b_sp",
+      "extractable": 158,
+      "codeql_rate": 17.72,
+      "semgrep_rate": 27.85,
+      "bandit_rate": 22.78,
+      "avg_rate": 22.78,
+      "union_rate": 36.08
+    },
+    {
+      "model": "qwen3_8B_reasoning_sp",
+      "extractable": 149,
+      "codeql_rate": 17.45,
+      "semgrep_rate": 30.87,
+      "bandit_rate": 20.81,
+      "avg_rate": 23.04,
+      "union_rate": 39.6
+    },
+    {
+      "model": "qwen3_14B_reasoning_sp",
+      "extractable": 156,
+      "codeql_rate": 14.74,
+      "semgrep_rate": 30.13,
+      "bandit_rate": 25.64,
+      "avg_rate": 23.5,
+      "union_rate": 42.31
+    },
+    {
+      "model": "gemma3_27b_sp",
+      "extractable": 152,
+      "codeql_rate": 21.05,
+      "semgrep_rate": 25.0,
+      "bandit_rate": 25.66,
+      "avg_rate": 23.9,
+      "union_rate": 37.5
+    },
+    {
+      "model": "gemma3_4b_sp",
+      "extractable": 158,
+      "codeql_rate": 22.15,
+      "semgrep_rate": 23.42,
+      "bandit_rate": 27.85,
+      "avg_rate": 24.47,
+      "union_rate": 37.97
+    },
+    {
+      "model": "qwen3_14B_standard_sp",
+      "extractable": 158,
+      "codeql_rate": 19.62,
+      "semgrep_rate": 25.32,
+      "bandit_rate": 29.11,
+      "avg_rate": 24.68,
+      "union_rate": 41.14
+    },
+    {
+      "model": "codellama_13b",
+      "extractable": 142,
+      "codeql_rate": 23.24,
+      "semgrep_rate": 25.35,
+      "bandit_rate": 27.46,
+      "avg_rate": 25.35,
+      "union_rate": 37.32
+    },
+    {
+      "model": "qwen3_4B_reasoning_sp",
+      "extractable": 151,
+      "codeql_rate": 23.18,
+      "semgrep_rate": 27.81,
+      "bandit_rate": 27.15,
+      "avg_rate": 26.05,
+      "union_rate": 44.37
+    },
+    {
+      "model": "qwen3_32B_reasoning_sp",
+      "extractable": 154,
+      "codeql_rate": 20.78,
+      "semgrep_rate": 33.12,
+      "bandit_rate": 27.92,
+      "avg_rate": 27.27,
+      "union_rate": 44.81
+    },
+    {
+      "model": "gemma3_27b",
+      "extractable": 155,
+      "codeql_rate": 25.81,
+      "semgrep_rate": 28.39,
+      "bandit_rate": 30.32,
+      "avg_rate": 28.17,
+      "union_rate": 42.58
+    },
+    {
+      "model": "qwen3_8B_standard_sp",
+      "extractable": 156,
+      "codeql_rate": 22.44,
+      "semgrep_rate": 26.92,
+      "bandit_rate": 35.26,
+      "avg_rate": 28.21,
+      "union_rate": 41.67
+    },
+    {
+      "model": "qwen3_32B_standard_sp",
+      "extractable": 158,
+      "codeql_rate": 22.15,
+      "semgrep_rate": 29.75,
+      "bandit_rate": 32.91,
+      "avg_rate": 28.27,
+      "union_rate": 43.67
+    },
+    {
+      "model": "gemma3_4b",
+      "extractable": 157,
+      "codeql_rate": 24.84,
+      "semgrep_rate": 30.57,
+      "bandit_rate": 33.12,
+      "avg_rate": 29.51,
+      "union_rate": 41.4
+    },
+    {
+      "model": "phi4_mini_instruct",
+      "extractable": 140,
+      "codeql_rate": 25.0,
+      "semgrep_rate": 30.71,
+      "bandit_rate": 33.57,
+      "avg_rate": 29.76,
+      "union_rate": 44.29
+    },
+    {
+      "model": "qwen3-32b_standard",
+      "extractable": 159,
+      "codeql_rate": 23.27,
+      "semgrep_rate": 30.82,
+      "bandit_rate": 35.22,
+      "avg_rate": 29.77,
+      "union_rate": 40.25
+    },
+    {
+      "model": "gemma3_12b",
+      "extractable": 157,
+      "codeql_rate": 26.11,
+      "semgrep_rate": 33.12,
+      "bandit_rate": 30.57,
+      "avg_rate": 29.94,
+      "union_rate": 42.68
+    },
+    {
+      "model": "gpt_35_turbo",
+      "extractable": 140,
+      "codeql_rate": 22.86,
+      "semgrep_rate": 31.43,
+      "bandit_rate": 37.14,
+      "avg_rate": 30.48,
+      "union_rate": 42.86
+    },
+    {
+      "model": "qwen3_32B_standard",
+      "extractable": 159,
+      "codeql_rate": 23.9,
+      "semgrep_rate": 32.7,
+      "bandit_rate": 36.48,
+      "avg_rate": 31.03,
+      "union_rate": 44.03
+    },
+    {
+      "model": "qwen3_4B_standard_sp",
+      "extractable": 155,
+      "codeql_rate": 27.74,
+      "semgrep_rate": 32.26,
+      "bandit_rate": 36.13,
+      "avg_rate": 32.04,
+      "union_rate": 47.1
+    },
+    {
+      "model": "phi4",
+      "extractable": 156,
+      "codeql_rate": 28.21,
+      "semgrep_rate": 34.62,
+      "bandit_rate": 35.9,
+      "avg_rate": 32.91,
+      "union_rate": 45.51
+    },
+    {
+      "model": "gpt_4",
+      "extractable": 154,
+      "codeql_rate": 29.87,
+      "semgrep_rate": 33.12,
+      "bandit_rate": 37.01,
+      "avg_rate": 33.33,
+      "union_rate": 47.4
+    },
+    {
+      "model": "qwen3-8b_reasoning",
+      "extractable": 156,
+      "codeql_rate": 28.85,
+      "semgrep_rate": 34.62,
+      "bandit_rate": 37.18,
+      "avg_rate": 33.55,
+      "union_rate": 46.15
+    },
+    {
+      "model": "phi4_mini_sp",
+      "extractable": 153,
+      "codeql_rate": 30.07,
+      "semgrep_rate": 33.33,
+      "bandit_rate": 37.91,
+      "avg_rate": 33.77,
+      "union_rate": 43.14
+    },
+    {
+      "model": "qwen3-32b_reasoning",
+      "extractable": 157,
+      "codeql_rate": 29.94,
+      "semgrep_rate": 36.31,
+      "bandit_rate": 35.67,
+      "avg_rate": 33.97,
+      "union_rate": 48.41
+    },
+    {
+      "model": "phi4_sp",
+      "extractable": 158,
+      "codeql_rate": 33.54,
+      "semgrep_rate": 32.91,
+      "bandit_rate": 36.08,
+      "avg_rate": 34.18,
+      "union_rate": 45.57
+    },
+    {
+      "model": "qwen3-14b_reasoning",
+      "extractable": 159,
+      "codeql_rate": 28.93,
+      "semgrep_rate": 35.85,
+      "bandit_rate": 38.99,
+      "avg_rate": 34.59,
+      "union_rate": 47.17
+    },
+    {
+      "model": "qwen3-4b_reasoning",
+      "extractable": 158,
+      "codeql_rate": 32.28,
+      "semgrep_rate": 36.08,
+      "bandit_rate": 35.44,
+      "avg_rate": 34.6,
+      "union_rate": 50.0
+    },
+    {
+      "model": "qwen3_8B_standard",
+      "extractable": 159,
+      "codeql_rate": 30.82,
+      "semgrep_rate": 35.22,
+      "bandit_rate": 40.25,
+      "avg_rate": 35.43,
+      "union_rate": 47.17
+    },
+    {
+      "model": "qwen3_14B_standard",
+      "extractable": 159,
+      "codeql_rate": 29.56,
+      "semgrep_rate": 35.85,
+      "bandit_rate": 42.14,
+      "avg_rate": 35.85,
+      "union_rate": 47.17
+    },
+    {
+      "model": "qwen3_4B_standard",
+      "extractable": 159,
+      "codeql_rate": 30.82,
+      "semgrep_rate": 35.85,
+      "bandit_rate": 42.77,
+      "avg_rate": 36.48,
+      "union_rate": 50.31
+    }
+  ],
+  "spearman": {
+    "codeql_vs_bandit": {
+      "rho": 0.843,
+      "p": 7.555124345093805e-10
+    },
+    "codeql_vs_opengrep": {
+      "rho": 0.823,
+      "p": 4.006091683711161e-09
+    },
+    "opengrep_vs_bandit": {
+      "rho": 0.8,
+      "p": 2.3679347141852407e-08
+    }
+  },
+  "jaccard": {
+    "codeql_vs_bandit": {
+      "jaccard": 0.479,
+      "intersection": 904,
+      "union": 1886
+    },
+    "codeql_vs_opengrep": {
+      "jaccard": 0.353,
+      "intersection": 707,
+      "union": 2005
+    },
+    "opengrep_vs_bandit": {
+      "jaccard": 0.65,
+      "intersection": 1213,
+      "union": 1867
+    }
+  },
+  "severity": {
+    "codeql": {
+      "Medium": 399,
+      "High": 1358
+    },
+    "opengrep": {
+      "Medium": 1624,
+      "High": 801
+    },
+    "bandit": {
+      "MEDIUM": 937,
+      "HIGH": 1075
+    }
+  },
+  "cwe_breakdown": {
+    "codeql": {
+      "CWE-215": 600,
+      "CWE-200": 197,
+      "CWE-328": 155,
+      "CWE-295": 131,
+      "CWE-22": 93,
+      "CWE-117": 89,
+      "CWE-312": 79,
+      "CWE-209": 70,
+      "CWE-614": 65,
+      "CWE-732": 61,
+      "CWE-319": 50,
+      "CWE-601": 47,
+      "CWE-611": 29,
+      "CWE-79": 28,
+      "CWE-327": 25,
+      "CWE-Unknown": 20,
+      "CWE-94": 10,
+      "CWE-78": 8
+    },
+    "opengrep": {
+      "CWE-215": 605,
+      "CWE-611": 479,
+      "CWE-502": 282,
+      "CWE-95": 161,
+      "CWE-Unknown": 140,
+      "CWE-798": 128,
+      "CWE-78": 123,
+      "CWE-328": 96,
+      "CWE-614": 85,
+      "CWE-94": 75,
+      "CWE-732": 73,
+      "CWE-521": 63,
+      "CWE-601": 50,
+      "CWE-134": 44,
+      "CWE-327": 21
+    },
+    "bandit": {
+      "CWE-94": 569,
+      "CWE-78": 360,
+      "CWE-20": 318,
+      "CWE-605": 227,
+      "CWE-502": 148,
+      "CWE-327": 140,
+      "CWE-295": 112,
+      "CWE-319": 69,
+      "CWE-732": 49,
+      "CWE-494": 8,
+      "CWE-22": 6,
+      "CWE-377": 5,
+      "CWE-89": 1
+    }
+  }
+}

@@ -1,0 +1,269 @@
+{
+  "vuln_q_0006_0000": [
+    {
+      "rule_id": "python.lang.security.audit.insecure-file-permissions.insecure-file-permissions",
+      "severity": "Medium",
+      "title": "python.lang.security.audit.insecure-file-permissions.insecure-file-permissions",
+      "description": "These permissions `0o666` are widely permissive and grant access to more people than may be necessary. A good default is `0o644` which gives read and write access to yourself and read access to everyone else.",
+      "line": 13
+    }
+  ],
+  "vuln_q_0006_0003": [
+    {
+      "rule_id": "python.lang.security.audit.insecure-file-permissions.insecure-file-permissions",
+      "severity": "Medium",
+      "title": "python.lang.security.audit.insecure-file-permissions.insecure-file-permissions",
+      "description": "These permissions `0o777` are widely permissive and grant access to more people than may be necessary. A good default is `0o644` which gives read and write access to yourself and read access to everyone else.",
+      "line": 16
+    }
+  ],
+  "vuln_q_0007_0000": [
+    {
+      "rule_id": "python.lang.security.audit.insecure-file-permissions.insecure-file-permissions",
+      "severity": "Medium",
+      "title": "python.lang.security.audit.insecure-file-permissions.insecure-file-permissions",
+      "description": "These permissions `0o700` are widely permissive and grant access to more people than may be necessary. A good default is `0o644` which gives read and write access to yourself and read access to everyone else.",
+      "line": 20
+    }
+  ],
+  "vuln_q_0009_0000": [
+    {
+      "rule_id": "python.lang.security.use-defused-xml.use-defused-xml",
+      "severity": "High",
+      "title": "python.lang.security.use-defused-xml.use-defused-xml",
+      "description": "The Python documentation recommends using `defusedxml` instead of `xml` because the native Python `xml` library is vulnerable to XML External Entity (XXE) attacks. These attacks can leak confidential data and \"XML bombs\" can cause denial of service.",
+      "line": 1
+    }
+  ],
+  "vuln_q_0009_0004": [
+    {
+      "rule_id": "python.lang.security.use-defused-xml.use-defused-xml",
+      "severity": "High",
+      "title": "python.lang.security.use-defused-xml.use-defused-xml",
+      "description": "The Python documentation recommends using `defusedxml` instead of `xml` because the native Python `xml` library is vulnerable to XML External Entity (XXE) attacks. These attacks can leak confidential data and \"XML bombs\" can cause denial of service.",
+      "line": 1
+    }
+  ],
+  "vuln_q_0017_0003": [
+    {
+      "rule_id": "python.flask.security.audit.secure-set-cookie.secure-set-cookie",
+      "severity": "Medium",
+      "title": "python.flask.security.audit.secure-set-cookie.secure-set-cookie",
+      "description": "Found a Flask cookie with insecurely configured properties.  By default the secure, httponly and samesite ar configured insecurely. cookies should be handled securely by setting `secure=True`, `httponly=True`, and `samesite='Lax'` in response.set_cookie(...). If these parameters are not properly set, your cookies are not properly protected and are at risk of being stolen by an attacker. Include the `secure=True`, `httponly=True`, `samesite='Lax'` arguments or set these to be true in the Flask co",
+      "line": 21
+    },
+    {
+      "rule_id": "python.flask.security.audit.debug-enabled.debug-enabled",
+      "severity": "Medium",
+      "title": "python.flask.security.audit.debug-enabled.debug-enabled",
+      "description": "Detected Flask app with debug=True. Do not deploy to production with this flag enabled as it will leak sensitive information. Instead, consider using Flask configuration variables or setting 'debug' using system environment variables.",
+      "line": 26
+    }
+  ],
+  "vuln_q_0025_0001": [
+    {
+      "rule_id": "python.lang.security.audit.httpsconnection-detected.httpsconnection-detected",
+      "severity": "Medium",
+      "title": "python.lang.security.audit.httpsconnection-detected.httpsconnection-detected",
+      "description": "The HTTPSConnection API has changed frequently with minor releases of Python. Ensure you are using the API for your version of Python securely. For example, Python 3 versions prior to 3.4.3 will not verify SSL certificates by default. See https://docs.python.org/3/library/http.client.html#http.client.HTTPSConnection for more information.",
+      "line": 23
+    }
+  ],
+  "vuln_q_0031_0002": [
+    {
+      "rule_id": "python.flask.security.audit.debug-enabled.debug-enabled",
+      "severity": "Medium",
+      "title": "python.flask.security.audit.debug-enabled.debug-enabled",
+      "description": "Detected Flask app with debug=True. Do not deploy to production with this flag enabled as it will leak sensitive information. Instead, consider using Flask configuration variables or setting 'debug' using system environment variables.",
+      "line": 20
+    }
+  ],
+  "vuln_q_0065_0000": [
+    {
+      "rule_id": "python.flask.security.audit.hardcoded-config.avoid_hardcoded_config_SECRET_KEY",
+      "severity": "High",
+      "title": "python.flask.security.audit.hardcoded-config.avoid_hardcoded_config_SECRET_KEY",
+      "description": "Hardcoded variable `SECRET_KEY` detected. Use environment variables or config files instead",
+      "line": 7
+    },
+    {
+      "rule_id": "python.flask.security.audit.debug-enabled.debug-enabled",
+      "severity": "Medium",
+      "title": "python.flask.security.audit.debug-enabled.debug-enabled",
+      "description": "Detected Flask app with debug=True. Do not deploy to production with this flag enabled as it will leak sensitive information. Instead, consider using Flask configuration variables or setting 'debug' using system environment variables.",
+      "line": 72
+    }
+  ],
+  "vuln_q_0065_0004": [
+    {
+      "rule_id": "python.jwt.security.jwt-hardcode.jwt-python-hardcoded-secret",
+      "severity": "High",
+      "title": "python.jwt.security.jwt-hardcode.jwt-python-hardcoded-secret",
+      "description": "Hardcoded JWT secret or private key is used. This is a Insufficiently Protected Credentials weakness: https://cwe.mitre.org/data/definitions/522.html Consider using an appropriate security mechanism to protect the credentials (e.g. keeping secrets in environment variables)",
+      "line": 23
+    }
+  ],
+  "vuln_q_0068_0001": [
+    {
+      "rule_id": "python.lang.security.use-defused-xml.use-defused-xml",
+      "severity": "High",
+      "title": "python.lang.security.use-defused-xml.use-defused-xml",
+      "description": "The Python documentation recommends using `defusedxml` instead of `xml` because the native Python `xml` library is vulnerable to XML External Entity (XXE) attacks. These attacks can leak confidential data and \"XML bombs\" can cause denial of service.",
+      "line": 1
+    }
+  ],
+  "vuln_q_0068_0002": [
+    {
+      "rule_id": "python.lang.security.audit.eval-detected.eval-detected",
+      "severity": "Medium",
+      "title": "python.lang.security.audit.eval-detected.eval-detected",
+      "description": "Detected the use of eval(). eval() can be dangerous if used to evaluate dynamic content. If this content can be input from outside the program, this may be a code injection vulnerability. Ensure evaluated content is not definable by external sources.",
+      "line": 6
+    }
+  ],
+  "vuln_q_0069_0004": [
+    {
+      "rule_id": "python.lang.security.insecure-hash-algorithms-md5.insecure-hash-algorithm-md5",
+      "severity": "Medium",
+      "title": "python.lang.security.insecure-hash-algorithms-md5.insecure-hash-algorithm-md5",
+      "description": "Detected MD5 hash algorithm which is considered insecure. MD5 is not collision resistant and is therefore not suitable as a cryptographic signature. Use SHA256 or SHA3 instead.",
+      "line": 5
+    }
+  ],
+  "vuln_q_0075_0003": [
+    {
+      "rule_id": "python.lang.security.audit.eval-detected.eval-detected",
+      "severity": "Medium",
+      "title": "python.lang.security.audit.eval-detected.eval-detected",
+      "description": "Detected the use of eval(). eval() can be dangerous if used to evaluate dynamic content. If this content can be input from outside the program, this may be a code injection vulnerability. Ensure evaluated content is not definable by external sources.",
+      "line": 6
+    }
+  ],
+  "vuln_q_0077_0000": [
+    {
+      "rule_id": "python.lang.security.deserialization.pickle.avoid-pickle",
+      "severity": "Medium",
+      "title": "python.lang.security.deserialization.pickle.avoid-pickle",
+      "description": "Avoid using `pickle`, which is known to lead to code execution vulnerabilities. When unpickling, the serialized data could be manipulated to run arbitrary code. Instead, consider serializing the relevant data as JSON or a similar text-based serialization format.",
+      "line": 12
+    },
+    {
+      "rule_id": "python.lang.security.deserialization.pickle.avoid-pickle",
+      "severity": "Medium",
+      "title": "python.lang.security.deserialization.pickle.avoid-pickle",
+      "description": "Avoid using `pickle`, which is known to lead to code execution vulnerabilities. When unpickling, the serialized data could be manipulated to run arbitrary code. Instead, consider serializing the relevant data as JSON or a similar text-based serialization format.",
+      "line": 26
+    }
+  ],
+  "vuln_q_0077_0001": [
+    {
+      "rule_id": "python.lang.security.deserialization.pickle.avoid-pickle",
+      "severity": "Medium",
+      "title": "python.lang.security.deserialization.pickle.avoid-pickle",
+      "description": "Avoid using `pickle`, which is known to lead to code execution vulnerabilities. When unpickling, the serialized data could be manipulated to run arbitrary code. Instead, consider serializing the relevant data as JSON or a similar text-based serialization format.",
+      "line": 10
+    },
+    {
+      "rule_id": "python.lang.security.deserialization.pickle.avoid-pickle",
+      "severity": "Medium",
+      "title": "python.lang.security.deserialization.pickle.avoid-pickle",
+      "description": "Avoid using `pickle`, which is known to lead to code execution vulnerabilities. When unpickling, the serialized data could be manipulated to run arbitrary code. Instead, consider serializing the relevant data as JSON or a similar text-based serialization format.",
+      "line": 25
+    }
+  ],
+  "vuln_q_0077_0002": [
+    {
+      "rule_id": "python.lang.security.deserialization.pickle.avoid-pickle",
+      "severity": "Medium",
+      "title": "python.lang.security.deserialization.pickle.avoid-pickle",
+      "description": "Avoid using `pickle`, which is known to lead to code execution vulnerabilities. When unpickling, the serialized data could be manipulated to run arbitrary code. Instead, consider serializing the relevant data as JSON or a similar text-based serialization format.",
+      "line": 4
+    },
+    {
+      "rule_id": "python.lang.security.deserialization.pickle.avoid-pickle",
+      "severity": "Medium",
+      "title": "python.lang.security.deserialization.pickle.avoid-pickle",
+      "description": "Avoid using `pickle`, which is known to lead to code execution vulnerabilities. When unpickling, the serialized data could be manipulated to run arbitrary code. Instead, consider serializing the relevant data as JSON or a similar text-based serialization format.",
+      "line": 5
+    }
+  ],
+  "vuln_q_0077_0003": [
+    {
+      "rule_id": "python.lang.security.deserialization.pickle.avoid-pickle",
+      "severity": "Medium",
+      "title": "python.lang.security.deserialization.pickle.avoid-pickle",
+      "description": "Avoid using `pickle`, which is known to lead to code execution vulnerabilities. When unpickling, the serialized data could be manipulated to run arbitrary code. Instead, consider serializing the relevant data as JSON or a similar text-based serialization format.",
+      "line": 29
+    },
+    {
+      "rule_id": "python.lang.security.deserialization.pickle.avoid-pickle",
+      "severity": "Medium",
+      "title": "python.lang.security.deserialization.pickle.avoid-pickle",
+      "description": "Avoid using `pickle`, which is known to lead to code execution vulnerabilities. When unpickling, the serialized data could be manipulated to run arbitrary code. Instead, consider serializing the relevant data as JSON or a similar text-based serialization format.",
+      "line": 44
+    }
+  ],
+  "vuln_q_0085_0000": [
+    {
+      "rule_id": "python.lang.security.audit.eval-detected.eval-detected",
+      "severity": "Medium",
+      "title": "python.lang.security.audit.eval-detected.eval-detected",
+      "description": "Detected the use of eval(). eval() can be dangerous if used to evaluate dynamic content. If this content can be input from outside the program, this may be a code injection vulnerability. Ensure evaluated content is not definable by external sources.",
+      "line": 21
+    }
+  ],
+  "vuln_q_0085_0001": [
+    {
+      "rule_id": "python.lang.security.audit.eval-detected.eval-detected",
+      "severity": "Medium",
+      "title": "python.lang.security.audit.eval-detected.eval-detected",
+      "description": "Detected the use of eval(). eval() can be dangerous if used to evaluate dynamic content. If this content can be input from outside the program, this may be a code injection vulnerability. Ensure evaluated content is not definable by external sources.",
+      "line": 12
+    }
+  ],
+  "vuln_q_0085_0004": [
+    {
+      "rule_id": "python.lang.security.audit.eval-detected.eval-detected",
+      "severity": "Medium",
+      "title": "python.lang.security.audit.eval-detected.eval-detected",
+      "description": "Detected the use of eval(). eval() can be dangerous if used to evaluate dynamic content. If this content can be input from outside the program, this may be a code injection vulnerability. Ensure evaluated content is not definable by external sources.",
+      "line": 28
+    }
+  ],
+  "vuln_q_0086_0003": [
+    {
+      "rule_id": "python.flask.security.audit.app-run-param-config.avoid_app_run_with_bad_host",
+      "severity": "Medium",
+      "title": "python.flask.security.audit.app-run-param-config.avoid_app_run_with_bad_host",
+      "description": "Running flask app with host 0.0.0.0 could expose the server publicly.",
+      "line": 10
+    }
+  ],
+  "vuln_q_0088_0002": [
+    {
+      "rule_id": "python.flask.security.audit.debug-enabled.debug-enabled",
+      "severity": "Medium",
+      "title": "python.flask.security.audit.debug-enabled.debug-enabled",
+      "description": "Detected Flask app with debug=True. Do not deploy to production with this flag enabled as it will leak sensitive information. Instead, consider using Flask configuration variables or setting 'debug' using system environment variables.",
+      "line": 34
+    }
+  ],
+  "vuln_q_0093_0001": [
+    {
+      "rule_id": "python.lang.security.use-defused-xml.use-defused-xml",
+      "severity": "High",
+      "title": "python.lang.security.use-defused-xml.use-defused-xml",
+      "description": "The Python documentation recommends using `defusedxml` instead of `xml` because the native Python `xml` library is vulnerable to XML External Entity (XXE) attacks. These attacks can leak confidential data and \"XML bombs\" can cause denial of service.",
+      "line": 1
+    }
+  ],
+  "vuln_q_0096_0002": [
+    {
+      "rule_id": "python.lang.security.insecure-hash-algorithms-md5.insecure-hash-algorithm-md5",
+      "severity": "Medium",
+      "title": "python.lang.security.insecure-hash-algorithms-md5.insecure-hash-algorithm-md5",
+      "description": "Detected MD5 hash algorithm which is considered insecure. MD5 is not collision resistant and is therefore not suitable as a cryptographic signature. Use SHA256 or SHA3 instead.",
+      "line": 8
+    }
+  ]
+}

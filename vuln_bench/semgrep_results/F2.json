@@ -1,0 +1,140 @@
+{
+  "vuln_q_0000_0000": [
+    {
+      "rule_id": "python.django.security.audit.unvalidated-password.unvalidated-password",
+      "severity": "Medium",
+      "title": "python.django.security.audit.unvalidated-password.unvalidated-password",
+      "description": "The password on 'self' is being set without validating the password. Call django.contrib.auth.password_validation.validate_password() with validation functions before setting the password. See https://docs.djangoproject.com/en/3.0/topics/auth/passwords/ for more information.",
+      "line": 55
+    },
+    {
+      "rule_id": "python.django.security.audit.unvalidated-password.unvalidated-password",
+      "severity": "Medium",
+      "title": "python.django.security.audit.unvalidated-password.unvalidated-password",
+      "description": "The password on 'pm' is being set without validating the password. Call django.contrib.auth.password_validation.validate_password() with validation functions before setting the password. See https://docs.djangoproject.com/en/3.0/topics/auth/passwords/ for more information.",
+      "line": 63
+    }
+  ],
+  "vuln_q_0006_0003": [
+    {
+      "rule_id": "python.lang.security.audit.insecure-file-permissions.insecure-file-permissions",
+      "severity": "Medium",
+      "title": "python.lang.security.audit.insecure-file-permissions.insecure-file-permissions",
+      "description": "These permissions `0o700` are widely permissive and grant access to more people than may be necessary. A good default is `0o644` which gives read and write access to yourself and read access to everyone else.",
+      "line": 14
+    }
+  ],
+  "vuln_q_0009_0004": [
+    {
+      "rule_id": "python.lang.security.use-defused-xml.use-defused-xml",
+      "severity": "High",
+      "title": "python.lang.security.use-defused-xml.use-defused-xml",
+      "description": "The Python documentation recommends using `defusedxml` instead of `xml` because the native Python `xml` library is vulnerable to XML External Entity (XXE) attacks. These attacks can leak confidential data and \"XML bombs\" can cause denial of service.",
+      "line": 1
+    }
+  ],
+  "vuln_q_0021_0000": [
+    {
+      "rule_id": "python.lang.security.use-defused-xml.use-defused-xml",
+      "severity": "High",
+      "title": "python.lang.security.use-defused-xml.use-defused-xml",
+      "description": "The Python documentation recommends using `defusedxml` instead of `xml` because the native Python `xml` library is vulnerable to XML External Entity (XXE) attacks. These attacks can leak confidential data and \"XML bombs\" can cause denial of service.",
+      "line": 1
+    }
+  ],
+  "vuln_q_0021_0001": [
+    {
+      "rule_id": "python.lang.security.use-defused-xml.use-defused-xml",
+      "severity": "High",
+      "title": "python.lang.security.use-defused-xml.use-defused-xml",
+      "description": "The Python documentation recommends using `defusedxml` instead of `xml` because the native Python `xml` library is vulnerable to XML External Entity (XXE) attacks. These attacks can leak confidential data and \"XML bombs\" can cause denial of service.",
+      "line": 1
+    }
+  ],
+  "vuln_q_0021_0003": [
+    {
+      "rule_id": "python.lang.security.use-defused-xml.use-defused-xml",
+      "severity": "High",
+      "title": "python.lang.security.use-defused-xml.use-defused-xml",
+      "description": "The Python documentation recommends using `defusedxml` instead of `xml` because the native Python `xml` library is vulnerable to XML External Entity (XXE) attacks. These attacks can leak confidential data and \"XML bombs\" can cause denial of service.",
+      "line": 1
+    },
+    {
+      "rule_id": "python.lang.security.use-defused-xml-parse.use-defused-xml-parse",
+      "severity": "High",
+      "title": "python.lang.security.use-defused-xml-parse.use-defused-xml-parse",
+      "description": "The native Python `xml` library is vulnerable to XML External Entity (XXE) attacks.  These attacks can leak confidential data and \"XML bombs\" can cause denial of service. Do not use this library to parse untrusted input. Instead  the Python documentation recommends using `defusedxml`.",
+      "line": 21
+    }
+  ],
+  "vuln_q_0021_0004": [
+    {
+      "rule_id": "python.lang.security.use-defused-xml.use-defused-xml",
+      "severity": "High",
+      "title": "python.lang.security.use-defused-xml.use-defused-xml",
+      "description": "The Python documentation recommends using `defusedxml` instead of `xml` because the native Python `xml` library is vulnerable to XML External Entity (XXE) attacks. These attacks can leak confidential data and \"XML bombs\" can cause denial of service.",
+      "line": 1
+    }
+  ],
+  "vuln_q_0040_0002": [
+    {
+      "rule_id": "python.django.security.audit.csrf-exempt.no-csrf-exempt",
+      "severity": "Medium",
+      "title": "python.django.security.audit.csrf-exempt.no-csrf-exempt",
+      "description": "Detected usage of @csrf_exempt, which indicates that there is no CSRF token set for this route. This could lead to an attacker manipulating the user's account and exfiltration of private data. Instead, create a function without this decorator.",
+      "line": 51
+    }
+  ],
+  "vuln_q_0069_0000": [
+    {
+      "rule_id": "python.pycryptodome.security.insecure-cipher-algorithm-des.insecure-cipher-algorithm-des",
+      "severity": "Medium",
+      "title": "python.pycryptodome.security.insecure-cipher-algorithm-des.insecure-cipher-algorithm-des",
+      "description": "Detected DES cipher or Triple DES algorithm which is considered insecure. This algorithm is not cryptographically secure and can be reversed easily. Use a secure symmetric cipher from the cryptodome package instead. Use secure stream ciphers such as ChaCha20, XChaCha20 and Salsa20, or a block cipher such as AES with a block size of 128 bits. When using a block cipher, use a modern mode of operation that also provides authentication, such as GCM.",
+      "line": 29
+    }
+  ],
+  "vuln_q_0071_0003": [
+    {
+      "rule_id": "python.flask.security.audit.render-template-string.render-template-string",
+      "severity": "Medium",
+      "title": "python.flask.security.audit.render-template-string.render-template-string",
+      "description": "Found a template created with string formatting. This is susceptible to server-side template injection and cross-site scripting attacks.",
+      "line": 29
+    },
+    {
+      "rule_id": "python.flask.security.audit.debug-enabled.debug-enabled",
+      "severity": "Medium",
+      "title": "python.flask.security.audit.debug-enabled.debug-enabled",
+      "description": "Detected Flask app with debug=True. Do not deploy to production with this flag enabled as it will leak sensitive information. Instead, consider using Flask configuration variables or setting 'debug' using system environment variables.",
+      "line": 56
+    }
+  ],
+  "vuln_q_0085_0001": [
+    {
+      "rule_id": "python.lang.security.audit.eval-detected.eval-detected",
+      "severity": "Medium",
+      "title": "python.lang.security.audit.eval-detected.eval-detected",
+      "description": "Detected the use of eval(). eval() can be dangerous if used to evaluate dynamic content. If this content can be input from outside the program, this may be a code injection vulnerability. Ensure evaluated content is not definable by external sources.",
+      "line": 32
+    }
+  ],
+  "vuln_q_0086_0003": [
+    {
+      "rule_id": "python.flask.security.audit.hardcoded-config.avoid_hardcoded_config_DEBUG",
+      "severity": "Medium",
+      "title": "python.flask.security.audit.hardcoded-config.avoid_hardcoded_config_DEBUG",
+      "description": "Hardcoded variable `DEBUG` detected. Set this by using FLASK_DEBUG environment variable",
+      "line": 23
+    }
+  ],
+  "vuln_q_0093_0001": [
+    {
+      "rule_id": "python.lang.security.use-defused-xml.use-defused-xml",
+      "severity": "High",
+      "title": "python.lang.security.use-defused-xml.use-defused-xml",
+      "description": "The Python documentation recommends using `defusedxml` instead of `xml` because the native Python `xml` library is vulnerable to XML External Entity (XXE) attacks. These attacks can leak confidential data and \"XML bombs\" can cause denial of service.",
+      "line": 1
+    }
+  ]
+}

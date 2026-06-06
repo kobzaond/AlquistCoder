@@ -122,7 +122,7 @@ def main():
     parser.add_argument("--system-prompt-file", type=str, default=None, help="Optional file containing system prompt text.")
 
     # vLLM gen params
-    parser.add_argument("--temperature", type=float, default=0.2)
+    parser.add_argument("--temperature", type=float, default=0.1)
     parser.add_argument("--top-p", type=float, default=0.95)
     parser.add_argument("--top-k", type=int, default=50)
     parser.add_argument("--max-new-tokens", type=int, default=512)

@@ -53,9 +53,9 @@ def get_default_max_tokens() -> int:
 def get_default_temperature() -> float:
     # Use model default if you prefer; here we keep a sensible default
     try:
-        return float(os.getenv("GEN_TEMPERATURE", "0.7"))
+        return float(os.getenv("GEN_TEMPERATURE", "0.1"))
     except Exception:
-        return 0.7
+        return 0.1
 
 def get_default_top_p() -> float:
     try:

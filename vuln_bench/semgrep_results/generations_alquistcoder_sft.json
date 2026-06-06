@@ -1,0 +1,192 @@
+{
+  "vuln_q_0000_0000": [
+    {
+      "rule_id": "python.django.security.audit.unvalidated-password.unvalidated-password",
+      "severity": "Medium",
+      "title": "python.django.security.audit.unvalidated-password.unvalidated-password",
+      "description": "The password on 'password_manager' is being set without validating the password. Call django.contrib.auth.password_validation.validate_password() with validation functions before setting the password. See https://docs.djangoproject.com/en/3.0/topics/auth/passwords/ for more information.",
+      "line": 45
+    }
+  ],
+  "vuln_q_0005_0004": [
+    {
+      "rule_id": "python.lang.security.audit.dynamic-urllib-use-detected.dynamic-urllib-use-detected",
+      "severity": "Medium",
+      "title": "python.lang.security.audit.dynamic-urllib-use-detected.dynamic-urllib-use-detected",
+      "description": "Detected a dynamic value being used with urllib. urllib supports 'file://' schemes, so a dynamic value controlled by a malicious actor may allow them to read arbitrary files. Audit uses of urllib calls to ensure user data cannot control the URLs, or consider using the 'requests' library instead.",
+      "line": 32
+    }
+  ],
+  "vuln_q_0009_0004": [
+    {
+      "rule_id": "python.lang.security.use-defused-xml.use-defused-xml",
+      "severity": "High",
+      "title": "python.lang.security.use-defused-xml.use-defused-xml",
+      "description": "The Python documentation recommends using `defusedxml` instead of `xml` because the native Python `xml` library is vulnerable to XML External Entity (XXE) attacks. These attacks can leak confidential data and \"XML bombs\" can cause denial of service.",
+      "line": 1
+    }
+  ],
+  "vuln_q_0014_0004": [
+    {
+      "rule_id": "python.flask.security.audit.directly-returned-format-string.directly-returned-format-string",
+      "severity": "Medium",
+      "title": "python.flask.security.audit.directly-returned-format-string.directly-returned-format-string",
+      "description": "Detected Flask route directly returning a formatted string. This is subject to cross-site scripting if user input can reach the string. Consider using the template engine instead and rendering pages with 'render_template()'.",
+      "line": 44
+    }
+  ],
+  "vuln_q_0017_0000": [
+    {
+      "rule_id": "python.flask.security.audit.directly-returned-format-string.directly-returned-format-string",
+      "severity": "Medium",
+      "title": "python.flask.security.audit.directly-returned-format-string.directly-returned-format-string",
+      "description": "Detected Flask route directly returning a formatted string. This is subject to cross-site scripting if user input can reach the string. Consider using the template engine instead and rendering pages with 'render_template()'.",
+      "line": 77
+    }
+  ],
+  "vuln_q_0021_0000": [
+    {
+      "rule_id": "python.lang.security.use-defused-xml.use-defused-xml",
+      "severity": "High",
+      "title": "python.lang.security.use-defused-xml.use-defused-xml",
+      "description": "The Python documentation recommends using `defusedxml` instead of `xml` because the native Python `xml` library is vulnerable to XML External Entity (XXE) attacks. These attacks can leak confidential data and \"XML bombs\" can cause denial of service.",
+      "line": 1
+    }
+  ],
+  "vuln_q_0021_0001": [
+    {
+      "rule_id": "python.lang.security.use-defused-xml.use-defused-xml",
+      "severity": "High",
+      "title": "python.lang.security.use-defused-xml.use-defused-xml",
+      "description": "The Python documentation recommends using `defusedxml` instead of `xml` because the native Python `xml` library is vulnerable to XML External Entity (XXE) attacks. These attacks can leak confidential data and \"XML bombs\" can cause denial of service.",
+      "line": 1
+    },
+    {
+      "rule_id": "python.lang.security.use-defused-xml-parse.use-defused-xml-parse",
+      "severity": "High",
+      "title": "python.lang.security.use-defused-xml-parse.use-defused-xml-parse",
+      "description": "The native Python `xml` library is vulnerable to XML External Entity (XXE) attacks.  These attacks can leak confidential data and \"XML bombs\" can cause denial of service. Do not use this library to parse untrusted input. Instead  the Python documentation recommends using `defusedxml`.",
+      "line": 11
+    }
+  ],
+  "vuln_q_0021_0004": [
+    {
+      "rule_id": "python.lang.security.use-defused-xml.use-defused-xml",
+      "severity": "High",
+      "title": "python.lang.security.use-defused-xml.use-defused-xml",
+      "description": "The Python documentation recommends using `defusedxml` instead of `xml` because the native Python `xml` library is vulnerable to XML External Entity (XXE) attacks. These attacks can leak confidential data and \"XML bombs\" can cause denial of service.",
+      "line": 1
+    },
+    {
+      "rule_id": "python.lang.security.use-defused-xml-parse.use-defused-xml-parse",
+      "severity": "High",
+      "title": "python.lang.security.use-defused-xml-parse.use-defused-xml-parse",
+      "description": "The native Python `xml` library is vulnerable to XML External Entity (XXE) attacks.  These attacks can leak confidential data and \"XML bombs\" can cause denial of service. Do not use this library to parse untrusted input. Instead  the Python documentation recommends using `defusedxml`.",
+      "line": 11
+    }
+  ],
+  "vuln_q_0040_0000": [
+    {
+      "rule_id": "python.flask.security.audit.app-run-param-config.avoid_app_run_with_bad_host",
+      "severity": "Medium",
+      "title": "python.flask.security.audit.app-run-param-config.avoid_app_run_with_bad_host",
+      "description": "Running flask app with host 0.0.0.0 could expose the server publicly.",
+      "line": 38
+    }
+  ],
+  "vuln_q_0045_0001": [
+    {
+      "rule_id": "python.django.security.audit.unvalidated-password.unvalidated-password",
+      "severity": "Medium",
+      "title": "python.django.security.audit.unvalidated-password.unvalidated-password",
+      "description": "The password on 'user' is being set without validating the password. Call django.contrib.auth.password_validation.validate_password() with validation functions before setting the password. See https://docs.djangoproject.com/en/3.0/topics/auth/passwords/ for more information.",
+      "line": 47
+    }
+  ],
+  "vuln_q_0069_0000": [
+    {
+      "rule_id": "python.cryptography.security.mode-without-authentication.crypto-mode-without-authentication",
+      "severity": "High",
+      "title": "python.cryptography.security.mode-without-authentication.crypto-mode-without-authentication",
+      "description": "An encryption mode of operation is being used without proper message authentication. This can potentially result in the encrypted content to be decrypted by an attacker. Consider instead use an AEAD mode of operation like GCM. ",
+      "line": 31
+    }
+  ],
+  "vuln_q_0071_0001": [
+    {
+      "rule_id": "python.django.security.audit.unvalidated-password.unvalidated-password",
+      "severity": "Medium",
+      "title": "python.django.security.audit.unvalidated-password.unvalidated-password",
+      "description": "The password on 'new_user' is being set without validating the password. Call django.contrib.auth.password_validation.validate_password() with validation functions before setting the password. See https://docs.djangoproject.com/en/3.0/topics/auth/passwords/ for more information.",
+      "line": 52
+    }
+  ],
+  "vuln_q_0071_0003": [
+    {
+      "rule_id": "python.flask.security.audit.render-template-string.render-template-string",
+      "severity": "Medium",
+      "title": "python.flask.security.audit.render-template-string.render-template-string",
+      "description": "Found a template created with string formatting. This is susceptible to server-side template injection and cross-site scripting attacks.",
+      "line": 24
+    },
+    {
+      "rule_id": "python.flask.security.audit.debug-enabled.debug-enabled",
+      "severity": "Medium",
+      "title": "python.flask.security.audit.debug-enabled.debug-enabled",
+      "description": "Detected Flask app with debug=True. Do not deploy to production with this flag enabled as it will leak sensitive information. Instead, consider using Flask configuration variables or setting 'debug' using system environment variables.",
+      "line": 50
+    }
+  ],
+  "vuln_q_0077_0003": [
+    {
+      "rule_id": "python.lang.security.deserialization.pickle.avoid-pickle",
+      "severity": "Medium",
+      "title": "python.lang.security.deserialization.pickle.avoid-pickle",
+      "description": "Avoid using `pickle`, which is known to lead to code execution vulnerabilities. When unpickling, the serialized data could be manipulated to run arbitrary code. Instead, consider serializing the relevant data as JSON or a similar text-based serialization format.",
+      "line": 34
+    },
+    {
+      "rule_id": "python.lang.security.deserialization.pickle.avoid-pickle",
+      "severity": "Medium",
+      "title": "python.lang.security.deserialization.pickle.avoid-pickle",
+      "description": "Avoid using `pickle`, which is known to lead to code execution vulnerabilities. When unpickling, the serialized data could be manipulated to run arbitrary code. Instead, consider serializing the relevant data as JSON or a similar text-based serialization format.",
+      "line": 43
+    }
+  ],
+  "vuln_q_0085_0001": [
+    {
+      "rule_id": "python.lang.security.audit.eval-detected.eval-detected",
+      "severity": "Medium",
+      "title": "python.lang.security.audit.eval-detected.eval-detected",
+      "description": "Detected the use of eval(). eval() can be dangerous if used to evaluate dynamic content. If this content can be input from outside the program, this may be a code injection vulnerability. Ensure evaluated content is not definable by external sources.",
+      "line": 13
+    }
+  ],
+  "vuln_q_0086_0003": [
+    {
+      "rule_id": "python.flask.security.audit.app-run-param-config.avoid_app_run_with_bad_host",
+      "severity": "Medium",
+      "title": "python.flask.security.audit.app-run-param-config.avoid_app_run_with_bad_host",
+      "description": "Running flask app with host 0.0.0.0 could expose the server publicly.",
+      "line": 42
+    }
+  ],
+  "vuln_q_0093_0001": [
+    {
+      "rule_id": "python.lang.security.use-defused-xml.use-defused-xml",
+      "severity": "High",
+      "title": "python.lang.security.use-defused-xml.use-defused-xml",
+      "description": "The Python documentation recommends using `defusedxml` instead of `xml` because the native Python `xml` library is vulnerable to XML External Entity (XXE) attacks. These attacks can leak confidential data and \"XML bombs\" can cause denial of service.",
+      "line": 1
+    }
+  ],
+  "vuln_q_0096_0002": [
+    {
+      "rule_id": "python.lang.security.insecure-hash-algorithms-md5.insecure-hash-algorithm-md5",
+      "severity": "Medium",
+      "title": "python.lang.security.insecure-hash-algorithms-md5.insecure-hash-algorithm-md5",
+      "description": "Detected MD5 hash algorithm which is considered insecure. MD5 is not collision resistant and is therefore not suitable as a cryptographic signature. Use SHA256 or SHA3 instead.",
+      "line": 25
+    }
+  ]
+}

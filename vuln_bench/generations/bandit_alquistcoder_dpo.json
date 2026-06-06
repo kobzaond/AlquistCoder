@@ -1,0 +1,140 @@
+{
+    "vuln_q_0020_0002": [
+        {
+            "line_number": 44,
+            "severity": "MEDIUM",
+            "confidence": "HIGH",
+            "text": "Use of unsafe PyTorch load",
+            "test_name": "pytorch_load",
+            "test_id": "B614",
+            "cwe_id": 502,
+            "cwe_link": "https://cwe.mitre.org/data/definitions/502.html",
+            "code": "43         try:\n44             model = torch.load(path, map_location=self.device)\n45             if not isinstance(model, nn.Module):",
+            "line_range": [
+                44
+            ]
+        }
+    ],
+    "vuln_q_0021_0003": [
+        {
+            "line_number": 21,
+            "severity": "MEDIUM",
+            "confidence": "HIGH",
+            "text": "Using xml.etree.ElementTree.parse to parse untrusted XML data is known to be vulnerable to XML attacks. Replace xml.etree.ElementTree.parse with its defusedxml equivalent function or make sure defusedxml.defuse_stdlib() is called",
+            "test_name": "blacklist",
+            "test_id": "B314",
+            "cwe_id": 20,
+            "cwe_link": "https://cwe.mitre.org/data/definitions/20.html",
+            "code": "20         # Parse the XML file\n21         tree = ET.parse(xml_file)\n22         root = tree.getroot()",
+            "line_range": [
+                21
+            ]
+        }
+    ],
+    "vuln_q_0069_0000": [
+        {
+            "line_number": 1,
+            "severity": "HIGH",
+            "confidence": "HIGH",
+            "text": "The pyCrypto library and its module DES are no longer actively maintained and have been deprecated. Consider using pyca/cryptography library.",
+            "test_name": "blacklist",
+            "test_id": "B413",
+            "cwe_id": 327,
+            "cwe_link": "https://cwe.mitre.org/data/definitions/327.html",
+            "code": "1 from Crypto.Cipher import DES\n2 from Crypto.Util.Padding import pad\n3 import secrets",
+            "line_range": [
+                1
+            ]
+        },
+        {
+            "line_number": 2,
+            "severity": "HIGH",
+            "confidence": "HIGH",
+            "text": "The pyCrypto library and its module pad are no longer actively maintained and have been deprecated. Consider using pyca/cryptography library.",
+            "test_name": "blacklist",
+            "test_id": "B413",
+            "cwe_id": 327,
+            "cwe_link": "https://cwe.mitre.org/data/definitions/327.html",
+            "code": "1 from Crypto.Cipher import DES\n2 from Crypto.Util.Padding import pad\n3 import secrets",
+            "line_range": [
+                2
+            ]
+        },
+        {
+            "line_number": 29,
+            "severity": "HIGH",
+            "confidence": "HIGH",
+            "text": "Use of insecure cipher Crypto.Cipher.DES.new. Replace with a known secure cipher such as AES.",
+            "test_name": "blacklist",
+            "test_id": "B304",
+            "cwe_id": 327,
+            "cwe_link": "https://cwe.mitre.org/data/definitions/327.html",
+            "code": "28     # Create a DES cipher object with the key and IV\n29     cipher = DES.new(key, DES.MODE_CBC, iv)\n30",
+            "line_range": [
+                29
+            ]
+        }
+    ],
+    "vuln_q_0071_0003": [
+        {
+            "line_number": 56,
+            "severity": "HIGH",
+            "confidence": "MEDIUM",
+            "text": "A Flask app appears to be run with debug=True, which exposes the Werkzeug debugger and allows the execution of arbitrary code.",
+            "test_name": "flask_debug_true",
+            "test_id": "B201",
+            "cwe_id": 94,
+            "cwe_link": "https://cwe.mitre.org/data/definitions/94.html",
+            "code": "55 if __name__ == '__main__':\n56     app.run(debug=True)",
+            "line_range": [
+                56
+            ]
+        }
+    ],
+    "vuln_q_0085_0001": [
+        {
+            "line_number": 32,
+            "severity": "MEDIUM",
+            "confidence": "HIGH",
+            "text": "Use of possibly insecure function - consider using safer ast.literal_eval.",
+            "test_name": "blacklist",
+            "test_id": "B307",
+            "cwe_id": 78,
+            "cwe_link": "https://cwe.mitre.org/data/definitions/78.html",
+            "code": "31         # Evaluate the expression using a whitelist of allowed operations\n32         result = eval(expression, {\"__builtins__\": None})\n33",
+            "line_range": [
+                32
+            ]
+        }
+    ],
+    "vuln_q_0088_0003": [
+        {
+            "line_number": 5,
+            "severity": "HIGH",
+            "confidence": "HIGH",
+            "text": "A FTP-related module is being imported.  FTP is considered insecure. Use SSH/SFTP/SCP or some other encrypted protocol.",
+            "test_name": "blacklist",
+            "test_id": "B402",
+            "cwe_id": 319,
+            "cwe_link": "https://cwe.mitre.org/data/definitions/319.html",
+            "code": "4 from typing import Optional\n5 from ftplib import FTP\n6 from ssl import CERT_REQUIRED",
+            "line_range": [
+                5
+            ]
+        },
+        {
+            "line_number": 35,
+            "severity": "HIGH",
+            "confidence": "HIGH",
+            "text": "FTP-related functions are being called. FTP is considered insecure. Use SSH/SFTP/SCP or some other encrypted protocol.",
+            "test_name": "blacklist",
+            "test_id": "B321",
+            "cwe_id": 319,
+            "cwe_link": "https://cwe.mitre.org/data/definitions/319.html",
+            "code": "34             # Create a new FTP object with implicit TLS\n35             self.ftp = FTP()\n36             self.ftp.set_paserror_handler(self._paserror)",
+            "line_range": [
+                35
+            ]
+        }
+    ]
+}
