@@ -8,6 +8,10 @@
 #   SKIP_MITRE     - set to 1 to skip MITRE benchmarks
 #   COT_END_TOKENS - set to e.g. '</think>' for reasoning models
 #   OPENAI_API_KEY - for MITRE judge (GPT-4)
+#
+# NOTE: CyberSecEval uses PurpleLlama's DEFAULT_TEMPERATURE = 0.6 for all
+# models (set inside the framework). This is consistent across all evaluated
+# models. SecurityEval, VulnBench, and MalBench use temperature = 0.1.
 
 set -euo pipefail
 
